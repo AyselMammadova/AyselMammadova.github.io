@@ -426,11 +426,6 @@ header.second-header .section-bottom {
       position: absolute;
       top: -23%;
       z-index: 1; }
-    #about .about-img .eight-star {
-      position: absolute;
-      bottom: -36%;
-      left: -22%;
-      z-index: 2; }
   #about .timeline-tabs h5 {
     display: inline-block;
     border-bottom: 2px solid #000;
