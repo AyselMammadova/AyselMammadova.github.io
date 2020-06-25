@@ -3,6 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'FTN_demi';
+    overflow-x: hidden;
 }
 
 .container {
@@ -65,7 +66,7 @@ h1, h2, h3, h4, h5, h6, .h6 {
     width: 10em; 
     height: 17.32em;
     position: relative;
-    transform: rotate(-10deg) scale(0.5);
+    transform: rotate(-10deg) scale(0.4);
     border-radius: 1em/.5em;
     &:before, &:after {
         position: absolute;
@@ -538,6 +539,7 @@ header.second-header {
 
 #about {
     padding-bottom: 60px;
+    background-color: #fff;
     .articleSec {
         padding: 100px 15px;
         h3 {
@@ -580,6 +582,7 @@ header.second-header {
                 .nav-link {
                     color: #000;
                     font-family: 'FTN_heavy';
+                    background-color: transparent;
                     padding-left: 0;
                     padding-right: 70px;
                     padding-bottom: 15px;
@@ -758,73 +761,87 @@ header.second-header {
 
 #news {
     padding: 60px;
+    background-color: #fff;
     position: relative;
     z-index: 999;
-    h3 {
-        text-transform: uppercase;
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
 
-    p {
-        font-size: 18px;
-    }
-
-    .news-boxes {
-        padding: 30px 0;
-        .box {
-            box-shadow: 10px -7px 25px rgba(0, 0, 0, 0.05);
-            border-radius: 3px;
-            margin: 15px 0;
-            background-color: #fff;
-            a {
-                display: inherit;
-                color: #000;
-                padding: 30px;
-                h5 {
-                    min-height: 50px;
-                }
-
-                p {
-                    overflow: hidden;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 6;
-                    -webkit-box-orient: vertical;
-                    padding-bottom: 20px;
-                    font-size: 14px;
-                    opacity: 0.6;
-                }
-
-                button {
-                    width: 100%;
-                    border-radius: 4px;
-                    border: 1px solid rgba(0, 0, 0, 0.4);
-                    padding: 8px 16px;
-                    overflow: hidden;
-                    position: relative;
-                    transition: 0.5s ease-in-out;
-                    z-index: 1;
-                    
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        right: -50px;
-                        bottom: 0;
-                        left: 0;
-                        border-right: 50px solid transparent;
-                        border-bottom: 80px solid #caadd9;
-                        -webkit-transform: translateX(-100%);
-                        transform: translateX(-100%);
-                        transition: 0.5s ease-in-out;
-                        z-index: -1;
+    .news-carousel {
+        margin-left: 12%;
+        .owl-stage-outer {
+            padding: 15px 0;
+            .box {
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.09), 0 3px 6px rgba(0, 0, 0, 0.05);
+                border-radius: 8px;
+                background-color: #fff;
+                margin-left: 15px;
+                position: relative;
+                a {
+                    display: inherit;
+                    color: #000;
+                    padding: 30px 30px 20px;
+                    h5 {
+                        min-height: 50px;
+                        font-family: 'FTN_medium';
                     }
 
-                    &:hover {
-                        color: #fff;
-                        &:before {
-                            -webkit-transform: translateX(0);
-                            transform: translateX(0);
+                    .info-box {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        height: 80px;
+                        .author, .info-img {
+                            width: 50%;
+                            height: 100%;
+                        }
+
+                        .author {
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            .hexagon-img {
+                                position: absolute;
+                                left: -10px;
+                                width: 80px;
+                                height: 80px;
+                            }
+
+                            .title {
+                                display: flex;
+                                flex-wrap: wrap;
+                                flex-direction: column;
+                                justify-content: center;
+                                text-align: center;
+                                padding-left: 48px;
+                                padding-right: 10px;
+                                position: relative;
+                                h6 {
+                                    margin-bottom: 20px;
+                                    font-family: 'FTN_demi';
+                                }
+                                span {
+                                    font-size: 14px;
+                                    font-family: 'FTN_medium';
+                                }
+
+                                &:after {
+                                    content: '';
+                                    position: absolute;
+                                    right: -10px;
+                                    width: 1px;
+                                    height: 100%;
+                                    background-color: #f2f2f2;
+                                }
+                            }
+                        }
+
+                        .info-img {
+                            border-radius: 5px;
+                            padding-left: 10px;
+                            img {
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 5px;
+                            }
                         }
                     }
                 }
@@ -832,9 +849,38 @@ header.second-header {
         }
     }
 
-    .seeMore {
-        margin: 15px 0 0 15px;
+    .navCustom {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 2%;
+        .eight-star {
+            cursor: pointer;
+            z-index: 2;
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 80px;
+                color: #3e1a77;
+                z-index: 1;
+            }
+            &[disabled] {
+                opacity: 0;
+            }
+            &.next-nav {
+                position: absolute;
+                right: 60px;
+                top: -70%;
+            }
+        }
     }
+
+
 
     .eight-star-wrapper.first {
         bottom: -22%;

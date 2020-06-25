@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('.mainCarousel.first-Main').owlCarousel({
         loop: true,
         lazyLoad:true,
-        autoplay: false,
+        autoplay: true,
         dots: false,
         nav: true,
         navSpeed: 2000,
@@ -15,13 +15,53 @@ $(document).ready(function () {
     $('.mainCarousel.second-Main').owlCarousel({
         loop: true,
         lazyLoad:true,
-        autoplay: false,
+        autoplay: true,
         dots: false,
         nav: true,
         navSpeed: 500,
         navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
         items: 1
     });
+
+    $('.news-carousel').owlCarousel({
+        margin: 10,
+        loop: false,
+        lazyLoad:true,
+        autoplay: false,
+        dots: false,
+        nav: true,
+        navSpeed: 500,
+        navContainer: '.navCustom',
+        items: 3
+    });
+
+    $('.navCustom button').remove();
+
+    var owl = $('.news-carousel');
+    owl.owlCarousel();
+    // Go to the next item
+    $('.next-nav').click(function() {
+        owl.trigger('next.owl.carousel');
+        $('.prev-nav').css('opacity', '1');
+    })
+    // Go to the previous item
+    $('.prev-nav').click(function() {
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        owl.trigger('prev.owl.carousel', [300]);
+        $('.next-nav').css('opacity', '1');
+    });
+
+    if ($('.news-carousel .owl-item').eq(0).hasClass('active')) {
+        $('.prev-nav').css('opacity', '0');
+    };
+
+    // var lastEl = $('.news-carousel .owl-item').length - 1;
+
+    // if ($('.news-carousel .owl-item').eq(lastEl).hasClass('active')) {
+    //     $('.next-nav').css('opacity', '0');
+    // };
+
 
     $('.search-icon').click(function(e) {
         e.stopPropagation(); 
@@ -55,7 +95,6 @@ $(document).ready(function () {
         } 
 
         if (news - ($(window).scrollTop()+$(window).height()) < 0) {
-            $('#news .news-desc').addClass('fadeInLeft');
             $('#news .box-wrap').addClass('zoomIn');
         } 
 
@@ -72,6 +111,7 @@ $(document).ready(function () {
             $('footer .section-bottom li').addClass('fadeIn');
         } 
     }); 
+
 
 
 
