@@ -45,15 +45,14 @@ h1, h2, h3, h4, h5, h6, .h6 {
     color: #f5b500;
     font-size: 16px;
     transition: 300ms all ease;
-    img {
-        margin-left: 10px;
-        width: 22px;
+    i {
+        margin: 5px 0 0 10px;
         transition: 300ms all ease;
     }
 
     &:hover {
-        img {
-            transform: scale(1.5);
+        i {
+            margin-left: 15px;
         }
     }
 }
@@ -559,8 +558,7 @@ header.second-header {
             width: 500px;
             height: 500px;
             position: absolute;
-            top: -10%;
-            transform: rotate(-10deg);
+            top: -23%;
             z-index: 1;
         }
 
@@ -697,49 +695,49 @@ header.second-header {
 
         &:nth-child(1) {
             .colorful {
-                background: linear-gradient(35deg, rgb(163, 238, 106), rgb(166, 255, 216));
+                background: #99ff99;
             }
         }
 
         &:nth-child(2) {
             .colorful {
-                background: linear-gradient(130deg, #e10522 0%, rgba(225, 5, 34, 0) 70%), linear-gradient(260deg, #3105d1 10%, rgba(49, 5, 209, 0) 80%);
+                background: #99ccff;
             }
         }
 
         &:nth-child(3) {
             .colorful {
-                background: linear-gradient(10deg, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #dd00f3);
+                background: #ffff33;
             }
         }
 
         &:nth-child(4) {
             .colorful {
-                background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, 0.4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgb(57, 219, 204) 0%, rgba(42, 60, 87, 0.4) 100%), linear-gradient(135deg, #670d10 0%, #092756 100%);
+                background: #ff8566;
             }
         }
 
         &:nth-child(5) {
             .colorful {
-                background: linear-gradient(35deg, rgb(106, 238, 199), rgb(166, 193, 255));
+                background: #df80ff;
             }
         }
 
         &:nth-child(6) {
             .colorful {
-                background: linear-gradient(135deg, #4567b2 20%, #8ab9ff 80%);
+                background: #2e5cb8;
             }
         }
 
         &:nth-child(7) {
             .colorful {
-                background: -webkit-gradient(linear, left top, right top, from(red), to(#f06d06));
+                background:  #e68a00;
             }
         }
 
         &:nth-child(8) {
             .colorful {
-                background: linear-gradient(35deg, rgb(139, 106, 238), rgb(255, 166, 233));
+                background: #990000;
             }
         }
     }
@@ -915,6 +913,8 @@ footer {
                             transform: scale(0.8);
                             font-size: 38px;
                             vertical-align: middle;
+                            position: relative;
+                            top: -1px;
                         }
                         span {
                             color: #000;
