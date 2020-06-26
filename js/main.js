@@ -25,43 +25,16 @@ $(document).ready(function () {
 
     $('.news-carousel').owlCarousel({
         margin: 10,
-        loop: false,
+        loop: true,
         lazyLoad:true,
         autoplay: false,
         dots: false,
         nav: true,
         navSpeed: 500,
         navContainer: '.navCustom',
+        navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
         items: 3
     });
-
-    $('.navCustom button').remove();
-
-    var owl = $('.news-carousel');
-    owl.owlCarousel();
-    // Go to the next item
-    $('.next-nav').click(function() {
-        owl.trigger('next.owl.carousel');
-        $('.prev-nav').css('opacity', '1');
-    })
-    // Go to the previous item
-    $('.prev-nav').click(function() {
-        // With optional speed parameter
-        // Parameters has to be in square bracket '[]'
-        owl.trigger('prev.owl.carousel', [300]);
-        $('.next-nav').css('opacity', '1');
-    });
-
-    if ($('.news-carousel .owl-item').eq(0).hasClass('active')) {
-        $('.prev-nav').css('opacity', '0');
-    };
-
-    // var lastEl = $('.news-carousel .owl-item').length - 1;
-
-    // if ($('.news-carousel .owl-item').eq(lastEl).hasClass('active')) {
-    //     $('.next-nav').css('opacity', '0');
-    // };
-
 
     $('.search-icon').click(function(e) {
         e.stopPropagation(); 
@@ -112,11 +85,11 @@ $(document).ready(function () {
         } 
     }); 
 
-
-
-
-
-
+    $('#services .box').each(function(){
+        var truncated = $(this).find('p').text();
+        truncated = $.trim(truncated).substring(0,68) + '...';
+        $(this).find('p').text(truncated);
+    });
 
 });
 
