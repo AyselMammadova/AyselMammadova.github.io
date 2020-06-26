@@ -85,11 +85,11 @@ $(document).ready(function () {
         } 
     }); 
 
-    $('#services .box').each(function(){
-        var truncated = $(this).find('p').text();
-        truncated = $.trim(truncated).substring(0,68) + '...';
-        $(this).find('p').text(truncated);
-    });
+    // $('#services .box').each(function(){
+    //     var truncated = $(this).find('p').text();
+    //     truncated = $.trim(truncated).substring(0,68) + '...';
+    //     $(this).find('p').text(truncated);
+    // });
 
 });
 
