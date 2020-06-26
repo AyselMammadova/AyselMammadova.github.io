@@ -27,7 +27,7 @@ $(document).ready(function () {
         margin: 10,
         loop: true,
         lazyLoad:true,
-        autoplay: false,
+        autoplay: true,
         dots: false,
         nav: true,
         navSpeed: 500,
