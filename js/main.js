@@ -27,7 +27,7 @@ $(document).ready(function () {
         margin: 10,
         loop: true,
         lazyLoad:true,
-        autoplay: false,
+        autoplay: true,
         dots: false,
         nav: true,
         navSpeed: 500,
@@ -35,6 +35,32 @@ $(document).ready(function () {
         navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
         items: 3
     });
+
+    // when hover items
+    
+    $('.owl-carousel .item').mouseover(function(){
+    $(this).trigger('stop.owl.autoplay');
+    });
+    
+    $('.owl-carousel .item').mouseleave(function(){
+        $(this).trigger('play.owl.autoplay',[5000]);
+    });
+    
+    //when click navs
+    
+    $('section .owl-nav > button').on('click', function () {
+        $('.owl-carousel').trigger('stop.owl.autoplay');
+    });
+    
+    $('section .owl-nav > button').mouseover(function(){
+        $('.owl-carousel').trigger('play.owl.autoplay',[5000]);
+    });
+    
+    $('section .owl-nav > button').mouseleave(function(){
+        $('.owl-carousel').trigger('play.owl.autoplay',[5000]);
+    });
+
+
 
     $('.search-icon').click(function(e) {
         e.stopPropagation(); 
@@ -68,7 +94,7 @@ $(document).ready(function () {
         } 
 
         if (news - ($(window).scrollTop()+$(window).height()) < 0) {
-            $('#news .box').addClass('zoomIn');
+            $('#news .item').addClass('zoomIn');
         } 
 
         if (footerTop - ($(window).scrollTop()+$(window).height()) < 0) {

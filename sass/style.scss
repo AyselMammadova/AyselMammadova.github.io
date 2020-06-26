@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6, .h6 {
     font-size: 16px;
     transition: 300ms all ease;
     i {
-        margin: 5px 0 0 10px;
+        margin: 4.7px 0 0 10px;
         transition: 300ms all ease;
     }
 
@@ -585,6 +585,7 @@ header.second-header {
             width: 70%;
             .tab-pane {
                 padding: 0;
+                font-family: 'FTN_medium';
             }
         }
     }
@@ -704,7 +705,7 @@ header.second-header {
         margin-left: 12%;
         .owl-stage-outer {
             padding: 15px 0;
-            .box {
+            .item {
                 box-shadow: 0 3px 6px rgba(0, 0, 0, 0.09), 0 3px 6px rgba(0, 0, 0, 0.05);
                 border-radius: 8px;
                 background-color: #fff;
@@ -725,13 +726,13 @@ header.second-header {
                         align-items: center;
                         height: 80px;
                         .author, .info-img {
-                            width: 50%;
                             height: 100%;
                         }
 
                         .author {
                             display: flex;
                             flex-wrap: wrap;
+                            width: 40%;
                             padding-right: 15px;
 
                             .hexagon-img {
@@ -750,6 +751,7 @@ header.second-header {
                                 padding-left: 48px;
                                 h6 {
                                     margin-bottom: 20px;
+                                    font-size: 12px;
                                     font-family: 'FTN_demi';
                                 }
                                 span {
@@ -760,8 +762,9 @@ header.second-header {
                         }
 
                         .info-img {
+                            width: 60%;
                             border-radius: 5px;
-                            padding-left: 15px;
+                            padding-left: 20px;
                             position: relative;
                             img {
                                 height: 100%;
@@ -789,11 +792,11 @@ header.second-header {
         top: 7%;
         right: 10%;
         button {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            border: 2px solid #3e1a77;
-            color: #cabfbf;
+            border: 2px solid #f5f5f5;
+            color: #c0c0c0;
             background-color: transparent;
             transition: 300ms all ease;
             &.owl-next {
