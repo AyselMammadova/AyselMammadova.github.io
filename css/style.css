@@ -385,7 +385,7 @@ header.second-header .section-bottom {
   padding-bottom: 60px;
   background-color: #fff; }
   #about .articleSec {
-    padding: 100px 15px; }
+    padding: 70px 15px; }
     #about .articleSec h3 {
       text-transform: uppercase;
       font-size: 28px;
@@ -393,6 +393,8 @@ header.second-header .section-bottom {
     #about .articleSec article {
       font-size: 18px;
       font-family: 'FTN_medium'; }
+      #about .articleSec article h5 {
+        margin: 30px 0 15px; }
       #about .articleSec article .seeMore {
         margin-top: 20px; }
   #about .about-img {
@@ -402,10 +404,10 @@ header.second-header .section-bottom {
       width: 550px;
       height: 550px;
       position: absolute;
-      top: -30%;
+      top: -16%;
       z-index: 1; }
       #about .about-img .hexagon-img .hexagon img {
-        top: 26px;
+        top: 46px;
         left: 26px;
         width: 500px;
         height: 500px; }
@@ -479,7 +481,8 @@ header.second-header .section-bottom {
         min-height: 50px; }
       #services .box-wrap .box a p {
         margin-bottom: 0;
-        font-family: 'FTN_medium'; }
+        font-family: 'FTN_medium';
+        color: #b2b2b2; }
       #services .box-wrap .box a span {
         position: absolute;
         right: 30px; }
