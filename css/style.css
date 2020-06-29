@@ -388,7 +388,6 @@ header.second-header .section-bottom {
     padding: 70px 15px; }
     #about .articleSec h3 {
       text-transform: uppercase;
-      font-size: 28px;
       margin-bottom: 10px; }
     #about .articleSec article {
       font-size: 18px;
@@ -404,7 +403,7 @@ header.second-header .section-bottom {
       width: 550px;
       height: 550px;
       position: absolute;
-      top: -16%;
+      top: -37%;
       z-index: 1; }
       #about .about-img .hexagon-img .hexagon img {
         top: 46px;
@@ -462,10 +461,176 @@ header.second-header .section-bottom {
       padding: 0;
       font-family: 'FTN_medium'; }
 
+/* what is */
+#whatIs {
+  padding: 60px 0;
+  background-color: #f2f2f2; }
+  #whatIs .video-wrapper {
+    display: flex; }
+    #whatIs .video-wrapper h1 {
+      transform: rotate(180deg);
+      text-transform: uppercase;
+      writing-mode: vertical-lr;
+      line-height: 0.5;
+      color: #b2b2b2;
+      margin-bottom: 2px; }
+    #whatIs .video-wrapper .video-wrap {
+      background: url("../img/video-cover.jpg") no-repeat;
+      background-size: cover;
+      width: 100%;
+      border-radius: 25px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer; }
+      #whatIs .video-wrapper .video-wrap:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: 300ms all ease; }
+      #whatIs .video-wrapper .video-wrap .play-icon-wrap, #whatIs .video-wrapper .video-wrap .play-icon {
+        border: 1.5px dashed rgba(255, 255, 255, 0.4);
+        border-radius: 50%;
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 300ms all ease; }
+      #whatIs .video-wrapper .video-wrap .play-icon-wrap {
+        width: 100px;
+        height: 100px; }
+        #whatIs .video-wrapper .video-wrap .play-icon-wrap .play-icon {
+          width: 70px;
+          height: 70px; }
+          #whatIs .video-wrapper .video-wrap .play-icon-wrap .play-icon i {
+            font-size: 40px;
+            color: #f5b500;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); }
+      #whatIs .video-wrapper .video-wrap iframe {
+        width: 100%;
+        height: 100%; }
+      #whatIs .video-wrapper .video-wrap:hover:before {
+        background-color: rgba(0, 0, 0, 0.6); }
+      #whatIs .video-wrapper .video-wrap:hover .play-icon-wrap, #whatIs .video-wrapper .video-wrap:hover .play-icon {
+        border: 1.5px dashed rgba(255, 255, 255, 0.7); }
+      #whatIs .video-wrapper .video-wrap.none-overlay:before {
+        content: none; }
+  #whatIs .info-section h2 {
+    margin-bottom: 15px; }
+  #whatIs .info-section p {
+    font-size: 15px; }
+
+/* calculate */
+#calculate {
+  padding: 60px 0;
+  background-color: #fff; }
+  #calculate .calc-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    #calculate .calc-wrapper .heart-beat {
+      width: 100px;
+      height: 100px;
+      background-color: #bf0b0b;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-animation: heartBeat 1s ease infinite 0s;
+      -moz-animation: heartBeat 1s ease infinite 0s;
+      -o-animation: heartBeat 1s ease infinite 0s;
+      -ms-animation: heartBeat 1s ease infinite 0s;
+      animation: heartBeat 1s ease infinite 0s;
+      position: relative;
+      top: 8px;
+      /*tested on opera 12*/
+      /*
+      tested on IE9, should work but doesn't :(
+      https://developer.mozilla.org/en-US/docs/CSS/transform
+      */
+      /*tested on FF 18*/ }
+      #calculate .calc-wrapper .heart-beat:before, #calculate .calc-wrapper .heart-beat:after {
+        content: '';
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        border-radius: 50px;
+        background-color: #bf0b0b; }
+      #calculate .calc-wrapper .heart-beat:before {
+        left: -50px;
+        top: 0; }
+      #calculate .calc-wrapper .heart-beat:after {
+        right: 0;
+        top: -50px; }
+@-webkit-keyframes heartBeat {
+  0% {
+    zoom: 100%; }
+  15% {
+    zoom: 120%; }
+  25% {
+    zoom: 110%; }
+  35% {
+    zoom: 120%; }
+  100% {
+    zoom: 100%; } }
+@-o-keyframes heartBeat {
+  0% {
+    zoom: 100%; }
+  15% {
+    zoom: 120%; }
+  25% {
+    zoom: 110%; }
+  35% {
+    zoom: 120%; }
+  100% {
+    zoom: 100%; } }
+@-ms-keyframes heartBeat {
+  0% {
+    transform: rotate(45deg) scale(1); }
+  15% {
+    transform: rotate(45deg) scale(1.2); }
+  25% {
+    transform: rotate(45deg) scale(1.1); }
+  35% {
+    transform: rotate(45deg) scale(1.2); }
+  100% {
+    transform: rotate(45deg) scale(1); } }
+@keyframes heartBeat {
+  0% {
+    transform: rotate(45deg) scale(1); }
+  15% {
+    transform: rotate(45deg) scale(1.2); }
+  25% {
+    transform: rotate(45deg) scale(1.1); }
+  35% {
+    transform: rotate(45deg) scale(1.2); }
+  100% {
+    transform: rotate(45deg) scale(1); } }
+    #calculate .calc-wrapper .calc {
+      width: 35%;
+      margin-left: 100px;
+      text-align: center; }
+      #calculate .calc-wrapper .calc a {
+        border: 1px solid #000;
+        margin-top: 15px;
+        padding: 5px 35px;
+        transition: 500ms all ease; }
+        #calculate .calc-wrapper .calc a:hover {
+          transform: scale(1.1); }
+
 /* services section */
 #services {
-  background-color: #f2f2f2;
-  padding: 60px 0; }
+  padding: 60px 0;
+  background-color: #f2f2f2; }
   #services .box-wrap .box {
     background: linear-gradient(150deg, #ffffff 50%, #f5f6f6 100%);
     box-shadow: 0 25px 25px rgba(0, 0, 0, 0.05);
@@ -556,7 +721,7 @@ header.second-header .section-bottom {
                 width: 86px;
                 height: 86px; }
                 #news .news-carousel .owl-stage-outer .item a .info-box .author .hexagon-img .hexagon img {
-                  top: 5px;
+                  top: 6px;
                   left: 0;
                   height: 100%; }
               #news .news-carousel .owl-stage-outer .item a .info-box .author .title {
@@ -604,8 +769,29 @@ header.second-header .section-bottom {
       #news .navCustom button.owl-next {
         margin-left: 15px; }
       #news .navCustom button:hover {
-        background-color: #3e1a77;
+        background-image: linear-gradient(-260deg, rgba(62, 26, 119, 0.9), rgba(245, 181, 0, 0.7));
         color: #fff; }
+  #news .all-info {
+    position: absolute;
+    bottom: 8%;
+    right: 10%;
+    color: #000;
+    font-family: 'FTN_medium';
+    transition: 300ms all ease-in-out; }
+    #news .all-info:before, #news .all-info:after {
+      content: '';
+      position: absolute;
+      top: 27px;
+      width: 20px;
+      height: 2px;
+      background-image: linear-gradient(-360deg, rgba(62, 26, 119, 0.9), rgba(245, 181, 0, 0.7));
+      transition: 300ms all ease-in-out; }
+    #news .all-info:before {
+      left: 50%; }
+    #news .all-info:after {
+      right: 50%; }
+    #news .all-info:hover:before, #news .all-info:hover:after {
+      width: 50%; }
 
 /* footer */
 footer .section-top {

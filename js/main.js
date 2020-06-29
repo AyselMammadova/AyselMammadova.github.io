@@ -61,7 +61,6 @@ $(document).ready(function () {
     });
 
 
-
     $('.search-icon').click(function(e) {
         e.stopPropagation(); 
         $(this).find('i').toggleClass('fa-search fa-times');
@@ -116,6 +115,11 @@ $(document).ready(function () {
     //     truncated = $.trim(truncated).substring(0,68) + '...';
     //     $(this).find('p').text(truncated);
     // });
+
+    $('#whatIs .video-wrap').click(function() {
+        $(this).html('<iframe width="560" height="315" src="https://www.youtube.com/embed/-uQz524deas?rel=0&enablejsapi=1?autoplay=1" frameborder="0"></iframe>');
+        $(this).addClass('none-overlay');
+    });
 
 });
 
