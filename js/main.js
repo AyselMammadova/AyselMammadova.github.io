@@ -117,10 +117,9 @@ $(document).ready(function () {
     // });
 
     $('#whatIs .video-wrap').click(function() {
-        $(this).html('<iframe width="560" height="315" src="https://www.youtube.com/embed/-uQz524deas?rel=0&enablejsapi=1?autoplay=1" frameborder="0"></iframe>');
+        $(this).html('<iframe width="560" height="315" src="https://www.youtube.com/embed/-uQz524deas?rel=0&enablejsapi=1&autoplay=1" frameborder="0"></iframe>');
         $(this).addClass('none-overlay');
     });
-
 });
 
 
