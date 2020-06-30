@@ -537,84 +537,58 @@ header.second-header .section-bottom {
     justify-content: center;
     align-items: center;
     position: relative; }
-    #calculate .calc-wrapper .heart-beat {
-      width: 100px;
-      height: 100px;
+    #calculate .calc-wrapper .heart-wrap {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       background-color: #bf0b0b;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-      -webkit-animation: heartBeat 1s ease infinite 0s;
-      -moz-animation: heartBeat 1s ease infinite 0s;
-      -o-animation: heartBeat 1s ease infinite 0s;
-      -ms-animation: heartBeat 1s ease infinite 0s;
-      animation: heartBeat 1s ease infinite 0s;
-      position: relative;
-      top: 8px;
-      /*tested on opera 12*/
-      /*
-      tested on IE9, should work but doesn't :(
-      https://developer.mozilla.org/en-US/docs/CSS/transform
-      */
-      /*tested on FF 18*/ }
-      #calculate .calc-wrapper .heart-beat:before, #calculate .calc-wrapper .heart-beat:after {
-        content: '';
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        border-radius: 50px;
-        background-color: #bf0b0b; }
-      #calculate .calc-wrapper .heart-beat:before {
-        left: -50px;
-        top: 0; }
-      #calculate .calc-wrapper .heart-beat:after {
-        right: 0;
-        top: -50px; }
+      -webkit-animation: play 2s ease infinite;
+      -moz-animation: play 2s ease infinite;
+      animation: play 2s ease infinite; }
+      #calculate .calc-wrapper .heart-wrap .heart-beat {
+        -webkit-animation: heartBeat 1.3s ease-in-out infinite;
+        -moz-animation: heartBeat 1.3s ease-in-out infinite;
+        -o-animation: heartBeat 1.3s ease-in-out infinite;
+        -ms-animation: heartBeat 1.3s ease-in-out infinite;
+        animation: heartBeat 1.3s ease-in-out infinite;
+        /*tested on FF 18*/ }
 @-webkit-keyframes heartBeat {
   0% {
     zoom: 100%; }
-  15% {
-    zoom: 120%; }
-  25% {
+  50% {
     zoom: 110%; }
-  35% {
-    zoom: 120%; }
+  75% {
+    zoom: 130%; }
   100% {
     zoom: 100%; } }
-@-o-keyframes heartBeat {
-  0% {
-    zoom: 100%; }
-  15% {
-    zoom: 120%; }
-  25% {
-    zoom: 110%; }
-  35% {
-    zoom: 120%; }
-  100% {
-    zoom: 100%; } }
-@-ms-keyframes heartBeat {
-  0% {
-    transform: rotate(45deg) scale(1); }
-  15% {
-    transform: rotate(45deg) scale(1.2); }
-  25% {
-    transform: rotate(45deg) scale(1.1); }
-  35% {
-    transform: rotate(45deg) scale(1.2); }
-  100% {
-    transform: rotate(45deg) scale(1); } }
 @keyframes heartBeat {
   0% {
-    transform: rotate(45deg) scale(1); }
-  15% {
-    transform: rotate(45deg) scale(1.2); }
-  25% {
-    transform: rotate(45deg) scale(1.1); }
-  35% {
-    transform: rotate(45deg) scale(1.2); }
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  75% {
+    transform: scale(1.3); }
   100% {
-    transform: rotate(45deg) scale(1); } }
+    transform: scale(1); } }
+@keyframes play {
+  0% {
+    transform: scale(1); }
+  15% {
+    -webkit-box-shadow: 0 0 0 5px rgba(191, 11, 11, 0.2);
+    -moz-box-shadow: 0 0 0 5px rgba(191, 11, 11, 0.2);
+    box-shadow: 0 0 0 5px rgba(191, 11, 11, 0.2); }
+  25% {
+    -webkit-box-shadow: 0 0 0 10px rgba(191, 11, 11, 0.2), 0 0 0 20px rgba(191, 11, 11, 0.1);
+    -moz-box-shadow: 0 0 0 10px rgba(191, 11, 11, 0.2), 0 0 0 20px rgba(191, 11, 11, 0.1);
+    box-shadow: 0 0 0 10px rgba(191, 11, 11, 0.2), 0 0 0 20px rgba(191, 11, 11, 0.1); }
+  25% {
+    -webkit-box-shadow: 0 0 0 15px rgba(191, 11, 11, 0.2), 0 0 0 30px rgba(191, 11, 11, 0.1);
+    -moz-box-shadow: 0 0 0 15px rgba(191, 11, 11, 0.2), 0 0 0 30px rgba(191, 11, 11, 0.1);
+    box-shadow: 0 0 0 15px rgba(191, 11, 11, 0.2), 0 0 0 30px rgba(191, 11, 11, 0.1); } }
     #calculate .calc-wrapper .calc {
       width: 35%;
       margin-left: 100px;
@@ -623,7 +597,7 @@ header.second-header .section-bottom {
         border: 1px solid #000;
         margin-top: 15px;
         padding: 5px 35px;
-        transition: 500ms all ease; }
+        transition: 500ms transform ease; }
         #calculate .calc-wrapper .calc a:hover {
           transform: scale(1.1); }
 
