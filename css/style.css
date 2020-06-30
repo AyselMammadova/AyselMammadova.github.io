@@ -550,23 +550,24 @@ header.second-header .section-bottom {
       -moz-animation: play 2s ease infinite;
       animation: play 2s ease infinite; }
       #calculate .calc-wrapper .heart-wrap .heart-beat {
-        -webkit-animation: heartBeat 1.5s ease-in-out infinite;
-        -moz-animation: heartBeat 1.5s ease-in-out infinite;
-        -o-animation: heartBeat 1.5s ease-in-out infinite;
-        -ms-animation: heartBeat 1.5s ease-in-out infinite;
-        animation: heartBeat 1.5s ease-in-out infinite;
+        -webkit-animation: heartBeat 2s ease-in-out infinite;
+        -moz-animation: heartBeat 2s ease-in-out infinite;
+        -o-animation: heartBeat 2s ease-in-out infinite;
+        -ms-animation: heartBeat 2s ease-in-out infinite;
+        animation: heartBeat 2s ease-in-out infinite;
+        transform: scale(1.1);
         /*tested on FF 18*/ }
 @keyframes heartBeat {
   0% {
-    transform: scale(1.1); }
-  25% {
     transform: scale(1.2); }
+  25% {
+    transform: scale(1.5); }
   50% {
-    transform: scale(1); }
-  75% {
     transform: scale(1.1); }
+  75% {
+    transform: scale(1.2); }
   100% {
-    transform: scale(1.2); } }
+    transform: scale(1.5); } }
 @keyframes play {
   0% {
     transform: scale(1); }
