@@ -627,7 +627,7 @@ header.second-header {
             text-transform: uppercase;
             writing-mode: vertical-lr;
             line-height: 0.5;
-            color: #b2b2b2;
+            color: #e7e7e7;
             margin-bottom: 2px;
         }
         .video-wrap {
@@ -722,8 +722,8 @@ header.second-header {
         align-items: center;
         position: relative;
         .heart-wrap {
-            width:150px;
-            height:150px;
+            width:120px;
+            height:120px;
             border-radius: 50%;
             display: flex;
             flex-wrap: wrap;
@@ -762,19 +762,19 @@ header.second-header {
                         transform: scale(1);
                     }
                     15% {
-                        -webkit-box-shadow: 0 0 0 10px rgba(191, 11, 11, 0.2);
-                        -moz-box-shadow: 0 0 0 10px rgba(191, 11, 11, 0.2);
-                        box-shadow: 0 0 0 10px rgba(191, 11, 11, 0.2);
+                        -webkit-box-shadow: 0 0 0 20px rgba(191, 11, 11, 0.2);
+                        -moz-box-shadow: 0 0 0 20px rgba(191, 11, 11, 0.2);
+                        box-shadow: 0 0 0 20px rgba(191, 11, 11, 0.2);
                     }
                     25% {
-                        -webkit-box-shadow: 0 0 0 15px rgba(191, 11, 11, 0.2), 0 0 0 25px rgba(191, 11, 11, 0.1);
-                        -moz-box-shadow: 0 0 0 15px rgba(191, 11, 11, 0.2), 0 0 0 25px rgba(191, 11, 11, 0.1);
-                        box-shadow: 0 0 0 15px rgba(191, 11, 11, 0.2), 0 0 0 25px rgba(191, 11, 11, 0.1);
+                        -webkit-box-shadow: 0 0 0 25px rgba(191, 11, 11, 0.2), 0 0 0 40px rgba(191, 11, 11, 0.1);
+                        -moz-box-shadow: 0 0 0 25px rgba(191, 11, 11, 0.2), 0 0 0 40px rgba(191, 11, 11, 0.1);
+                        box-shadow: 0 0 0 25px rgba(191, 11, 11, 0.2), 0 0 0 40px rgba(191, 11, 11, 0.1);
                     }
                     25% {
-                        -webkit-box-shadow: 0 0 0 20px rgba(191, 11, 11, 0.2), 0 0 0 35px rgba(191, 11, 11, 0.1);
-                        -moz-box-shadow: 0 0 0 20px rgba(191, 11, 11, 0.2), 0 0 0 35px rgba(191, 11, 11, 0.1);
-                        box-shadow: 0 0 0 20px rgba(191, 11, 11, 0.2), 0 0 0 35px rgba(191, 11, 11, 0.1);
+                        -webkit-box-shadow: 0 0 0 30px rgba(191, 11, 11, 0.2), 0 0 0 50px rgba(191, 11, 11, 0.1);
+                        -moz-box-shadow: 0 0 0 30px rgba(191, 11, 11, 0.2), 0 0 0 50px rgba(191, 11, 11, 0.1);
+                        box-shadow: 0 0 0 30px rgba(191, 11, 11, 0.2), 0 0 0 50px rgba(191, 11, 11, 0.1);
                     }
                 }
             }
