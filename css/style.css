@@ -598,11 +598,17 @@ header.second-header .section-bottom {
       margin-left: 100px;
       text-align: center; }
       #calculate .calc-wrapper .calc a {
-        border: 1px solid #000;
+        background: #dd1a29;
+        border: 1px solid #da251f;
+        box-shadow: 0px 2px 0 #d6251f, 2px 4px 6px #e02a24;
         margin-top: 15px;
-        transition: 500ms transform ease; }
+        transition: 500ms all ease; }
         #calculate .calc-wrapper .calc a:hover {
-          transform: scale(1.1); }
+          background: #e02c26;
+          border: 1px solid rgba(0, 0, 0, 0.05);
+          box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+          color: #ffffff82;
+          text-shadow: -1px -1px 0 #c2211c; }
 
 /* services section */
 #services {
