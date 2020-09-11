@@ -726,6 +726,17 @@ ul {
                 border: 1px solid #ccc;
                 background-color: transparent;
             }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 15px;
+                background: url(../img/next.png) no-repeat;
+                background-size: 13px;
+                width: 32px;
+                height: 13px;
+            }
         }
     }
 
