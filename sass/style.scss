@@ -125,7 +125,7 @@ ul {
 
             .online-order {
                 background-color: transparent;
-                border: 1px solid #fff;
+                border: 2px solid #fff;
                 color: #fff;
                 margin-left: 15px;
                 border-radius: 30px;
@@ -479,9 +479,8 @@ ul {
 
 /* about section */
 #about-company {
-    padding: 50px 0;
     .about-info {
-        padding: 115px 100px 115px 0;
+        padding: 90px 100px 90px 0;
         h3 {
             font-size: 36px;
             margin-bottom: 15px;
@@ -752,10 +751,11 @@ ul {
             a {
                 display: block;
                 .img-wrap {
-                    height: 315px;
-                    padding: 20px;
+                    height: 230px;
+                    padding: 10px;
                     img {
                         object-fit: cover;
+                        border-radius: 2px;
                     }
                 }
 
@@ -781,6 +781,10 @@ ul {
 
         .owl-nav button.owl-next, 
         .owl-nav button.owl-prev {
+            top: 38%;
+            width: 52px;
+            height: 52px;
+            padding: 0;
             &:hover {
                 color: #fff;
                 background-color: #76d0f3;
@@ -788,8 +792,15 @@ ul {
             i {
                 position: relative;
                 top: 1px;
-                font-size: 13px;
             }
+        }
+
+        .owl-nav button.owl-next {
+            right: -30px;
+        }
+
+        .owl-nav button.owl-prev {
+            left: -30px;
         }
     }
 }
@@ -923,7 +934,6 @@ ul {
 /* references style */
 #references {
     padding: 50px 0;
-    background-color: #f7f7f9;
     h3 {
         text-align: center;
         margin-bottom: 25px;
