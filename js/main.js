@@ -23,9 +23,6 @@ $(document).ready(function () {
         else {
             feature.css('display', 'flex');
         }
-      
-        // if (feature.is(':hidden')) header.addClass('sticky')
-        // else header.removeClass('sticky');
 
         if (scroll >= headHeight) header.addClass('sticky')
         else header.removeClass('sticky');
@@ -34,6 +31,13 @@ $(document).ready(function () {
             $('.first-body header').find('.navbar-brand img').attr('src', 'img/original-logo.png');
         } else {
             $('.first-body header').find('.navbar-brand img').attr('src', 'img/white-logo.png');
+        }
+
+        if ($(window).scrollTop()){
+            $('#features').slideUp();
+        }
+        else{
+            $('#features').slideDown();
         }
     });
 
