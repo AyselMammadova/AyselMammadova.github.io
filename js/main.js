@@ -13,16 +13,7 @@ $(document).ready(function () {
         var feature = $('#features'),
             header = $('header'),
             scroll = $(window).scrollTop();
-        var featureHeight = $('#features').height();
         var headHeight = $('.first-body #main').height();
-      
-        if (scroll >= featureHeight) {
-            feature.slideUp('500');
-            feature.css('display', 'none');
-        }
-        else {
-            feature.css('display', 'flex');
-        }
 
         if (scroll >= headHeight) header.addClass('sticky')
         else header.removeClass('sticky');
@@ -34,10 +25,10 @@ $(document).ready(function () {
         }
 
         if ($(window).scrollTop()){
-            $('#features').slideUp();
+            feature.slideUp();
         }
         else{
-            $('#features').slideDown();
+            feature.slideDown();
         }
     });
 
