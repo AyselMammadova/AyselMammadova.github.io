@@ -70,6 +70,7 @@ ul {
 
 /* first style */
 .first-body {
+    font-family: 'Proxima Nova', sans-serif !important;
     font-family: 'Futura', sans-serif !important;
     h1, h2, h3, h4, h5, h6 {
         font-weight: 600;
@@ -87,10 +88,9 @@ ul {
             z-index: 100;
             background-color: #fff;
             box-shadow: 0 2px 25px rgba(0,0,0,.05);
-            height: 100px;
             .navbar-brand {
                 img {
-                    width: 120px;
+                    width: 94px;
                 }
             }
             #navbarMenu {
@@ -249,6 +249,7 @@ ul {
 
 /* second style */
 .second-body {
+    font-family: 'Proxima Nova', sans-serif !important;
     font-family: 'Montserrat', sans-serif !important;
     h1, h2, h3, h4, h5, h6 {
         font-weight: 600;
@@ -479,6 +480,12 @@ ul {
 
 /* about section */
 #about-company {
+    background: url('../img/back.png') no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 120px;
     .about-info {
         padding: 90px 100px 90px 0;
         h3 {
@@ -496,6 +503,7 @@ ul {
             &:nth-child(1) {
                 transform: rotate(-30deg) scaleY(0.93);
                 filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.1));
+                position: relative;
                 z-index: 2;
             }
             &:nth-child(2) {
@@ -528,12 +536,14 @@ ul {
 
 /* statistics style */
 #statistics {
-    padding: 70px 0;
-    background: url('../img/calsium-carbonate.jpg') no-repeat;
+    padding: 114px 0 100px;
+    background: url('../img/statistic-background.jpg') no-repeat;
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
     position: relative;
+    top: -42px;
+    z-index: 1;
     &:after {
         content: '';
         position: absolute;
@@ -552,7 +562,7 @@ ul {
         position: relative;
         z-index: 10;
         i {
-            color: #73b2d9;
+            color: #fee74e;
             font-size: 40px;
             margin-right: 40px;
         }
@@ -575,7 +585,7 @@ ul {
             }
             strong {
                 font-size: 40px;
-                color: #73b2d9;
+                color: #ffe72f;
             }
             span {
                 color: #fff;
@@ -583,44 +593,6 @@ ul {
             }
         }
     }
-
-    // .back-line {
-    //     position: absolute;
-    //     top: -20px;
-    //     width: 45%;
-    //     height: 40px;
-    //     background: #a0d6fc;
-    //     // background: url(../img/calsium-carbonate.jpg) no-repeat;
-    //     // background-size: cover;
-    //     // background-position: center 130px;
-    //     // background-attachment: fixed;
-    //     z-index: -1;
-    //     &.back-line1 {
-    //         left: 0;
-    //         transform: skew(60deg, -3deg);
-    //         border-top-right-radius: 25px;
-    //         &:after {
-    //             border-top-right-radius: 25px;
-    //         }
-    //     }
-    //     &.back-line2 {
-    //         right: 0;
-    //         transform: skew(-60deg, 3deg);
-    //         border-top-left-radius: 25px;
-    //         &:after {
-    //             border-top-left-radius: 25px;
-    //         }
-    //     }
-    //     &:after {
-    //         content: '';
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         width: 100%;
-    //         height: 100%;
-    //         background-color: rgba(0, 0, 0, 0.6);
-    //     }
-    // }
 }
 
 
@@ -821,6 +793,7 @@ ul {
 #advantages {
     padding: 50px 0;
     background-color: #fff;
+    display: none;
     .advantages-row {
         position: relative;
         top: 70px;
@@ -1084,17 +1057,16 @@ footer {
             a {
                 color: #fff;
                 font-size: 18px;
-                i {
-                    color: #54c227;
-                    margin-right: 8px;
-                    font-size: 15px;
-                }
             }
             &:not(:last-child) {
                 a {
                     font-size: 20px;
                     font-weight: 600;
                     line-height: 0;
+                    i {
+                        color: #54c227;
+                        margin-right: 8px;
+                    }
                 }
             }
         }

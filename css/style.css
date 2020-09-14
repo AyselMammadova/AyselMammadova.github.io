@@ -50,6 +50,7 @@ ul {
 
 /* first style */
 .first-body {
+  font-family: 'Proxima Nova', sans-serif !important;
   font-family: 'Futura', sans-serif !important;
   /* header style */
   /* main section */ }
@@ -66,10 +67,9 @@ ul {
       width: 100%;
       z-index: 100;
       background-color: #fff;
-      box-shadow: 0 2px 25px rgba(0, 0, 0, 0.05);
-      height: 100px; }
+      box-shadow: 0 2px 25px rgba(0, 0, 0, 0.05); }
       .first-body header.sticky .navbar-brand img {
-        width: 120px; }
+        width: 94px; }
       .first-body header.sticky #navbarMenu .nav-link {
         color: #000 !important; }
       .first-body header.sticky #navbarMenu .online-order {
@@ -184,6 +184,7 @@ ul {
 
 /* second style */
 .second-body {
+  font-family: 'Proxima Nova', sans-serif !important;
   font-family: 'Montserrat', sans-serif !important;
   /* main section */ }
   .second-body h1, .second-body h2, .second-body h3, .second-body h4, .second-body h5, .second-body h6 {
@@ -344,49 +345,59 @@ ul {
       margin-right: 29px; }
 
 /* about section */
-#about-company .about-info {
-  padding: 90px 100px 90px 0; }
-  #about-company .about-info h3 {
-    font-size: 36px;
-    margin-bottom: 15px; }
-  #about-company .about-info article {
-    font-size: 15px; }
-#about-company .about-svg-wrap {
-  margin: -12px 0 0 50px;
-  position: relative; }
-  #about-company .about-svg-wrap .hexagon-svg:nth-child(1) {
-    transform: rotate(-30deg) scaleY(0.93);
-    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.1));
-    z-index: 2; }
-  #about-company .about-svg-wrap .hexagon-svg:nth-child(2) {
-    position: absolute;
-    top: -6px;
-    left: -1px;
-    transform: scale(0.81) rotate(-30deg);
-    z-index: 3; }
-  #about-company .about-svg-wrap .hexagon-svg:nth-child(3) {
-    position: absolute;
-    left: 35.5%;
-    transform: rotate(30deg);
-    bottom: 11%;
-    opacity: .9;
-    z-index: 3; }
-  #about-company .about-svg-wrap .hexagon-svg:nth-child(4) {
-    position: absolute;
-    top: 19%;
-    left: -6.5%;
-    transform: scale(0.59) rotate(-30deg);
-    z-index: 1;
-    opacity: .7; }
+#about-company {
+  background: url("../img/back.png") no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 120px; }
+  #about-company .about-info {
+    padding: 90px 100px 90px 0; }
+    #about-company .about-info h3 {
+      font-size: 36px;
+      margin-bottom: 15px; }
+    #about-company .about-info article {
+      font-size: 15px; }
+  #about-company .about-svg-wrap {
+    margin: -12px 0 0 50px;
+    position: relative; }
+    #about-company .about-svg-wrap .hexagon-svg:nth-child(1) {
+      transform: rotate(-30deg) scaleY(0.93);
+      filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.1));
+      position: relative;
+      z-index: 2; }
+    #about-company .about-svg-wrap .hexagon-svg:nth-child(2) {
+      position: absolute;
+      top: -6px;
+      left: -1px;
+      transform: scale(0.81) rotate(-30deg);
+      z-index: 3; }
+    #about-company .about-svg-wrap .hexagon-svg:nth-child(3) {
+      position: absolute;
+      left: 35.5%;
+      transform: rotate(30deg);
+      bottom: 11%;
+      opacity: .9;
+      z-index: 3; }
+    #about-company .about-svg-wrap .hexagon-svg:nth-child(4) {
+      position: absolute;
+      top: 19%;
+      left: -6.5%;
+      transform: scale(0.59) rotate(-30deg);
+      z-index: 1;
+      opacity: .7; }
 
 /* statistics style */
 #statistics {
-  padding: 70px 0;
-  background: url("../img/calsium-carbonate.jpg") no-repeat;
+  padding: 114px 0 100px;
+  background: url("../img/statistic-background.jpg") no-repeat;
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
-  position: relative; }
+  position: relative;
+  top: -42px;
+  z-index: 1; }
   #statistics:after {
     content: '';
     position: absolute;
@@ -404,7 +415,7 @@ ul {
     position: relative;
     z-index: 10; }
     #statistics .statistic-box i {
-      color: #73b2d9;
+      color: #fee74e;
       font-size: 40px;
       margin-right: 40px; }
     #statistics .statistic-box .statistic {
@@ -425,7 +436,7 @@ ul {
         background-color: rgba(255, 255, 255, 0.4); }
       #statistics .statistic-box .statistic strong {
         font-size: 40px;
-        color: #73b2d9; }
+        color: #ffe72f; }
       #statistics .statistic-box .statistic span {
         color: #fff;
         padding: 5px 0; }
@@ -583,7 +594,8 @@ ul {
 /* advantages style */
 #advantages {
   padding: 50px 0;
-  background-color: #fff; }
+  background-color: #fff;
+  display: none; }
   #advantages .advantages-row {
     position: relative;
     top: 70px; }
@@ -783,14 +795,13 @@ footer {
       footer .info-contact li a {
         color: #fff;
         font-size: 18px; }
-        footer .info-contact li a i {
-          color: #54c227;
-          margin-right: 8px;
-          font-size: 15px; }
       footer .info-contact li:not(:last-child) a {
         font-size: 20px;
         font-weight: 600;
         line-height: 0; }
+        footer .info-contact li:not(:last-child) a i {
+          color: #54c227;
+          margin-right: 8px; }
   footer .copyright {
     padding: 30px 15px 0; }
     footer .copyright span {
