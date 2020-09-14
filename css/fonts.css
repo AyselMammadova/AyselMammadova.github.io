@@ -91,7 +91,7 @@
 @font-face{
     font-family:'Proxima Nova';
     src:url('../fonts/._ProximaNova-Regular.eot');
-    src:url('../fonts/._ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),url('../fonts/._ProximaNova-Regular.woff2') format('woff2'),url('../fonts/._ProximaNova-Regular.woff') format('woff'),url('../fonts/._ProximaNova-Regular.ttf') format('truetype'),url('../fonts/._ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    src:url('../fonts/._ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),url('../fonts/._ProximaNova-Regular.woff2') format('woff2'),url('../fonts/._ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
     font-weight:400;
     font-style:normal
 }
