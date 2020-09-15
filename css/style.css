@@ -350,8 +350,7 @@ ul {
   background-size: cover;
   background-position: center bottom;
   position: relative;
-  z-index: 2;
-  padding-bottom: 120px; }
+  z-index: 2; }
   #about-company .about-info {
     padding: 90px 100px 90px 0; }
     #about-company .about-info h3 {
@@ -375,9 +374,9 @@ ul {
       z-index: 3; }
     #about-company .about-svg-wrap .hexagon-svg:nth-child(3) {
       position: absolute;
-      left: 35.5%;
-      transform: rotate(30deg);
-      bottom: 11%;
+      left: 35.9%;
+      transform: rotate(30deg) scale(0.78) scaleY(1);
+      bottom: 11.3%;
       opacity: .9;
       z-index: 3; }
     #about-company .about-svg-wrap .hexagon-svg:nth-child(4) {
