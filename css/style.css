@@ -879,7 +879,12 @@ footer {
     footer .sosial-media-wrapper span {
       margin-top: 6px; }
   footer .contact-info {
-    margin-top: 40px; }
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    footer .contact-info address {
+      margin: 0; }
     footer .contact-info .phone-numbers {
       margin-top: 10px; }
       footer .contact-info .phone-numbers .nav-item {
