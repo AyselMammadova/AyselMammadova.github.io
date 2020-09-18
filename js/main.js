@@ -85,35 +85,35 @@ $(document).ready(function() {
     // nav and dot function
 
     
-    owl.on('changed.owl.carousel', function() {
-        fadeInRightReset();
-        fadeInReset();
-        fadeInRight();
-        fadeIn();
-    });
+    // owl.on('changed.owl.carousel', function() {
+    //     fadeInRightReset();
+    //     fadeInReset();
+    //     fadeInRight();
+    //     fadeIn();
+    // });
 
     $('#customDots .owl-dot').click(function () {
         owl.trigger('to.owl.carousel', [$(this).index(), 1000]);
-        fadeInRightReset();
-        fadeInReset();
-        fadeInRight();
-        fadeIn();
+        // fadeInRightReset();
+        // fadeInReset();
+        // fadeInRight();
+        // fadeIn();
     });
 
     $('#customNavs .owl-prev').click(function () {
         owl.trigger('prev.owl.carousel');
-        fadeInRightReset();
-        fadeInReset();
-        fadeInRight();
-        fadeIn();
+        // fadeInRightReset();
+        // fadeInReset();
+        // fadeInRight();
+        // fadeIn();
     });
 
     $('#customNavs .owl-next').click(function () {
         owl.trigger('next.owl.carousel');    
-        fadeInRightReset();
-        fadeInReset();
-        fadeInRight();
-        fadeIn();
+        // fadeInRightReset();
+        // fadeInReset();
+        // fadeInRight();
+        // fadeIn();
     });
     
     // stop autoplay and start
