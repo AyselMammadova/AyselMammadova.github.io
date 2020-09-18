@@ -1356,20 +1356,24 @@
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
+    visibility: hidden;
   }
 
   to {
     opacity: 1;
+    visibility: visible;
   }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
+    visibility: hidden;
   }
 
   to {
     opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -3372,9 +3376,9 @@
 
 @-webkit-keyframes slideInRight {
   from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
+    visibility: hidden;
   }
 
   to {
@@ -3385,9 +3389,9 @@
 
 @keyframes slideInRight {
   from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
+    -webkit-transform: translate3d(40%, 0, 0);
+    transform: translate3d(40%, 0, 0);
+    visibility: hidden;
   }
 
   to {

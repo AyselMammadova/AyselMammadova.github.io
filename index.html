@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="az">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azer Calci Company</title>
+    <title>Ivento</title>
     <!--Addition Styles-->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/hightlight.css">
@@ -16,537 +16,654 @@
     <!--Main Styles-->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="first-body">
-<!--header start-->
+<body>
+    <!--header start-->
     <header>
-        <nav class="navbar navbar-expand-lg px-0">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="#navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#"><img src="img/white-logo.png" alt="logo"></a>
+        <nav class="navbar navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="#navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="img/logo-white.png" alt="logo"></a>
 
-                <div class="collapse navbar-collapse ml-auto mr-0" id="navbarMenu">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Şirkət</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sertifikatlar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Tətbiq sahələri</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Məhsullar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Müştərilər</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Əlaqə</a>
-                        </li>
-                    </ul>
-                    <a href="#" type="button" class="btn online-order">Online sifariş</a>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown dropdown-menu-wrap">
+                        <div class="nav-icon"><img src="img/company.png" alt="nav-icon"></div>
+                        <a class="nav-link dropdown-toggle" href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Şirkət</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Haqqında</a>
+                            <a class="dropdown-item" href="#">Norma və standartlar</a>
+                            <a class="dropdown-item" href="#">Fəaliyyətin istiqaməti</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown dropdown-menu-wrap">
+                        <div class="nav-icon"><img src="img/product.png" alt="nav-icon"></div>
+                        <a class="nav-link dropdown-toggle" href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Məhsullar</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Məhsul 1</a>
+                            <a class="dropdown-item" href="#">Məhsul 2</a>
+                            <a class="dropdown-item" href="#">Məhsul 3</a>
+                            <a class="dropdown-item" href="#">Məhsul 4</a>
+                            <a class="dropdown-item" href="#">Məhsul 5</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown dropdown-menu-wrap">
+                        <div class="nav-icon"><img src="img/service.png" alt="nav-icon"></div>
+                        <a class="nav-link dropdown-toggle" href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Xidmətlər</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Xidmət 1</a>
+                            <a class="dropdown-item" href="#">Xidmət 2</a>
+                            <a class="dropdown-item" href="#">Xidmət 3</a>
+                            <a class="dropdown-item" href="#">Xidmət 4</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown dropdown-menu-wrap">
+                        <div class="nav-icon"><img src="img/project.png" alt="nav-icon"></div>
+                        <a class="nav-link dropdown-toggle" href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layihələr</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Layihə 1</a>
+                            <a class="dropdown-item" href="#">Layihə 2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-icon"><img src="img/contact.png" alt="nav-icon"></div>
+                        <a class="nav-link" href="#">Əlaqə</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right-side">
+                <button class="btn search-btn"><i class="fas fa-search"></i></button>
+                <a href="#" type="button" class="btn calc-btn">Kalkulyator</a>
             </div>
         </nav>
     </header>
-<!--header end-->
+    <!--header end-->
 
-<!--main section start-->
+    <!--main section start-->
     <section id="main">
-        <div id="mainCarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" style="background-image: url('img/slide1.jpg')">
-                    <div class="container">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1 class="animated bounceInLeft">Etibarlılıq Effektivlik Keyfiyyət</h1>
-                            <p class="animated bounceInRight">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa hic harum officia unde sapiente earum eaque delectus voluptate, quam alias in? Perspiciatis quo magni voluptatem quas, voluptatibus ab velit qui.</p>
-                        </div>
+        <div class="mainCarousel owl-carousel owl-theme">
+            <div class="item">
+                <img src="img/item1.jpg" alt="slide">
+                <div class="slide-text-wrapper">
+                    <div class="slide-text">
+                        <h1 class="fadeInRight-1">Lorem <br>ipsum1</h1>
+                        <p class="fadeInRight-2"><span>6,95 %</span>-dən</p>
+                        <a href="#" type="button" class="btn more-btn fadeIn-1">Ətraflı</a>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url('img/slide2.jpg')">
-                    <div class="container">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1 class="animated bounceInLeft">Boya Sənayesində İnnovativ Həll yolu</h1>
-                            <p class="animated bounceInRight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi accusantium cupiditate sint deserunt veritatis iste assumenda recusandae dolorem praesentium. Similique voluptas ipsa minus! Deleniti unde officia reiciendis recusandae labore tenetur.</p>
-                        </div>
+            </div>
+            <div class="item">
+                <img src="img/item2.jpg" alt="slide">
+                <div class="slide-text-wrapper">
+                    <div class="slide-text">
+                        <h1 class="fadeInRight-1">Lorem <br>ipsum2</h1>
+                        <p class="fadeInRight-2"><span>4,55 %</span>-dən</p>
+                        <a href="#" type="button" class="btn more-btn fadeIn-1">Ətraflı</a>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url('img/slide1.jpg')">
-                    <div class="container">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1 class="animated bounceInLeft">Boya İstehsalında Keyfiyyətli xammal</h1>
-                            <p class="animated bounceInRight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos distinctio provident repellat ad sint numquam quae placeat totam fuga, voluptatem, asperiores adipisci impedit ipsam magnam esse debitis? Quam, aperiam natus.</p>
-                        </div>
+            </div>
+            <div class="item">
+                <img src="img/item3.jpeg" alt="slide">
+                <div class="slide-text-wrapper">
+                    <div class="slide-text">
+                        <h1 class="fadeInRight-1">Lorem <br>ipsum3</h1>
+                        <p class="fadeInRight-2"><span>8,4 %</span>-dən</p>
+                        <a href="#" type="button" class="btn more-btn fadeIn-1">Ətraflı</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/item4.jpg" alt="slide">
+                <div class="slide-text-wrapper">
+                    <div class="slide-text">
+                        <h1 class="fadeInRight-1">Lorem <br>ipsum4</h1>
+                        <p class="fadeInRight-2"><span>12,7 %</span>-dən</p>
+                        <a href="#" type="button" class="btn more-btn fadeIn-1">Ətraflı</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="scroll-down">
-                <span>Aşağı sürüşdür</span>
-            </div>
-        </div>
-    </section>
-<!--main section end-->
-
-<!--about section start-->
-    <section id="about-company">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="about-info">
-                        <h3>Şirkət haqqında</h3>
-                        <article>
-                            <p>“Azer Calci Company” şirkəti 2003-cü ildən fəaliyyət göstərir və əsas fəaliyyət sahəsi boya , dolğu , plastik profil , plastik boru , kabel , şüşə və s. tipli məhsullarda istifadə olunan xammalların satışını həyata keçirir.</p>
-
-                            <p>Biz İİR-də fəaliyyət göstərən Poudrsazan Co və ArtinPowder kalsium karbonat istehsalçılarının Azərbaycandakı rəsmi distribütoruyuq.</p>
-
-                            <p>Şirkətimiz xammalların anbardan birbaşa satışı ilə yanaşı həmçinin sifarişlə ünvana pulsuz çatdırılmanı da həyata keçirir.</p>
-
-                            <p>“Azer Calci Company” şirkətinin Bakı şəhərində ofisi fəaliyyət göstərir və bütün suallarınızı cavablandıracaq mütəxəssislərimiz vardır.</p>
-
-                            <p>Biz müasir istehsalat prosesini keyfiyyətli xammalla təmin etməklə istehsalatı daha sürətli və effektiv edirik.</p>
-                        </article>
+        <div class="controls-wrapper">
+            <div id="customNavs">
+                <div class="owl-nav owl-prev"></div>
+                <div id="customDots">
+                    <div class="owl-dot">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="15" stroke-width="2"></circle>
+                            <circle cx="16" cy="16" r="15" stroke-width="2"></circle>
+                        </svg>
                     </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="about-svg-wrap">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="380" height="600" class="hexagon-svg">
-                            <path stroke="#ededef" fill="none" d="M171 18.320508075689a60 60 0 0 1 60 0l105.20508075689 65.358983848622a60 60 0 0 1 30 60.961524227066l0 300.71796769724a60 60 0 0 1 -30 60.961524227066l-105.20508075689 65.358983848622a60 60 0 0 1 -60 0l-105.20508075689 -65.358983848623a60 60 0 0 1 -30 -60.961524227066l2.0818925484178e-13 -300.71796769724a60 60 0 0 1 30 -60.961524227066 Z"></path>
+                    <div class="owl-dot">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="15" stroke-width="2"></circle>
+                            <circle cx="16" cy="16" r="15" stroke-width="2"></circle>
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="402" height="600" class="hexagon-svg">
-                            <defs>
-                                <pattern id="pattern" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-                                    <image height="1" width="1" preserveAspectRatio="none" xlink:href="img/svg-calsium.png" />
-                                </pattern>
-                            </defs>
-                            <path stroke="none" fill="url(#pattern)" d="M171 18.320508075689a60 60 0 0 1 60 0l105.20508075689 65.358983848622a60 60 0 0 1 30 60.961524227066l0 300.71796769724a60 60 0 0 1 -30 60.961524227066l-105.20508075689 65.358983848622a60 60 0 0 1 -60 0l-105.20508075689 -65.358983848623a60 60 0 0 1 -30 -60.961524227066l2.0818925484178e-13 -300.71796769724a60 60 0 0 1 30 -60.961524227066"></path>
+                    </div>
+                    <div class="owl-dot">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="15" stroke-width="2"></circle>
+                            <circle cx="16" cy="16" r="15" stroke-width="2"></circle>
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="300" height="238" class="hexagon-svg">
-                            <path stroke="none" fill="rgba(255, 255, 255, .9)" d="M94 13.433756729741a50 50 0 0 1 50 0l53.923048454133 31.132486540519a50 50 0 0 1 25 43.301270189222l0 62.264973081037a50 50 0 0 1 -25 43.301270189222l-55.923048454133 37.132486540519a50 50 0 0 1 -50 2l-55.923048454133 -35.132486540519a50 50 0 0 1 -25 -43.301270189222l0 -62.264973081037a50 50 0 0 1 25 -43.301270189222"></path>
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="350" height="600" class="hexagon-svg">
-                            <path stroke="none" fill="#f3f3f3" d="M171 18.320508075689a60 60 0 0 1 60 0l105.20508075689 65.358983848622a60 60 0 0 1 30 60.961524227066l0 300.71796769724a60 60 0 0 1 -30 60.961524227066l-105.20508075689 65.358983848622a60 60 0 0 1 -60 0l-105.20508075689 -65.358983848623a60 60 0 0 1 -30 -60.961524227066l2.0818925484178e-13 -300.71796769724a60 60 0 0 1 30 -60.961524227066"></path>
+                    </div>
+                    <div class="owl-dot">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="15" stroke-width="2"></circle>
+                            <circle cx="16" cy="16" r="15" stroke-width="2"></circle>
                         </svg>
                     </div>
                 </div>
+                <div class="owl-nav owl-next"></div>
             </div>
         </div>
     </section>
-<!--about section end-->
+    <!--main section end-->
 
-<!--statistics section start-->
-    <section id="statistics">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-md-3">
-                    <div class="statistic-box">
-                        <i class="far fa-compass"></i>
-                        <div class="statistic">
-                            <strong>17</strong> 
-                            <span>illik fəaliyyət</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="statistic-box">
-                        <i class="far fa-bookmark"></i>
-                        <div class="statistic">
-                            <strong>5</strong> 
-                            <span>rəsmi sertifikat</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="statistic-box">
-                        <i class="fas fa-retweet"></i>
-                        <div class="statistic">
-                            <strong>5000</strong> 
-                            <span>ton aylıq tədarük</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="statistic-box">
-                        <i class="far fa-handshake"></i>
-                        <div class="statistic">
-                            <strong>120</strong> 
-                            <span>etibarlı tərəfdaş</span>
-                        </div>
-                    </div>
-                </div>            
-            </div>
-        </div>
-    </section>
-<!--statistics section end-->
-
-<!--areas of use section start-->
-    <section id="areas-use">
-        <div class="container">
-            <h3>Tətbiq sahələri</h3>
-            <div class="areas-boxes">
-                <div class="box">
-                    <a href="#">
-                        <img src="img/area-1.jpg" alt="area-use">
-                        <h6>Tökmə</h6>
-                        <span>Ətraflı</span>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="#">
-                        <img src="img/plastik.jpg" alt="area-use">
-                        <h6>Plastik</h6>
-                        <span>Ətraflı</span>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="#">
-                        <img src="img/yapisdirici.jpg" alt="area-use">
-                        <h6>Yapıştırıcılar</h6>
-                        <span>Ətraflı</span>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="#">
-                        <img src="img/kend-teserrufati.jpg" alt="area-use">
-                        <h6>Kənd Təsərrüfatı</h6>
-                        <span>Ətraflı</span>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="#">
-                        <img src="img/area-5.jpg" alt="area-use">
-                        <h6>Qazma</h6>
-                        <span>Ətraflı</span>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="#">
-                        <img src="img/area-6.jpg" alt="area-use">
-                        <h6>Şüşə emalı</h6>
-                        <span>Ətraflı</span>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="#">
-                        <img src="img/area-7.jpg" alt="area-use">
-                        <h6>Dolğu</h6>
-                        <span>Ətraflı</span>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="#">
-                        <img src="img/kaucuk.jpg" alt="area-use">
-                        <h6>Kauçuk</h6>
-                        <span>Ətraflı</span>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="#">
-                        <img src="img/area-9.jpg" alt="area-use">
-                        <h6>Əkinçilik</h6>
-                        <span>Ətraflı</span>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="#">
-                        <img src="img/area-10.jpg" alt="area-use">
-                        <h6>Gübrə</h6>
-                        <span>Ətraflı</span>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="#">
-                        <img src="img/tibbi.png" alt="area-use">
-                        <h6>Tibbi</h6>
-                        <span>Ətraflı</span>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="#">
-                        <img src="img/istehlak.jpg" alt="area-use">
-                        <h6>İstehlak</h6>
-                        <span>Ətraflı</span>
-                    </a>
-                </div>
-            </div>  
-        </div>
-    </section>
-<!--areas of use section end-->
-
-
-<!--products section start-->
-    <section id="products">
-        <div class="container">
-            <div class="title-row">
-                <h3>Məhsullar</h3>
-                <p class="see-more">
-                    <a href="#">Bütün məhsullara bax</a>
-                </p>
-            </div>
-            <div class="products-carousel owl-carousel owl-theme">
-                <div class="item">
-                    <a href="#">
-                        <div class="img-wrap">
-                            <img src="img/qirmizi.jpg" alt="item">
-                        </div>
-                        <span class="title">Red Iron Oxide</span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <div class="img-wrap">
-                            <img src="img/boz.png" alt="item">
-                        </div>
-                        <span class="title">White Crystal Barite</span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <div class="img-wrap">
-                            <img src="img/goy.png" alt="item">
-                        </div>
-                        <span class="title">Calcium Carbonate</span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <div class="img-wrap">
-                            <img src="img/sari.png" alt="item">
-                        </div>
-                        <span class="title">Coated Calcium Carbonate</span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <div class="img-wrap">
-                            <img src="img/qirmizi.jpg" alt="item">
-                        </div>
-                        <span class="title">Yellow Iron Oxide</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-<!--products section end-->
-
-
-
-<!--advantages section start-->
+    <!--advantages section start-->
     <section id="advantages">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="advantages-row">
-                    <button class="btn">Üstünlüklərimiz</button>
+            <div class="advantageCarousel owl-carousel owl-theme">
+                <div class="item">
+                    <a href="#">
+                        <div class="img-wrap">
+                            <img src="img/lorry.gif" alt="advantage">
+                            <svg viewBox="0 0 100 100"><circle cx="50" cy="39" r="38"></circle></svg>
+                        </div>
+                        <h6>Pulsuz çatdırılma</h6>
+                    </a>
                 </div>
-                <div class="advantages-wrap">
-                    <div class="advantages-info">
-                        <div class="info-box">
-                            <img src="img/all-time.png" alt="icon">
-                            <span class="icon-box"><span>01</span></span>
-                            <h6>Daimi Xammal <br>Ehtiyatı</h6>
+                <div class="item">
+                    <a href="#">
+                        <div class="img-wrap">
+                            <img src="img/ventilation.jpg" alt="advantage">
+                            <svg viewBox="0 0 100 100"><circle cx="50" cy="39" r="38"></circle></svg>
                         </div>
-                        <div class="info-box">
-                            <img src="img/quality.png" alt="icon">
-                            <span class="icon-box"><span>02</span></span>
-                            <h6>Xammalın Keyfiyyətinə <br>Nəzarət</h6>
+                        <h6>Havalandırma</h6>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="img-wrap">
+                            <img src="img/air-conditioning.jpg" alt="advantage">
+                            <svg viewBox="0 0 100 100"><circle cx="50" cy="39" r="38"></circle></svg>
                         </div>
-                        <div class="info-box">
-                            <img src="img/in-touch.png" alt="icon">
-                            <span class="icon-box"><span>03</span></span>
-                            <h6>Müştərilərlə Daima <br>Əlaqə</h6>
+                        <h6>Kondisionerləşdirmə</h6>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="img-wrap">
+                            <img src="img/fast-service.jpg" alt="advantage">
+                            <svg viewBox="0 0 100 100"><circle cx="50" cy="39" r="38"></circle></svg>
                         </div>
-                        <div class="info-box">
-                            <img src="img/support.png" alt="icon">
-                            <span class="icon-box"><span>04</span></span>
-                            <h6>İstehsalata <br>Dəstək</h6>
+                        <h6>Ən sürətli xidmət</h6>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="img-wrap">
+                            <img src="img/lorry.gif" alt="advantage">
+                            <svg viewBox="0 0 100 100"><circle cx="50" cy="39" r="38"></circle></svg>
                         </div>
+                        <h6>Pulsuz çatdırılma</h6>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="img-wrap">
+                            <img src="img/ventilation.jpg" alt="advantage">
+                            <svg viewBox="0 0 100 100"><circle cx="50" cy="39" r="38"></circle></svg>
+                        </div>
+                        <h6>Havalandırma</h6>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="img-wrap">
+                            <img src="img/air-conditioning.jpg" alt="advantage">
+                            <svg viewBox="0 0 100 100"><circle cx="50" cy="39" r="38"></circle></svg>
+                        </div>
+                        <h6>Kondisionerləşdirmə</h6>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="img-wrap">
+                            <img src="img/fast-service.jpg" alt="advantage">
+                            <svg viewBox="0 0 100 100"><circle cx="50" cy="39" r="38"></circle></svg>
+                        </div>
+                        <h6>Ən sürətli xidmət</h6>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="img-wrap">
+                            <img src="img/lorry.gif" alt="advantage">
+                            <svg viewBox="0 0 100 100"><circle cx="50" cy="39" r="38"></circle></svg>
+                        </div>
+                        <h6>Pulsuz çatdırılma</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--advantages section end-->
+
+    <!--products section start-->
+    <section id="products">
+        <div class="row mx-0">
+            <div class="col-md-3 px-0">
+                <div class="left-side">
+                    <h6>Məhsullar</h6>
+                    <div class="all-category-wrapper animated">
+                        <img src="img/white-apartment.jpg" alt="all-category">
+                        <a href="#" type="button" class="link-btn"></a>
+                        <div class="text-wrap">
+                            <h2>Kateqoriyalar</h2>
+                            <p>Ipsam tempore placeat veniam voluptatibus at perspiciatis cupiditate explicabo voluptatem, pariatur fuga distinctio inventore temporibus laborum totam facilis reiciendis ipsa, illo sed.</p>
+                            <a href="#" type="button" class="btn more-btn">Kateqoriyalara bax</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9 px-0">
+                <div class="right-side">
+                    <div class="product-wrapper">
+                        <div class="product-wrap">
+                            <a href="#">
+                                <div class="product-advantage free-installation">
+                                    <img src="img/setting.png" alt="product-advantage">
+                                    <span>Pulsuz quraşdırma</span>
+                                </div>
+                                <div class="img-wrap">
+                                    <img src="img/product1.jpg" alt="product">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <a href="#"><h5>Kondisioner</h5></a>
+                            <div class="price-wrapper">
+                                <span class="new-price">400 <i class="azn">₼</i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-wrapper discounted-product">
+                        <div class="product-wrap">
+                            <a href="#">
+                                <div class="product-advantage free-installation">
+                                    <img src="img/setting.png" alt="product-advantage">
+                                    <span>Pulsuz quraşdırma</span>
+                                </div>
+                                <div class="img-wrap">
+                                    <img src="img/product2.jpg" alt="product">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <a href="#"><h5>Havalandırma</h5></a>
+                            <div class="price-wrapper">
+                                <span class="new-price">550 <i class="azn">₼</i></span>
+                                <span class="old-price">645 <i class="azn">₼</i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-wrapper discounted-product">
+                        <div class="product-wrap">
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src="img/product1.jpg" alt="product">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <a href="#"><h5>Kondisioner</h5></a>
+                            <div class="price-wrapper">
+                                <span class="new-price">600 <i class="azn">₼</i></span>
+                                <span class="old-price">699 <i class="azn">₼</i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-wrapper">
+                        <div class="product-wrap">
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src="img/product2.jpg" alt="product">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <a href="#"><h5>Havalandırma</h5></a>
+                            <div class="price-wrapper">
+                                <span class="new-price">700 <i class="azn">₼</i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-wrapper">
+                        <div class="product-wrap">
+                            <a href="#">
+                                <div class="product-advantage self-clean">
+                                    <img src="img/water.png" alt="product-advantage">
+                                    <span>Self Clean</span>
+                                </div>
+                                <div class="img-wrap">
+                                    <img src="img/product1.jpg" alt="product">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <a href="#"><h5>Kondisioner</h5></a>
+                            <div class="price-wrapper">
+                                <span class="new-price">799 <i class="azn">₼</i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-wrapper discounted-product">
+                        <div class="product-wrap">
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src="img/product2.jpg" alt="product">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <a href="#"><h5>Havalandırma</h5></a>
+                            <div class="price-wrapper">
+                                <span class="new-price">530 <i class="azn">₼</i></span>
+                                <span class="old-price">570 <i class="azn">₼</i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-wrapper discounted-product">
+                        <div class="product-wrap">
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src="img/product1.jpg" alt="product">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <a href="#"><h5>Kondisioner</h5></a>
+                            <div class="price-wrapper">
+                                <span class="new-price">300 <i class="azn">₼</i></span>
+                                <span class="old-price">369 <i class="azn">₼</i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-wrapper">
+                        <div class="product-wrap">
+                            <a href="#">
+                                <div class="img-wrap">
+                                    <img src="img/product2.jpg" alt="product">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <a href="#"><h5>Havalandırma</h5></a>
+                            <div class="price-wrapper">
+                                <span class="new-price">1000 <i class="azn">₼</i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-products">
+                        <a href="#" type="button" class="btn more-products-btn">Bütün məhsullar</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-<!--advantages section end-->
+    <!--products section end-->
 
-
-<!--references section start-->
-    <section id="references">
+    <!--services section start-->
+    <section id="services">
         <div class="container">
-            <h3>Referanslar</h3>
-            <div class="row justify-content-center">
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/corella-logo.png" alt="reference">
-                    </div>
+            <div class="services-wrapper">
+                <h6>Xidmətlər</h6>
+                <div class="service">
+                    <a href="#">
+                        <img src="img/service1.jpg" alt="service" class="background-img">
+                        <div class="service-info">
+                            <img src="img/airConditioner.png" alt="service-icon">
+                            <h4>İsitmə-soyutma</h4>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/dyo-logo.png" alt="reference">
-                    </div>
+                <div class="service">
+                    <a href="#">
+                        <img src="img/service2.jpg" alt="service" class="background-img">
+                        <div class="service-info">
+                            <img src="img/duct.png" alt="service-icon">
+                            <h4>Hava kəmərinin hazırlanması</h4>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/sobsan-logo.png" alt="reference">
-                    </div>
+                <div class="service">
+                    <a href="#">
+                        <img src="img/service2.jpg" alt="service" class="background-img">
+                        <div class="service-info">
+                            <img src="img/duct.png" alt="service-icon">
+                            <h4>Hava kəmərinin montajı və quraşdırılması</h4>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/erco-logo.png" alt="reference">
-                    </div>
+                <div class="service">
+                    <a href="#">
+                        <img src="img/service1.jpg" alt="service" class="background-img">
+                        <div class="service-info">
+                            <img src="img/airConditioner.png" alt="service-icon">
+                            <h4>Bütün növ split və multi split, VRF- kondisioner sistemlərinin, layihələndirilməsi, quraşdırılması və zəmanətli təmiri</h4>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/muflon-logo.jpg" alt="reference">
-                    </div>
+                <div class="service">
+                    <a href="#">
+                        <img src="img/service1.jpg" alt="service" class="background-img">
+                        <div class="service-info">
+                            <img src="img/airConditioner.png" alt="service-icon">
+                            <h4>Mərkəzi kondisionerlərin (AHU) layihələndirilməsi və quraşdırılması</h4>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/nb-logo.png" alt="reference">
-                    </div>
+                <div class="service">
+                    <a href="#">
+                        <img src="img/service1.jpg" alt="service" class="background-img">
+                        <div class="service-info">
+                            <img src="img/airConditioner.png" alt="service-icon">
+                            <h4>İsti döşəmə sistemlərinin layihələndirilməsi və quraşdırılması</h4>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/cmt-logo.png" alt="reference">
-                    </div>
+                <div class="service">
+                    <a href="#">
+                        <img src="img/service1.jpg" alt="service" class="background-img">
+                        <div class="service-info">
+                            <img src="img/airConditioner.png" alt="service-icon">
+                            <h4>Qazanxana - isti su təchizatı sistemlərinin layihələndirilməsi və quraşdırılması</h4>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/bilfa-logo.png" alt="reference">
-                    </div>
+                <div class="service">
+                    <a href="#">
+                        <img src="img/service1.jpg" alt="service" class="background-img">
+                        <div class="service-info">
+                            <img src="img/airConditioner.png" alt="service-icon">
+                            <h4>Daxili su kanalzasiya sistemlərinin layihələndirilməsi və quraşdırılması</h4>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/bermuda-logo.png" alt="reference">
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/basf-logo.png" alt="reference">
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/azpol-logo.jpg" alt="reference">
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/amass-logo.jpeg" alt="reference">
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/tarsa-logo.png" alt="reference">
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="ref-box">
-                        <img src="img/polymart-logo.png" alt="reference">
-                    </div>
+                <div class="service">
+                    <a href="#">
+                        <img src="img/service1.jpg" alt="service" class="background-img">
+                        <div class="service-info">
+                            <img src="img/airConditioner.png" alt="service-icon">
+                            <h4>Yüksək keyfiyyətli servis xidməti</h4>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-<!--references section end-->
+    <!--services section end-->
 
-<!--whatsapp section start-->
-    <section id="whatsapp-wrapper">
+    <!--about section start-->
+    <section id="about">
         <div class="container">
-            <div class="whatsapp-wrap">
-                <div class="row align-items-center">
-                    <div class="col-md-1">
-                        <i class="fab fa-whatsapp"></i>
+            <div class="about-info">
+                <h2>Şirkət haqqında</h2>
+                <article>İVENTO (Məhdud  Məsuliyyətli  Cəmiyyət)  müasir  bina  və  tikililər  üçün  mühəndis  məsələlərinin  peşakarcasına  yerinə  yetirilməsi  sahəsində  aparıcı  şirkətdir. 
+                Şirkət  2001-ci  ildə  bu  sahədə  böyük  təcrübəyə  malik  olan   Direktor  İlqar  Qədim  tərəfindən  yaradılmışdır. 
+                Göstərdiyi  tam  dövriyyəli  xidmət  və  yüksək  keyfiyyətli  işi  sayəsində  şirkət  tezliklə  müştərilərin  etimadını  qazanaraq,  iqlim  texnikası  sahəsində  qabaqcıl  yeri  tutdu.
+                Hal – hazırda   İVENTO  kondisionerləşmə və havalandırma   texnikası  sahəsindəki  məşhur  brendlərin   təmsilçisidir  və  bu  istiqamətdə  geniş  çesidli  texnikanın  tədarükünü  təmin  edir.
+                </article>
+                <a href="#" type="button" class="btn more-info-btn">Daha çox məlumat</a>
+            </div>
+        </div>
+    </section>
+    <!--about section end-->
+    
+    <!--partners section start-->
+    <section id="partners">
+        <div class="container">
+            <div class="row justify-content-center partners-wrapper">
+                <h6>Tərəfdaşlar</h6>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/istec.png" alt="partner">
                     </div>
-                    <div class="col-md-8">
-                        <p>Sualınız var?</p>
-                        <p>Bir kliklə whatsapp-a yazın, dərhal yardımçı olaq</p>
+                </div>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/sfv.png" alt="partner">
                     </div>
-                    <div class="col-md-3">
-                        <a target="_blank" type="button" class="wp-contact" href="https://api.whatsapp.com/send?phone=994555050511&amp;text=Salam,sizə azcalci.com saytından yazıram. ">WHATSAPP-A YAZ</a>
+                </div>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/istec.png" alt="partner">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/sfv.png" alt="partner">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/istec.png" alt="partner">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/sfv.png" alt="partner">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/istec.png" alt="partner">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/sfv.png" alt="partner">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/istec.png" alt="partner">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/sfv.png" alt="partner">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/istec.png" alt="partner">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/sfv.png" alt="partner">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/istec.png" alt="partner">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="partner-box">
+                        <img src="img/sfv.png" alt="partner">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-<!--whatsapp section end-->
+    <!--partners section end-->
 
-<!--footer start-->
+    <!--footer start-->
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-2">
-                    <a href="#" class="logo-footer"><img src="img/footer-logo.png" alt="logo"></a>
-                    <a href="#" type="button" class="online-order">Online sifariş</a>
-                </div>
-                <div class="col-lg-7 footer-menu">
-                    <div class="row">
-                        <ul class="nav flex-column col-lg-4">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Şirkət haqqında</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Sertifikatlar</a>
-                            </li>
-                        </ul>
-                        <ul class="nav flex-column col-lg-4">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Tətbiq sahələri</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Məhsullar</a>
-                            </li>
-                        </ul>
-                        <ul class="nav flex-column col-lg-4">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Müştərilər</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Bizimlə əlaqə</a>
-                            </li>
-                        </ul>
+            <div class="row justify-content-between align-items-center">
+                <span>
+                    Copyright © 2020 "İvento" MMC.<br>
+                    (isitmə-soyutma və havalandırma sistemləri)
+                </span>
+                <div class="sosial-media-wrapper">
+                    <div class="social-media">
+                        <div class="social-icon">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="social-icon">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="social-icon">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div class="social-icon">
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
+                    <span>Sosial mediada izlə</span>
                 </div>
-                <div class="col-lg-3">
-                    <ul class="social-medias">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    </ul>  
-                    <ul class="info-contact">
-                        <li>
-                            <a href="tel:+994555050511">
-                                <i class="fas fa-phone-alt"></i>
-                                (+99455) 505 05 11
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:+994125650511">
-                                <i class="fas fa-phone-alt"></i>
-                                (+99412) 565 05 11
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:office@azcalci.com">
-                                office@azcalci.com
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row justify-content-between copyright">
-                <span>Copyright © 2020 Azer Calci Company.</span>
-                <span>Site by 
+                <span class="siteBy">Site by 
                     <a href="https://okmedia.az" target="_blank">
                         <img src="img/okmedia-logo.png" alt="okmedia-logo">
                     </a>
                 </span>
             </div>
+            <div class="row justify-content-center align-items-center">
+                <div class="contact-info">
+                    <address>Ünvan: Əliyar Əliyev, 129C, Bakı, Nərimanov, AZ1052</address>
+                    <ul class="nav phone-numbers">
+                        <li class="nav-item">
+                            <a class="nav-link" href="tel:+994553102185">(+99455) 310-21-85</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tel:+994125642185">(+99412) 564-21-85</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
-<!--footer end-->
+    <!--footer end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -567,11 +684,23 @@
 
     <!-- Additional Scripts-->
     <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
     <script src="js/fontawesome.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- Main Scripts-->
     <script src="js/main.js"></script>
+    <script>
+    $(document).ready(function () {
+        $(window).scroll(function() {    
+            var products = $('#products').offset().top;
+    
+            if (products - ($(window).scrollTop()+$(window).height()) < 0) {
+                $('#products .all-category-wrapper').addClass('zoomIn');
+            } 
+        }); 
+    });
+    </script>
 </body>
 </html>
