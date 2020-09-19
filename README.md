@@ -1,1 +1,0 @@
-# AyselMammadova.github.io
