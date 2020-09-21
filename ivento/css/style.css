@@ -505,7 +505,7 @@ header {
     -moz-border-top-left-radius: 15px;
     border-top-left-radius: 15px;
     background-color: #fff;
-    padding: 112px 12.5% 112px 17.7%;
+    padding: 10px 12.5% 50px 17.7%;
     position: relative;
     z-index: 1;
     display: flex;
@@ -566,8 +566,6 @@ header {
       #products .right-side .product-wrapper .product-info .price-wrapper .new-price {
         font-size: 24px;
         font-weight: 700; }
-      #products .right-side .product-wrapper.discounted-product .product-wrap {
-        background-color: #fecdd3; }
       #products .right-side .product-wrapper.discounted-product .price-wrapper {
         display: flex;
         align-items: center; }
@@ -695,6 +693,7 @@ header {
 #about {
   background: url("../img/about.jpg") no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   padding: 90px 0;
   color: #fff;
   position: relative; }
@@ -716,7 +715,7 @@ header {
       line-height: 1.5;
       margin-bottom: 30px; }
     #about .about-info article {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 2;
       margin-bottom: 15px; }
 

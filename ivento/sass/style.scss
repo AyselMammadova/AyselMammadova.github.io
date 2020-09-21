@@ -632,7 +632,7 @@ header {
         -moz-border-top-left-radius: 15px;
         border-top-left-radius: 15px;
         background-color: #fff;
-        padding: 112px 12.5% 112px 17.7%;
+        padding: 10px 12.5% 50px 17.7%;
         position: relative;
         z-index: 1;
         display: flex;
@@ -717,9 +717,6 @@ header {
                 }
             }
             &.discounted-product {
-                .product-wrap {
-                    background-color: #fecdd3;
-                }
                 .price-wrapper {
                     display: flex;
                     align-items: center;
@@ -872,6 +869,7 @@ header {
 #about {
     background: url('../img/about.jpg') no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     padding: 90px 0;
     color: #fff;
     position: relative;
@@ -895,7 +893,7 @@ header {
             margin-bottom: 30px;
         }
         article {
-            font-size: 14px;
+            font-size: 16px;
             line-height: 2;
             margin-bottom: 15px;
         }
