@@ -47,9 +47,6 @@ a {
     -moz-transition: all .25s ease-in-out;
     -o-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,6 +242,11 @@ header {
                             font-size: 50px;
                             font-weight: 500;
                         }
+                    }
+                    .more-btn {
+                        -webkit-border-radius: 8px;
+                        -moz-border-radius: 8px;
+                        border-radius: 8px;
                     }
                 }
             }
@@ -744,6 +746,11 @@ header {
             align-items: center;
             width: 100%;
             margin-top: 30px;
+            .more-products-btn {
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+            }
         }
     }
 }
@@ -900,6 +907,12 @@ header {
         article {
             font-size: 14px;
             line-height: 2;
+        }
+        .more-info-btn {
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
+            margin-top: 15px;
         }
     }
 }
