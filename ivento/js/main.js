@@ -23,42 +23,26 @@ $(document).ready(function() {
         else header.removeClass('sticky');
     });
 
+
     //main carousel
-
-    // slide caption animate 
-    var owl = $('.mainCarousel');
-    function fadeInReset() {
-		$('.mainCarousel .slide-text .fadeIn-1').stop().delay(800).animate({ opacity: 0 }, { duration: 400, easing: "easeInCubic" });
-    }
     
-    function fadeInRightReset() {
-        $('.mainCarousel .slide-text .fadeInRight-1, .mainCarousel .slide-text .fadeInRight-2').stop().delay(800).animate({ opacity: 0, left: "-15px" }, { duration: 400, easing: "easeInCubic" });
-	}
-	
-	function fadeIn() {
-		$('.mainCarousel .owl-item.active .slide-text .fadeIn-1').stop().delay(500).animate({ opacity: 1 }, { duration: 800, easing: "easeOutCubic" });
-    }
-
-    function fadeInRight() {
-		$('.mainCarousel .owl-item.active .slide-text .fadeInRight-1').stop().delay(500).animate({ opacity: 1, left: "0" }, { duration: 800, easing: "easeOutCubic" });
-		$('.mainCarousel .owl-item.active .slide-text .fadeInRight-2').stop().delay(700).animate({ opacity: 1, left: "0" }, { duration: 800, easing: "easeOutCubic" });
-	}
-    $('.mainCarousel').owlCarousel({
+    $('.mainCarousel').owlCarousel({ 
         loop: true,
         lazyLoad:true,
         mouseDrag: false,
         autoplay: true,
         autoplayTimeout: 5000,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 2000,
         dotsEach: true,
         dots: true,
         dotsContainer: '#customDots',
         nav: true,
         navContainer: '#customNavs',
-        navSpeed: 500,
-        smartSpeed: 500,
+        navSpeed: 2000,
+        smartSpeed: 2000,
         items: 1	
     });
+
 
     //advantages carousel
     $('.advantageCarousel').owlCarousel({
@@ -75,46 +59,48 @@ $(document).ready(function() {
         items: 8
     });
 
+
     // remove old nav
 
     $('#customNavs').find('button').remove();
-   
 
+
+    // animate main slide caption
+   
+    var owl = $('.mainCarousel');
     
+    $(".mainCarousel .owl-item.active h1").addClass('animated fadeInRight delay-1s faster');
+    $(".mainCarousel .owl-item.active p").addClass('animated fadeInRight delay-1-5s faster');
+    $(".mainCarousel .owl-item.active .custom-btn").addClass('animated fadeIn delay-2s faster');
+    
+    owl.on('change.owl.carousel', function(event) {
+            
+        var item = event.item.index-1;
+    
+        $('.mainCarousel h1').removeClass('animated fadeInRight delay-1s faster');
+        $('.mainCarousel p').removeClass('animated fadeInRight delay-1-5s faster');
+        $('.mainCarousel .custom-btn').removeClass('animated fadeIn delay-2s faster');
+        
+        $('.mainCarousel .owl-item').not('.cloned').eq(item).find('h1').addClass('animated fadeInRight delay-1s faster');
+        $('.mainCarousel .owl-item').not('.cloned').eq(item).find('p').addClass('animated fadeInRight delay-1-5s faster');
+        $('.mainCarousel .owl-item').not('.cloned').eq(item).find('.custom-btn').addClass('animated fadeIn delay-2s faster');          
+    });
+
 
     // nav and dot function
 
-    
-    // owl.on('changed.owl.carousel', function() {
-    //     fadeInRightReset();
-    //     fadeInReset();
-    //     fadeInRight();
-    //     fadeIn();
-    // });
-
     $('#customDots .owl-dot').click(function () {
-        owl.trigger('to.owl.carousel', [$(this).index(), 1000]);
-        // fadeInRightReset();
-        // fadeInReset();
-        // fadeInRight();
-        // fadeIn();
+        owl.trigger('to.owl.carousel', [$(this).index(), 2000]);
     });
 
     $('#customNavs .owl-prev').click(function () {
         owl.trigger('prev.owl.carousel');
-        // fadeInRightReset();
-        // fadeInReset();
-        // fadeInRight();
-        // fadeIn();
     });
 
     $('#customNavs .owl-next').click(function () {
         owl.trigger('next.owl.carousel');    
-        // fadeInRightReset();
-        // fadeInReset();
-        // fadeInRight();
-        // fadeIn();
     });
+
     
     // stop autoplay and start
 

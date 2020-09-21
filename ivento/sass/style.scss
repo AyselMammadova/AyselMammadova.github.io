@@ -43,6 +43,9 @@ a {
     -webkit-box-shadow: 0 20px 30px -18px #22b0f3;
     -moz-box-shadow: 0 20px 30px -18px #22b0f3;
     box-shadow: 0 20px 30px -18px #22b0f3;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
     -webkit-transition: all .25s ease-in-out;
     -moz-transition: all .25s ease-in-out;
     -o-transition: all .25s ease-in-out;
@@ -72,10 +75,10 @@ a {
             position: relative;
             top: -3px;
             left: 2px;
-            -webkit-transition: transform 500ms ease-in-out 0s;
-            -moz-transition: transform 500ms ease-in-out 0s;
-            -o-transition: transform 500ms ease-in-out 0s;
-            transition: transform 500ms ease-in-out 0s;
+            -webkit-transition: transform 400ms ease-in-out 0s;
+            -moz-transition: transform 400ms ease-in-out 0s;
+            -o-transition: transform 400ms ease-in-out 0s;
+            transition: transform 400ms ease-in-out 0s;
         }
     }
     .dropdown-menu {
@@ -96,10 +99,10 @@ a {
         -webkit-transform-origin: top;
         -ms-transform-origin: top;
         transform-origin: top;
-        -webkit-transition: all 400ms ease-in-out 0s;
-        -moz-transition: all 400ms ease-in-out 0s;
-        -o-transition: all 400ms ease-in-out 0s;
-        transition: all 400ms ease-in-out 0s;
+        -webkit-transition: all 300ms ease-in-out 0s;
+        -moz-transition: all 300ms ease-in-out 0s;
+        -o-transition: all 300ms ease-in-out 0s;
+        transition: all 300ms ease-in-out 0s;
         .dropdown-item {
             -webkit-transition: 400ms background ease;
             -moz-transition: 400ms background ease;
@@ -189,9 +192,6 @@ header {
             .calc-btn {
                 background-color: #fcde4b;
                 padding: 8px 40px;
-                -webkit-border-radius: 8px;
-                -moz-border-radius: 8px;
-                border-radius: 8px;
                 &:hover {
                     background-color: #e2bd03;
                 }
@@ -221,7 +221,7 @@ header {
                 padding: 0 0 50px 140px;
                 width: 45%;
                 height: 100%;
-                background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, .9) 90%, rgba(0, 0, 0, 0) 100%);
+                background-image: linear-gradient(to right, #fff 20%, #fff 20%, rgba(255, 255, 255, 0.9) 60%, rgba(0, 0, 0, 0) 100%);
                 filter: drop-shadow(80px 80px 80px rgba(255, 255, 255, 0.99));
                 display: flex;
                 flex-wrap: wrap;
@@ -242,11 +242,6 @@ header {
                             font-size: 50px;
                             font-weight: 500;
                         }
-                    }
-                    .more-btn {
-                        -webkit-border-radius: 8px;
-                        -moz-border-radius: 8px;
-                        border-radius: 8px;
                     }
                 }
             }
@@ -746,11 +741,6 @@ header {
             align-items: center;
             width: 100%;
             margin-top: 30px;
-            .more-products-btn {
-                -webkit-border-radius: 8px;
-                -moz-border-radius: 8px;
-                border-radius: 8px;
-            }
         }
     }
 }
@@ -907,12 +897,7 @@ header {
         article {
             font-size: 14px;
             line-height: 2;
-        }
-        .more-info-btn {
-            -webkit-border-radius: 50px;
-            -moz-border-radius: 50px;
-            border-radius: 50px;
-            margin-top: 15px;
+            margin-bottom: 15px;
         }
     }
 }
@@ -975,7 +960,7 @@ footer {
             margin-left: 5px;
         }
         &.siteBy {
-            width: 18%;
+            width: 17%;
             text-align: right;
         }
     }
@@ -1059,41 +1044,6 @@ footer {
         }
         span {
             margin-top: 6px;
-        }
-    }
-    .contact-info {
-        margin-top: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        address {
-            margin: 0;
-        }
-        .phone-numbers {
-            margin-top: 10px;
-            .nav-item {
-                position: relative;
-                margin: 0 7px;
-                &::after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    right: -8px;
-                    width: 1px;
-                    height: 100%;
-                    background-color: #a6a6a6;
-                }
-                &:last-child {
-                    &::after {
-                        content: none;
-                    }
-                }
-                .nav-link {
-                    color: #a6a6a6;
-                    text-decoration: underline;
-                    padding: 0;
-                }
-            }
         }
     }
 }
