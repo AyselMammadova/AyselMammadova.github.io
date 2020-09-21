@@ -606,7 +606,7 @@ header {
       left: -11%; }
     #services .services-wrapper .service {
       margin: 15px;
-      width: calc(20% - 30px);
+      width: calc(25% - 30px);
       height: 150px;
       -webkit-border-radius: 15px;
       -moz-border-radius: 15px;
@@ -676,7 +676,7 @@ header {
             margin: 5px 0 0;
             overflow: hidden;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical; }
         #services .services-wrapper .service a:hover {
           color: #fff; }
