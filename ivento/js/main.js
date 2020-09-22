@@ -38,14 +38,14 @@ $(document).ready(function() {
         mouseDrag: false,
         autoplay: true,
         autoplayTimeout: 5000,
-        autoplaySpeed: 1200,
+        autoplaySpeed: 500,
         dotsEach: true,
         dots: true,
         dotsContainer: '#customDots',
         nav: true,
         navContainer: '#customNavs',
-        navSpeed: 1200,
-        smartSpeed: 1200,
+        navSpeed: 500,
+        smartSpeed: 500,
         items: 1	
     });
 
@@ -82,7 +82,7 @@ $(document).ready(function() {
     // nav and dot function
 
     $('#customDots .owl-dot').click(function () {
-        owl.trigger('to.owl.carousel', [$(this).index(), 1200]);
+        owl.trigger('to.owl.carousel', [$(this).index(), 500]);
     });
 
     $('#customNavs .owl-prev').click(function () {
