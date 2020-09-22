@@ -21,6 +21,12 @@ $(document).ready(function() {
 
         if (scroll >= headHeight) header.addClass('sticky')
         else header.removeClass('sticky');
+
+        if($('header').hasClass('sticky')) {
+            $('header').find('.navbar-brand img').attr('src', 'img/logo-medium.png');
+        } else {
+            $('header').find('.navbar-brand img').attr('src', 'img/logo-white.png');
+        }
     });
 
 
@@ -30,17 +36,80 @@ $(document).ready(function() {
         loop: true,
         lazyLoad:true,
         mouseDrag: false,
-        autoplay: true,
+        // autoplay: true,
         autoplayTimeout: 5000,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 1200,
         dotsEach: true,
         dots: true,
         dotsContainer: '#customDots',
         nav: true,
         navContainer: '#customNavs',
-        navSpeed: 2000,
-        smartSpeed: 2000,
+        navSpeed: 1200,
+        smartSpeed: 1200,
         items: 1	
+    });
+
+
+    // remove old nav
+
+    $('#customNavs').find('button').remove();
+
+
+    // animate main slide caption
+   
+    var owl = $('.mainCarousel');
+    $(".mainCarousel .owl-item.active h3").addClass('animated fadeInDown delay-1s faster');
+    $(".mainCarousel .owl-item.active h1").addClass('animated fadeInRight delay-1s faster');
+    $(".mainCarousel .owl-item.active p").addClass('animated fadeInRight delay-1-5s faster');
+    $(".mainCarousel .owl-item.active .custom-btn").addClass('animated fadeIn delay-2s faster');
+    
+    owl.on('change.owl.carousel', function(event) {
+            
+        var item = event.item.index-1;
+        
+        $(".mainCarousel h3").removeClass('animated fadeInDown delay-1s faster');
+        $('.mainCarousel h1').removeClass('animated fadeInRight delay-1s faster');
+        $('.mainCarousel p').removeClass('animated fadeInRight delay-1-5s faster');
+        $('.mainCarousel .custom-btn').removeClass('animated fadeIn delay-2s faster');
+        
+        $('.mainCarousel .owl-item').not('.cloned').eq(item).find('h3').addClass('animated fadeInDown delay-1s faster');
+        $('.mainCarousel .owl-item').not('.cloned').eq(item).find('h1').addClass('animated fadeInRight delay-1s faster');
+        $('.mainCarousel .owl-item').not('.cloned').eq(item).find('p').addClass('animated fadeInRight delay-1-5s faster');
+        $('.mainCarousel .owl-item').not('.cloned').eq(item).find('.custom-btn').addClass('animated fadeIn delay-2s faster');          
+    });
+
+
+    // nav and dot function
+
+    $('#customDots .owl-dot').click(function () {
+        owl.trigger('to.owl.carousel', [$(this).index(), 1200]);
+    });
+
+    $('#customNavs .owl-prev').click(function () {
+        owl.trigger('prev.owl.carousel');
+    });
+
+    $('#customNavs .owl-next').click(function () {
+        owl.trigger('next.owl.carousel');    
+    });
+
+    
+    // stop autoplay and start
+
+    $('#customNavs > .owl-nav').on('click', function () {
+        owl.trigger('stop.owl.autoplay');
+    });
+    
+    $('#customNavs > .owl-nav').mouseleave(function(){
+        owl.trigger('play.owl.autoplay',[5000]);
+    });
+    
+    $('#customDots > .owl-dot').on('click', function () {
+        owl.trigger('stop.owl.autoplay');
+    });
+    
+    $('#customDots > .owl-dot').mouseleave(function(){
+        owl.trigger('play.owl.autoplay',[5000]);
     });
 
 
@@ -60,67 +129,6 @@ $(document).ready(function() {
     });
 
 
-    // remove old nav
-
-    $('#customNavs').find('button').remove();
-
-
-    // animate main slide caption
-   
-    var owl = $('.mainCarousel');
-    
-    $(".mainCarousel .owl-item.active h1").addClass('animated fadeInRight delay-1s faster');
-    $(".mainCarousel .owl-item.active p").addClass('animated fadeInRight delay-1-5s faster');
-    $(".mainCarousel .owl-item.active .custom-btn").addClass('animated fadeIn delay-2s faster');
-    
-    owl.on('change.owl.carousel', function(event) {
-            
-        var item = event.item.index-1;
-    
-        $('.mainCarousel h1').removeClass('animated fadeInRight delay-1s faster');
-        $('.mainCarousel p').removeClass('animated fadeInRight delay-1-5s faster');
-        $('.mainCarousel .custom-btn').removeClass('animated fadeIn delay-2s faster');
-        
-        $('.mainCarousel .owl-item').not('.cloned').eq(item).find('h1').addClass('animated fadeInRight delay-1s faster');
-        $('.mainCarousel .owl-item').not('.cloned').eq(item).find('p').addClass('animated fadeInRight delay-1-5s faster');
-        $('.mainCarousel .owl-item').not('.cloned').eq(item).find('.custom-btn').addClass('animated fadeIn delay-2s faster');          
-    });
-
-
-    // nav and dot function
-
-    $('#customDots .owl-dot').click(function () {
-        owl.trigger('to.owl.carousel', [$(this).index(), 2000]);
-    });
-
-    $('#customNavs .owl-prev').click(function () {
-        owl.trigger('prev.owl.carousel');
-    });
-
-    $('#customNavs .owl-next').click(function () {
-        owl.trigger('next.owl.carousel');    
-    });
-
-    
-    // stop autoplay and start
-
-    $('#customNavs > .owl-nav').on('click', function () {
-        $('.owl-carousel').trigger('stop.owl.autoplay');
-    });
-    
-    $('#customNavs > .owl-nav').mouseleave(function(){
-        $('.owl-carousel').trigger('play.owl.autoplay',[5000]);
-    });
-    
-    $('#customDots > .owl-dot').on('click', function () {
-        $('.owl-carousel').trigger('stop.owl.autoplay');
-    });
-    
-    $('#customDots > .owl-dot').mouseleave(function(){
-        $('.owl-carousel').trigger('play.owl.autoplay',[5000]);
-    });
-
-
     // add active class on advantages carousel
 
     $('#advantages .item a').click(function() {
@@ -131,7 +139,7 @@ $(document).ready(function() {
     
     // change image on service hover 
 
-    $('#services .service').hover(function() {
+    /*$('#services .service').hover(function() {
         var serviceIcon = $(this).find('.service-info img').attr('src').split('.')[0];
         var serviceEnd = $(this).find('.service-info img').attr('src').split('.')[1];
         $(this).find('.service-info img').attr('src', serviceIcon + '-white.' + serviceEnd);
@@ -139,5 +147,7 @@ $(document).ready(function() {
         var serviceIcon = $(this).find('.service-info img').attr('src').split('.')[0].split('-')[0];
         var serviceEnd = $(this).find('.service-info img').attr('src').split('.')[1];
         $(this).find('.service-info img').attr('src', serviceIcon + '.' + serviceEnd);
-    });
+    });*/
+
+
 });
