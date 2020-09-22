@@ -809,16 +809,16 @@ header {
 
 /* question */
 #question {
-  background: url("../img/bg-question.png") no-repeat;
+  background: url("../img/bg-question.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 64px 0px;
+  padding: 30px 0px;
   position: relative;
   background-attachment: fixed; }
   #question .question-overlay {
     width: 100%;
     height: 100%;
-    background-color: #0000002E;
+    background-color: #3875b41c;
     position: absolute;
     z-index: 1;
     top: 0; }
