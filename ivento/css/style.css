@@ -137,8 +137,6 @@ header {
         background-color: #2354a5 !important; }
   header .navbar {
     padding: 6px 40px; }
-    header .navbar .navbar-brand img {
-      width: 130px; }
     header .navbar #navbarMenu .nav-item {
       display: flex;
       flex-wrap: wrap;

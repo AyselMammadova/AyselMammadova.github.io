@@ -23,7 +23,7 @@ $(document).ready(function() {
         else header.removeClass('sticky');
 
         if($('header').hasClass('sticky')) {
-            $('header').find('.navbar-brand img').attr('src', 'img/logo-medium.png');
+            $('header').find('.navbar-brand img').attr('src', 'img/fixed-logo.png');
         } else {
             $('header').find('.navbar-brand img').attr('src', 'img/logo-white.png');
         }
