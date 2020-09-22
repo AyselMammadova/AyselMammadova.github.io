@@ -126,6 +126,8 @@ header {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.07); }
     header.sticky #navbarMenu .dropdown-toggle::after {
       border-color: #212121; }
+    header.sticky #navbarMenu .nav-icon {
+      background-color: #fafafa !important; }
     header.sticky #navbarMenu .nav-link {
       color: #212121 !important; }
     header.sticky .right-side .search-btn {
@@ -215,7 +217,7 @@ header {
             height: 88px; }
           #main .mainCarousel .item .slide-text-wrapper .slide-text p {
             margin-bottom: 0;
-            color: #37a0f0;
+            color: #919fa9;
             font-size: 16px;
             height: 125px;
             margin-bottom: 60px; }
