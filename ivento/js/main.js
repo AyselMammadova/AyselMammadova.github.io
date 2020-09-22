@@ -36,7 +36,7 @@ $(document).ready(function() {
         loop: true,
         lazyLoad:true,
         mouseDrag: false,
-        // autoplay: true,
+        autoplay: true,
         autoplayTimeout: 5000,
         autoplaySpeed: 1200,
         dotsEach: true,
