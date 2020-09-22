@@ -121,7 +121,7 @@ $(document).ready(function() {
         autoplay: false,
         dots: false,
         nav: true,
-        navText: ["⟨","⟩"],
+        navText: ["<span>⟨</span>","<span>⟩</span>"],
         navSpeed: 500,
         smartSpeed: 500,
         slideBy: 2,

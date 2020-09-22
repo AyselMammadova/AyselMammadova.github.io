@@ -261,19 +261,22 @@ header {
                         color: #2a3139;
                         font-weight: 500;
                         font-size: 22px;
+                        height: 45px;
                     }
                     h1 {
                         color: #2a3139;
                         font-size: 36px;
                         font-weight: 700;
                         text-transform: uppercase;
-                        margin-bottom: 20px;
+                        margin-bottom: 60px;
+                        height: 88px;
                     }
                     p {
                         margin-bottom: 0;
                         color: #37a0f0;
                         font-size: 16px;
-                        margin-bottom: 30px;
+                        height: 125px;
+                        margin-bottom: 60px;
                         span {
                             font-size: 50px;
                             font-weight: 500;
@@ -444,6 +447,7 @@ header {
 /* advantages section style */
 #advantages {
     background-color: #f6f6f6;
+    padding-top: 15px;
     .advantageCarousel {
         padding: 20px 0;
         .item {
@@ -463,10 +467,8 @@ header {
                         width: 100px;
                         height: 100px;
                         position: absolute;
-                        top: 39%;
-                        left: 50%;
-                        -webkit-transform: translate(-50%,-50%);
-                        transform: translate(-50%,-50%);
+                        top: 5px;
+                        left: 20px;
                         -webkit-border-radius: 50%;
                         -moz-border-radius: 50%;
                         border-radius: 50%;
@@ -531,7 +533,6 @@ header {
                 -moz-border-radius: 0;
                 border-radius: 0;
                 height: 100%;
-                width: 150px;
                 color: #cecece;
                 background-color: transparent;
                 font-size: 44px;
@@ -539,15 +540,27 @@ header {
                 margin: 0;
                 padding: 0;
                 &.owl-prev {
-                    background-image: linear-gradient(90deg, #f6f6f6 50%, transparent);
+                    background-image: linear-gradient(90deg, #f6f6f6 68%, transparent);
+                    width: 140px;
                     left: 0;
+                    span {
+                        right: 52px;
+                    }
                 }
                 &.owl-next {
-                    background-image: linear-gradient(90deg, transparent, #f6f6f6 50%);
+                    background-image: linear-gradient(90deg, transparent, #f6f6f6 32%);
+                    width: 130px;
                     right: 0;
+                    span {
+                        left: 52px;
+                    }
                 }
                 &.disabled {
                     display: none;
+                }
+                span {
+                    position: absolute;
+                    top: 38px;
                 }
             }
         }
@@ -558,7 +571,7 @@ header {
 /* products section style */
 #products {
     background-color: #f6f6f6;
-    padding-top: 90px;
+    padding-top: 30px;
     .left-side {
         padding-left: 90px;
         position: relative;
@@ -899,8 +912,11 @@ header {
         li {
             background: url('../img/check.png') no-repeat;
             background-size: 22px;
+            background-position: 0px 5px;
             padding-left: 34px;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            font-weight: 500;
         }
     }
 }
@@ -980,6 +996,65 @@ header {
                 img {
                     filter: none;
                     opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+/* question */
+#question {
+    background: url('../img/bg-question.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 64px 0px;
+    position: relative;
+    background-attachment: fixed;
+    .question-overlay {
+        width: 100%;
+        height: 100%;
+        background-color: #0000002E;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .question-text {
+            z-index: 10;
+            h1 {
+                font-size: 36px;
+                color: #ffffff;
+                font-weight: 700;
+            }
+            p {
+                margin: 20px 0 0;
+                font-size: 20px;
+                color: #ebebeb;
+                font-weight: 400;
+            }
+        }
+        .question-btn {
+            z-index: 10;
+            a {
+                background-color: white;
+                padding: 16px;
+                font-size: 16px;
+                color: #606160;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+                font-weight: 600;
+                -webkit-transition: 0.3s;
+                -moz-transition: 0.3s;
+                -o-transition: 0.3s;
+                transition: 0.3s;
+                border: none;
+                &:hover {
+                    background-color: rgba(225, 225, 225, 0.9);
                 }
             }
         }
