@@ -279,20 +279,20 @@ header {
                     }
                 }
             }
-            &:after {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                background-image: linear-gradient(90deg, rgba(255, 255, 255, .8) 35%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
-                filter: drop-shadow(0 15px 112px rgba(255, 255 , 255, .9));
-                -webkit-box-shadow: 40px 2px 40px 22px rgba(255, 255, 255, 0.6);
-                -moz-box-shadow: 40px 2px 40px 22px rgba(255, 255, 255, 0.6);
-                box-shadow: 40px 2px 40px 22px rgba(255, 255, 255, 0.6);
-                z-index: 1;
-            }
+            // &:after {
+            //     content: '';
+            //     position: absolute;
+            //     top: 0;
+            //     right: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-image: linear-gradient(90deg, rgba(255, 255, 255, .8) 35%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+            //     filter: drop-shadow(0 15px 112px rgba(255, 255 , 255, .9));
+            //     -webkit-box-shadow: 40px 2px 40px 22px rgba(255, 255, 255, 0.6);
+            //     -moz-box-shadow: 40px 2px 40px 22px rgba(255, 255, 255, 0.6);
+            //     box-shadow: 40px 2px 40px 22px rgba(255, 255, 255, 0.6);
+            //     z-index: 1;
+            // }
         }
     }
 
