@@ -176,7 +176,7 @@ header {
         position: absolute;
         right: 0;
         z-index: 1;
-        transition: 500ms all ease; }
+        background-color: #bfbfbf; }
         header nav .lang-wrapper .other-langs-wrap .other-langs {
           display: flex;
           align-items: center; }
