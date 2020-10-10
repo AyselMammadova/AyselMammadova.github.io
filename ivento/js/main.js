@@ -137,19 +137,4 @@ $(document).ready(function() {
         $(this).addClass('active');
         $(this).parents().eq(1).siblings().find('a').removeClass('active');
     });
-
-    
-    // change image on service hover 
-
-    /*$('#services .service').hover(function() {
-        var serviceIcon = $(this).find('.service-info img').attr('src').split('.')[0];
-        var serviceEnd = $(this).find('.service-info img').attr('src').split('.')[1];
-        $(this).find('.service-info img').attr('src', serviceIcon + '-white.' + serviceEnd);
-    }, function() {
-        var serviceIcon = $(this).find('.service-info img').attr('src').split('.')[0].split('-')[0];
-        var serviceEnd = $(this).find('.service-info img').attr('src').split('.')[1];
-        $(this).find('.service-info img').attr('src', serviceIcon + '.' + serviceEnd);
-    });*/
-
-
 });
