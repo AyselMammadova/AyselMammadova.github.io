@@ -1,4 +1,15 @@
 $(document).ready(function () {
+
+  // header fixed 
+  $(window).scroll(function(){
+    var header = $('header'),
+        scroll = $(window).scrollTop();
+    var headHeight = $('header').height();
+
+    if (scroll >= headHeight) header.addClass('sticky')
+    else header.removeClass('sticky');
+  });
+
   // slider text parallax
   var rellax = new Rellax('.rellax');
 
@@ -35,40 +46,38 @@ $(document).ready(function () {
     }
   );
 
-  /* for mobile click */
-  // $('.lang-wrapper .active-lang').click(function() {
-  //     $('.lang-wrapper .other-langs-wrap').toggleClass('opened');
-  //     if($('.lang-wrapper .other-langs-wrap').hasClass('opened')) {
-  //       $('.lang-wrapper .other-langs-wrap').show();
-  //       $('.lang-wrapper .other-langs-wrap').animate({right: '100%'},100, 'linear');
-  //     } else {
-  //       $('.lang-wrapper .other-langs-wrap').animate({right: '0'},100, 'linear');
-  //       $('.lang-wrapper .other-langs-wrap').hide('100');
-  //     }     
-  // });
+  var lastScrollTop = $('#portfolio').height();
+  backgroundSize = $("#about .about-img").css('background-size');
+$(window).scroll(function(event){
+  console.log(backgroundSize);
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+    backgroundSize = parseFloat(backgroundSize) - 0.3;
+   } else {
+    backgroundSize = parseFloat(backgroundSize) + 0.3;
+   }
 
-  
-
-  // about scroll and zoom out effect
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    $("#about .cover-img").css({
-      transform: 'scale('+ scroll/1000 +')'
-    });
+  if (parseFloat(backgroundSize) < 100) {
+    console.log('true');
+   backgroundSize = 100;
+  }
+   $("#about .cover-img").css('background-size', backgroundSize + '%');
     $("#about .about-img-wrap").css({
-      transform: 'translate(-50%, '+ scroll/100 + '%' +')'
+      transform: 'translate(-50%, '+ st/1000 + '%' +')'
     });
-    $("#about .about-img").css({
-      transform: 'scale('+ scroll/1000 +')'
-    });
-    $("#about .overlay-img").css({
-      transform: 'scale('+ scroll/1000 +')'
-    });
-  });
+    $("#about .about-img").css('background-size', backgroundSize + '%');
+    $("#about .overlay-img").css('background-size', backgroundSize + '%');
+   lastScrollTop = st;
+});
 
 
   // add and remove wishlist
   $('.wishlistIcon').click(function() {
     $(this).toggleClass('mark');
+  })
+
+  // hamburger menu 
+  $('.menu-wrap').click(function() {
+    $(this).toggleClass('opened');
   })
 });
