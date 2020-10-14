@@ -3,8 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'FTN_demi';
-    font-family: "Proxima Nova", "Times New Roman", "Times", "Baskerville", "Georgia", serif;
+    font-family: 'FTN_medium';
     color: #212121;
     scroll-behavior: smooth;
 }
@@ -157,7 +156,7 @@ a {
 header {
     border-top: 20px solid #f5f0e9;
     background-color: #fbfbf8;
-    padding: 0 100px;
+    padding: 10px 100px;
     -webkit-transition: 500ms all ease;
     -moz-transition: 500ms all ease;
     -o-transition: 500ms all ease;
@@ -179,7 +178,7 @@ header {
         .navbar-brand {
             margin-right: 20px;
             img {
-                width: 70px;
+                width: 100px;
             }
         }
         .navbar-toggler {
@@ -245,8 +244,10 @@ header {
         #navbarMenu {
             .nav-item {
                 .nav-link {
+                    font-family: 'FTN_demi';
                     font-size: 15px;
                     padding: 16px 12px;
+                    text-transform: uppercase;
                     -webkit-transition: 300ms all ease;
                     -moz-transition: 300ms all ease;
                     -o-transition: 300ms all ease;
@@ -278,9 +279,12 @@ header {
                 position: relative;
                 z-index: 2;
                 a {
-                    color: #bfbfbf;
+                    color: #222;
                     border: 1px solid #fbfbf8;
                     padding: 6px 6px 3px;
+                    i {
+                        margin-right: 6px;
+                    }
                 }
             }
             .other-langs-wrap {
@@ -294,16 +298,15 @@ header {
                     align-items: center;
                     a {
                         padding: 6px 6px 3px;
-                        border: 1px solid #bfbfbf;
-                        background-color: #bfbfbf;
-                        color: #fff;
+                        border: 1px solid #f5f0e9;
+                        background-color: #f5f0e9;
+                        color: #000;
                         -webkit-transition: 300ms all ease;
                         -moz-transition: 300ms all ease;
                         -o-transition: 300ms all ease;
                         transition: 300ms all ease;
                         &:hover {
                             background-color: #fff;
-                            color: #bfbfbf;
                         }
                     }
                 }
@@ -313,11 +316,13 @@ header {
         .price-order {
             position: relative;
             padding-left: 50px;
+            padding-right: 0;
             transition-duration: .3s;
             transition-timing-function: ease;
             transition-property: color;
             letter-spacing: 1px;
             font-size: 12px;
+            background-color: #f5f0e9;
             &::before, &::after {
                 content: "";
                 display: block;
@@ -1077,7 +1082,7 @@ footer {
 
 @media screen and (max-width: 1199.98px) {
     header {
-        padding: 0 70px;
+        padding: 10px 70px;
     }
 
     #map-wrapper .contact-info-wrap {
@@ -1104,13 +1109,6 @@ footer {
             .lang-wrapper {
                 display: none;
             }
-            .nav-item.lang-mobile {
-                display: block !important;
-                .nav-link {
-                    display: inline-block;
-                    padding: 25px 25px 25px 12px !important;
-                }
-            }
             #navbarMenu {
                 position: fixed;
                 top: 100px;
@@ -1135,6 +1133,31 @@ footer {
                         position: relative;
                         .nav-link {
                             color: #fff;
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
+                        &.active {
+                            .nav-link {
+                                color: #fff;
+                            }
+                        }
+                        &.lang-mobile {
+                            display: block !important;
+                            padding: 37px !important;
+                            .nav-link {
+                                display: inline-block;
+                                padding: 8px 12px !important;
+                                border: 1px solid #fff;
+                                -webkit-border-radius: 5px;
+                                -moz-border-radius: 5px;
+                                border-radius: 5px;
+                                margin-right: 25px;
+                                &.active, &:hover {
+                                    background-color: #fff;
+                                    color: #000;
+                                }
+                            }
                         }
                     }
                 }
@@ -1142,6 +1165,19 @@ footer {
             .price-order {
                 position: absolute;
                 right: 65px;
+            }
+        }
+    }
+
+    .dropdown-menu-wrap {
+        .dropdown-menu {
+            top: 0;
+        }
+        &:hover {
+            .dropdown-menu {
+                -webkit-transform: scale(1, 0);
+                -ms-transform: scale(1, 0);
+                transform: scale(1, 0);
             }
         }
     }
@@ -1266,7 +1302,7 @@ footer {
 
 @media screen and (max-width: 576.98px) {
     header {
-        padding: 0 20px;
+        padding: 10px 20px;
     }
 
     #main {
