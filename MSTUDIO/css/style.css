@@ -8,7 +8,7 @@ body {
   scroll-behavior: smooth; }
 
 h1, h2, h3, h4, h5, h6 {
-  font: 18px/28px "Tinos", "Helvetica Neue", "Helvetica", sans-serif; }
+  font-family: 'FTN_heavy'; }
 
 button:focus, input:focus, textarea:focus, .btn:focus {
   outline: 0;
@@ -30,7 +30,7 @@ a {
   padding: 16px 20px 16px 12px !important; }
   .dropdown-menu-wrap .dropdown-toggle::after {
     content: '';
-    background: url(../img/down-arrow.png) no-repeat;
+    background: url("../img/down-arrow.png") no-repeat;
     border: none;
     background-size: 6px;
     width: 20px;
@@ -80,10 +80,9 @@ a {
       background-color: #fbfbf8; }
     .dropdown-menu-wrap .dropdown-menu .dropdown-item.active, .dropdown-menu-wrap .dropdown-menu .dropdown-item:active {
       background-color: transparent; }
-.dropdown-menu-wrap:hover .dropdown-toggle i {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  top: 0; }
+.dropdown-menu-wrap:hover .dropdown-toggle::after {
+  background: url("../img/down-arrow-grey.png") no-repeat;
+  background-size: 6px; }
 .dropdown-menu-wrap:hover .dropdown-menu {
   display: block;
   -webkit-transform: scale(1, 1);
@@ -151,7 +150,7 @@ header {
         width: 100px; }
     header nav .navbar-toggler {
       padding: 0;
-      margin: 0 5px 0 auto; }
+      border: none; }
       header nav .navbar-toggler .menu-wrap {
         width: 60px;
         height: 60px;
@@ -161,10 +160,6 @@ header {
         -moz-transition: transform 300ms ease-out;
         -o-transition: transform 300ms ease-out;
         transition: transform 300ms ease-out;
-        border: 2px solid #bfbfbf;
-        -webkit-border-radius: 15px;
-        -moz-border-radius: 15px;
-        border-radius: 15px;
         flex-flow: column wrap;
         align-items: center;
         align-content: center;
@@ -185,6 +180,10 @@ header {
             border-top-right-radius: 2px;
             border-bottom-right-radius: 2px;
             transform-origin: left center; }
+          header nav .navbar-toggler .menu-wrap .line-menu:nth-child(2) {
+            width: 10px;
+            position: relative;
+            right: -4px; }
         header nav .navbar-toggler .menu-wrap.opened .line-menu:nth-child(1) {
           transform: translateY(17px) rotate(45deg); }
         header nav .navbar-toggler .menu-wrap.opened .line-menu:nth-child(2), header nav .navbar-toggler .menu-wrap.opened .line-menu:nth-child(5) {
@@ -389,7 +388,8 @@ header {
         position: relative;
         line-height: 1.3;
         margin: 16px 0 0 0;
-        padding: 0 48px 0 0; }
+        padding: 0 48px 0 0;
+        font-size: 16px; }
         #portfolio .box-wrap a .title-wrap h5::after {
           content: '';
           width: 32px;
@@ -416,14 +416,6 @@ header {
     height: 850px;
     position: relative;
     overflow: hidden; }
-    #about .back-wrapper .cover-about::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); }
     #about .back-wrapper .cover-about .cover-img {
       position: absolute;
       width: 100%;
@@ -432,6 +424,15 @@ header {
       background-position: center;
       background-size: 250%;
       will-change: transform; }
+      #about .back-wrapper .cover-about .cover-img::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1; }
     #about .back-wrapper .cover-about .content-wrap {
       position: absolute;
       top: 24%;
@@ -455,6 +456,8 @@ header {
   #about .back-wrapper .about-img-wrap {
     width: 33vw;
     height: 36vw;
+    width: 614px;
+    height: 670px;
     position: absolute;
     top: 25%;
     left: 50%;
@@ -462,6 +465,15 @@ header {
     z-index: 9;
     will-change: transform;
     overflow: hidden; }
+    #about .back-wrapper .about-img-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 1; }
     #about .back-wrapper .about-img-wrap .about-img {
       position: absolute;
       width: 100%;
@@ -470,13 +482,6 @@ header {
       background-position: center;
       background-size: 250%;
       will-change: transform; }
-  #about .back-wrapper .overlay-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); }
   #about .back-wrapper article {
     padding: 250px 0 20px;
     text-align: center; }
@@ -560,7 +565,6 @@ header {
           #services .service-wrapper .service:nth-child(1) .text-content h3 {
             color: #212121;
             font-size: 24px;
-            font-family: "Proxima Nova", "Times New Roman", "Times", "Baskerville", "Georgia", serif;
             padding: 0 32px;
             font-weight: 700;
             line-height: 1.5;
@@ -584,7 +588,6 @@ header {
         transform: translate(-50%, -50%);
         color: #fff;
         font-size: 24px;
-        font-family: "Proxima Nova", "Times New Roman", "Times", "Baskerville", "Georgia", serif;
         letter-spacing: -.9px;
         font-weight: 700;
         line-height: 1.1;
@@ -860,9 +863,26 @@ footer {
         color: rgba(120, 128, 136, 0.6); }
 
 /* Responsive */
+@media screen and (max-width: 1800px) {
+  #about .back-wrapper .about-img-wrap {
+    top: 27%; } }
+@media screen and (max-width: 1400px) {
+  #about .back-wrapper .cover-about .content-wrap h1 {
+    font-size: 32px;
+    width: 82%; }
+  #about .back-wrapper .cover-about .content-wrap p {
+    font-size: 16px;
+    width: 45%; } }
 @media screen and (max-width: 1199.98px) {
   header {
     padding: 10px 70px; }
+
+  #about .back-wrapper .about-img-wrap {
+    width: 530px; }
+  #about .back-wrapper .cover-about .content-wrap h1 {
+    font-size: 28px; }
+  #about .back-wrapper .cover-about .content-wrap p {
+    width: 64%; }
 
   #map-wrapper .contact-info-wrap {
     background: -moz-linear-gradient(left, white 0%, white 82%, rgba(255, 255, 255, 0) 100%);
@@ -876,12 +896,16 @@ footer {
 
   footer {
     padding: 17.5px 70px; } }
+@media screen and (min-width: 991.98px) and (max-width: 1199.98px) {
+  header nav #navbarMenu .nav-item .nav-link {
+    font-size: 13px;
+    padding: 16px 10px; } }
 @media screen and (max-width: 991.98px) {
   header nav .lang-wrapper {
     display: none; }
   header nav #navbarMenu {
     position: fixed;
-    top: 100px;
+    top: 130px;
     right: 0;
     width: 100%;
     height: 100%;
@@ -894,48 +918,59 @@ footer {
       background-color: #262626;
       position: absolute;
       top: 0;
-      right: 0;
+      right: -100%;
       overflow-y: scroll;
       padding-bottom: 30px; }
       header nav #navbarMenu .navbar-nav li {
-        padding: 0 25px !important;
         display: block !important;
         position: relative; }
         header nav #navbarMenu .navbar-nav li .nav-link {
-          color: #fff; }
+          color: #fff;
+          padding: 20px 37px !important; }
           header nav #navbarMenu .navbar-nav li .nav-link:hover {
             color: #fff; }
         header nav #navbarMenu .navbar-nav li.active .nav-link {
           color: #fff; }
         header nav #navbarMenu .navbar-nav li.lang-mobile {
-          display: block !important;
+          display: flex !important;
+          justify-content: space-between;
           padding: 37px !important; }
           header nav #navbarMenu .navbar-nav li.lang-mobile .nav-link {
             display: inline-block;
-            padding: 8px 12px !important;
+            padding: 8px 30px !important;
             border: 1px solid #fff;
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
-            border-radius: 5px;
-            margin-right: 25px; }
+            border-radius: 5px; }
             header nav #navbarMenu .navbar-nav li.lang-mobile .nav-link.active, header nav #navbarMenu .navbar-nav li.lang-mobile .nav-link:hover {
               background-color: #fff;
               color: #000; }
   header nav .price-order {
     position: absolute;
-    right: 65px; }
+    right: 75px; }
 
   .dropdown-menu-wrap .dropdown-menu {
-    top: 0; }
+    top: 0;
+    display: none;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    margin: 0 37px; }
   .dropdown-menu-wrap:hover .dropdown-menu {
-    -webkit-transform: scale(1, 0);
-    -ms-transform: scale(1, 0);
-    transform: scale(1, 0); }
+    display: none; }
+  .dropdown-menu-wrap:hover .dropdown-toggle::after {
+    background: url("../img/down-arrow-white.png") no-repeat;
+    background-size: 6px; }
+  .dropdown-menu-wrap.show .dropdown-menu {
+    display: block; }
+  .dropdown-menu-wrap .dropdown-toggle::after {
+    background: url("../img/down-arrow-white.png") no-repeat;
+    background-size: 6px; }
 
   #main .carousel-item .container .carousel-caption {
     width: 55%; }
     #main .carousel-item .container .carousel-caption h1 {
-      font-size: 42px; }
+      font-size: 40px; }
     #main .carousel-item .container .carousel-caption p {
       font-size: 14px; }
 
@@ -945,6 +980,15 @@ footer {
   #services .service-wrapper .service:nth-child(1) .text-content h3 {
     font-size: 20px;
     padding: 0 25px; }
+
+  #about .back-wrapper .cover-about {
+    height: 650px; }
+    #about .back-wrapper .cover-about .content-wrap h1 {
+      font-size: 24px; }
+  #about .back-wrapper .about-img-wrap {
+    width: 450px;
+    height: 550px;
+    top: 24%; }
 
   #references .custom-container .description {
     width: 80%; }
@@ -959,6 +1003,9 @@ footer {
     max-width: 100%;
     flex: none; } }
 @media screen and (max-width: 767.98px) {
+  header #navbarMenu .navbar-nav {
+    width: 80% !important; }
+
   #main .carousel-item .container .carousel-caption {
     width: 75%;
     left: 5%; }
@@ -979,6 +1026,22 @@ footer {
     #services .service-wrapper .service-wrap .service {
       width: calc(50% - 4px);
       height: 130px; }
+
+  #about .back-wrapper .about-img-wrap {
+    width: 380px;
+    height: 500px; }
+    #about .back-wrapper .about-img-wrap .about-img {
+      background-size: 340%; }
+  #about .back-wrapper .cover-about .cover-img {
+    background-size: 340%; }
+  #about .back-wrapper .cover-about .content-wrap h1 {
+    width: 86%;
+    font-size: 20px; }
+  #about .back-wrapper .cover-about .content-wrap p {
+    width: 70%;
+    font-size: 15px; }
+  #about .back-wrapper article {
+    padding: 180px 0 20px; }
 
   #references .custom-container .description {
     width: 100%; }
@@ -1006,7 +1069,9 @@ footer {
       margin: 5px 0; } }
 @media screen and (max-width: 576.98px) {
   header {
-    padding: 10px 20px; }
+    padding: 10px 15px; }
+    header nav #navbarMenu .navbar-nav li.lang-mobile .nav-link {
+      padding: 8px 22px !important; }
 
   #main {
     height: 450px; }
@@ -1015,9 +1080,22 @@ footer {
       #main .carousel-item .container {
         height: 450px; }
     #main .right-sec h5 {
-      font-size: 30px;
-      padding-right: 80px;
-      padding-left: 80px; }
+      font-size: 24px;
+      padding-right: 10px;
+      padding-left: 10px; }
+
+  #about .back-wrapper .cover-about {
+    height: 460px; }
+    #about .back-wrapper .cover-about .content-wrap h1 {
+      font-size: 16px; }
+    #about .back-wrapper .cover-about .content-wrap p {
+      font-size: 12px; }
+  #about .back-wrapper .about-img-wrap {
+    width: 210px;
+    height: 290px;
+    top: 26%; }
+  #about .back-wrapper article {
+    padding: 100px 0 20px; }
 
   #references .custom-container {
     padding: 0 5.6%; }
@@ -1036,8 +1114,26 @@ footer {
     height: 600px; }
 
   footer {
-    padding: 17.5px 20px; } }
+    padding: 17.5px 15px; } }
 @media screen and (max-width: 500px) {
+  header nav .navbar-brand img {
+    width: 85px; }
+  header nav .navbar-toggler .menu-wrap {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7); }
+  header nav #navbarMenu .navbar-nav {
+    width: 90% !important; }
+    header nav #navbarMenu .navbar-nav li.lang-mobile .nav-link {
+      padding: 8px 12px !important; }
+  header nav .price-order {
+    padding-left: 40px; }
+    header nav .price-order::before, header nav .price-order::after {
+      width: 30px; }
+    header nav .price-order::after {
+      width: 0; }
+    header nav .price-order:hover::after {
+      width: 30px; }
+
   #main .carousel-item .container .carousel-caption h1 {
     font-size: 26px; }
   #main .carousel-item .container .carousel-caption p {
@@ -1052,6 +1148,21 @@ footer {
   #services .service-wrapper .service .service-text {
     font-size: 15px;
     padding: 0 10px; }
+
+  #about .back-wrapper .cover-about {
+    height: 520px; }
+    #about .back-wrapper .cover-about .cover-img {
+      background-size: 440%; }
+    #about .back-wrapper .cover-about .content-wrap h1 {
+      font-size: 15px;
+      width: 90%; }
+    #about .back-wrapper .cover-about .content-wrap p {
+      width: 82%; }
+  #about .back-wrapper .about-img-wrap {
+    height: 315px; }
+    #about .back-wrapper .about-img-wrap .about-img {
+      background-size: 440%;
+      background-position: center -345px; }
 
   #references .custom-container {
     padding: 0 3%; }
