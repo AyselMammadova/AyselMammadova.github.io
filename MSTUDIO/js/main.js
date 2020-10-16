@@ -1,8 +1,4 @@
 $(document).ready(function () {
-  $('.carousel').carousel({
-    interval: false
-  });
-
   // header fixed 
   $(window).scroll(function(){
     var header = $('header'),
