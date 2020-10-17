@@ -107,11 +107,55 @@ $(window).scroll(function(event){
 
   $('body').click(function() {
     $('body').css('overflow-y', 'visible');
+    $('.order-modal-wrapper').hide();
     $('header #navbarMenu .navbar-nav').animate({right: '-100%'}, 300, 'linear');
     setTimeout(function() {
         $('header #navbarMenu').hide();
         $('.navbar-toggler .menu-wrap.opened').removeClass('opened');
     }, 200);
     $('.dropdown-menu-wrap').removeClass('show');
+  });
+
+  // price order modal
+    
+  $('header .price-order').click(function(e) {
+    e.stopPropagation();
+    $('.order-modal-wrapper').show();
+    $('body').css('overflow-y', 'hidden');
+  });
+
+  $('.order-modal-wrapper .close').click(function() {
+      $('.order-modal-wrapper').hide();
+      $('body').css('overflow-y', 'visible');
+  });
+
+  $('.order-modal').click(function(e) {
+      e.stopPropagation(); 
+  });
+
+  // form effect
+  $(".form").find(".form-control").each(function () {
+    var targetItem = $(this).parent();
+    if ($(this).val()) {
+      $(targetItem).find("label").css({
+        top: "-6px", fontSize: "16px", color: "#ff512f"
+      });
+    }
+  });
+
+  $(".form").find(".form-control").focus(function () {
+    $(this).parent(".input-block").addClass("focus");
+    $(this).parent().find("label").animate({
+      top: "-6px", fontSize: "16px", color: "#ff512f"
+    }, 300);
+  });
+
+  $(".form").find(".form-control").blur(function () {
+    if ($(this).val().length == 0) {
+      $(this).parent(".input-block").removeClass("focus");
+      $(this).parent().find("label").animate({
+        top: "20px", fontSize: "18px"
+      }, 300);
+    }
   });
 });
