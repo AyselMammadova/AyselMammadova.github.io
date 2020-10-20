@@ -298,7 +298,7 @@ header {
 /* main */
 #main {
   position: relative;
-  height: 500px; }
+  height: 565px; }
   #main::after {
     content: '';
     position: absolute;
@@ -311,13 +311,13 @@ header {
     position: relative; }
   #main .carousel-item {
     width: 100%;
-    height: 500px;
+    height: 565px;
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: 0% 50%;
     background-size: cover; }
     #main .carousel-item .container {
-      height: 500px; }
+      height: 565px; }
       #main .carousel-item .container .carousel-caption {
         top: 50%;
         bottom: auto;
@@ -337,7 +337,7 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    width: 80px;
+    width: 102px;
     height: 100%;
     background-color: #fbfbf8;
     z-index: 100; }
@@ -363,9 +363,24 @@ header {
       text-transform: uppercase; }
 
 .second-design #main {
-  height: 525px; }
-  .second-design #main .carousel-item {
-    height: 525px; }
+  height: 525px;
+  cursor: pointer; }
+  .second-design #main .carousel {
+    position: relative; }
+    .second-design #main .carousel::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.55); }
+    .second-design #main .carousel .carousel-item {
+      height: 525px; }
+      .second-design #main .carousel .carousel-item .container {
+        height: 525px; }
+  .second-design #main::after {
+    content: none; }
 
 /* portfolio */
 #portfolio {
