@@ -362,6 +362,11 @@ header {
       letter-spacing: 5px;
       text-transform: uppercase; }
 
+.second-design #main {
+  height: 525px; }
+  .second-design #main .carousel-item {
+    height: 525px; }
+
 /* portfolio */
 #portfolio {
   padding: 50px 0; }
