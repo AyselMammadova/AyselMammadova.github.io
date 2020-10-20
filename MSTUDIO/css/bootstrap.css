@@ -575,7 +575,12 @@ pre code {
 }
 
 @media (min-width: 576px) {
-  .container {
+  .first-design .container {
+    max-width: 100%;
+    padding: 0 70px;
+  }
+
+  .second-design .container {
     max-width: 100%;
     padding: 0 70px;
   }
@@ -593,8 +598,14 @@ pre code {
   }
 } */
 
+
 @media (min-width: 1200px) {
-  .container {
+  .first-design .container {
+    max-width: 100%;
+    padding: 0 100px;
+  }
+
+  .second-design .container {
     max-width: 100%;
     padding: 0 100px;
   }

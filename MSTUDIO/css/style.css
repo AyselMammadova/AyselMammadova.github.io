@@ -290,6 +290,11 @@ header {
     header nav .price-order:hover:after {
       width: 40px; }
 
+/* second design header */
+.second-design header {
+  border-top: none;
+  padding: 12.92px 0; }
+
 /* main */
 #main {
   position: relative;
@@ -1074,15 +1079,13 @@ footer {
           color: #fff; }
         header nav #navbarMenu .navbar-nav li.lang-mobile {
           display: flex !important;
-          justify-content: space-between;
+          justify-content: center;
           padding: 37px !important; }
           header nav #navbarMenu .navbar-nav li.lang-mobile .nav-link {
             display: inline-block;
             padding: 8px 30px !important;
             border: 1px solid #fff;
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            border-radius: 5px; }
+            margin: 3px; }
             header nav #navbarMenu .navbar-nav li.lang-mobile .nav-link.active, header nav #navbarMenu .navbar-nav li.lang-mobile .nav-link:hover {
               background-color: #fff;
               color: #000; }

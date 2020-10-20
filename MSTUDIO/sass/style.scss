@@ -153,7 +153,6 @@ a {
 
 
 /* header */
-
 header {
     border-top: 20px solid #f5f0e9;
     background-color: #fbfbf8;
@@ -368,10 +367,17 @@ header {
     }
 }
 
+
+/* second design header */
+.second-design header {
+    border-top: none;
+    padding: 12.92px 0;
+}
+
 /* main */
 
 #main {
-	position: relative;
+    position: relative;
     height: 500px;
     &::after {
         content: '';
@@ -445,6 +451,8 @@ header {
         }
     }
 }
+
+
 
 /* portfolio */
 
@@ -1375,15 +1383,13 @@ footer {
                         }
                         &.lang-mobile {
                             display: flex!important;
-                            justify-content: space-between;
+                            justify-content: center;
                             padding: 37px !important;
                             .nav-link {
                                 display: inline-block;
                                 padding: 8px 30px !important;
                                 border: 1px solid #fff;
-                                -webkit-border-radius: 5px;
-                                -moz-border-radius: 5px;
-                                border-radius: 5px;
+                                margin: 3px;
                                 &.active, &:hover {
                                     background-color: #fff;
                                     color: #000;
