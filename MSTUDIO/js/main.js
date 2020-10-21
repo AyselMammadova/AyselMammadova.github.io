@@ -3,9 +3,9 @@ $(document).ready(function () {
   $(window).scroll(function(){
     var header = $('header'),
         scroll = $(window).scrollTop();
-    var headHeight = $('header').height();
+    var mainHeight = $('#main').height() + 100;
 
-    if (scroll >= headHeight) header.addClass('sticky')
+    if (scroll >= mainHeight) header.addClass('sticky')
     else header.removeClass('sticky');
   });
 
@@ -160,7 +160,7 @@ $(window).scroll(function(event){
   });
 
   // second design slider 
-  $(".second-design .carousel").swipe({
+  $(".carousel").swipe({
     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
         if (direction == 'left') $(this).carousel('next');
         if (direction == 'right') $(this).carousel('prev');
@@ -168,7 +168,7 @@ $(window).scroll(function(event){
     allowPageScroll: "vertical" 
   });
 
-  $(".second-design .carousel").carousel({
+  $(".carousel").carousel({
     pause: false
   });
 });

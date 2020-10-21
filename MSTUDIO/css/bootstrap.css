@@ -6902,22 +6902,16 @@ a.close.disabled {
 }
 
 .carousel-indicators li {
-  box-sizing: content-box;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  width: 8px;
-  height: 8px;
-  border-radius: 100%;
-  margin-right: 3px;
-  margin-left: 3px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #fff;
-  background-clip: padding-box;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  opacity: 1;
-  transition: opacity 0.6s ease;
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 40px;
+    height: 4px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    background-color: #fff;
 }
 
 
@@ -6928,7 +6922,7 @@ a.close.disabled {
 }
 
 .carousel-indicators .active {
-  background-color: #fb9d18
+  background-color: #dacab3;
 }
 
 .carousel-caption {
