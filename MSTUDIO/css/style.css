@@ -124,7 +124,7 @@ a {
         width: 0; }
 
 .carousel-control-prev {
-  right: 150px;
+  right: 160px;
   left: auto; }
 
 .carousel-control-next {
@@ -146,10 +146,15 @@ header {
   border-top: 20px solid #f5f0e9;
   background-color: #fbfbf8;
   padding: 10px 0;
-  -webkit-transition: 500ms all ease;
-  -moz-transition: 500ms all ease;
-  -o-transition: 500ms all ease;
-  transition: 500ms all ease; }
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000; }
   header.sticky {
     position: fixed;
     top: 0;
@@ -326,6 +331,7 @@ header {
 #main {
   position: relative;
   height: 565px;
+  margin-top: 130px;
   cursor: pointer; }
   #main .container {
     position: relative; }
@@ -372,7 +378,7 @@ header {
     #main .navs-slider .container {
       height: 565px; }
       #main .navs-slider .container i {
-        font-size: 30px; }
+        font-size: 40px; }
   #main .right-sec {
     position: absolute;
     top: 0;
@@ -402,8 +408,17 @@ header {
       letter-spacing: 5px;
       text-transform: uppercase; }
 
+.first-design #main .carousel-control-prev, .first-design #main .carousel-control-next {
+  top: auto;
+  bottom: 15px; }
+.first-design #main .carousel-control-prev {
+  right: 190px; }
+.first-design #main .carousel-control-next {
+  right: 130px; }
+
 .second-design #main {
-  height: 525px; }
+  height: 525px;
+  margin-top: 116px; }
   .second-design #main .carousel .carousel-item {
     height: 525px; }
     .second-design #main .carousel .carousel-item .container {
@@ -412,6 +427,15 @@ header {
     height: 525px; }
     .second-design #main .navs-slider .container {
       height: 525px; }
+  .second-design #main .carousel-control-prev i, .second-design #main .carousel-control-next i {
+    -webkit-transition: 500ms all ease-in-out;
+    -moz-transition: 500ms all ease-in-out;
+    -o-transition: 500ms all ease-in-out;
+    transition: 500ms all ease-in-out; }
+  .second-design #main .carousel-control-prev:hover i {
+    color: #dacab3; }
+  .second-design #main .carousel-control-next:hover i {
+    color: #dacab3; }
 
 /* portfolio */
 #portfolio {
@@ -498,7 +522,7 @@ header {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.3) 80%, rgba(0, 0, 0, 0) 100%);
         z-index: 1; }
     #about .back-wrapper .cover-about .content-wrap {
       position: absolute;
@@ -528,7 +552,7 @@ header {
     width: 614px;
     height: 670px;
     position: absolute;
-    top: 25%;
+    top: 400px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 9;

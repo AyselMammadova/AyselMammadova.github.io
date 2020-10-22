@@ -1,13 +1,31 @@
 $(document).ready(function () {
   // header fixed 
-  $(window).scroll(function(){
-    var header = $('header'),
-        scroll = $(window).scrollTop();
-    var mainHeight = $('#main').height() + 100;
+  // $(window).scroll(function(){
+  //   var header = $('header'),
+  //       scroll = $(window).scrollTop();
+  //   var mainHeight = $('#main').height() + 100;
 
-    if (scroll >= mainHeight) header.addClass('sticky')
-    else header.removeClass('sticky');
-  });
+  //   if (scroll >= mainHeight) header.addClass('sticky')
+  //   else header.removeClass('sticky');
+    
+  // });
+
+  $("html, body").animate({scrollTop: 0}, 1000);
+
+  function scrolling(){ 
+    var mainHeight = $('#main').height() + 100;
+    if ($(window).scrollTop()>mainHeight){
+      $("header").addClass("fadeInDownBig sticky ");
+    }
+    if ($(window).scrollTop()<mainHeight){
+      $("header").removeClass("fadeInDownBig sticky ");
+    }
+}
+   $(window).scroll(function(){
+       scrolling();
+   });
+
+  scrolling();
 
   // slider text parallax
   var rellax = new Rellax('.rellax');
@@ -47,25 +65,30 @@ $(document).ready(function () {
 
   var lastScrollTop = $('#portfolio').height();
   backgroundSize = $("#about .about-img").css('background-size');
+  transformI = $("#about .about-img-wrap").css('top');
+  console.log(transformI);
 $(window).scroll(function(event){
-  console.log(backgroundSize);
    var st = $(this).scrollTop();
    if (st > lastScrollTop){
     backgroundSize = parseFloat(backgroundSize) - 0.3;
+    transformI = parseFloat(transformI) - 0.3;
    } else {
     backgroundSize = parseFloat(backgroundSize) + 0.3;
+    transformI = parseFloat(transformI) + 0.3;
    }
 
   if (parseFloat(backgroundSize) < 100) {
-    console.log('true');
    backgroundSize = 100;
   }
    $("#about .cover-img").css('background-size', backgroundSize + '%');
+    // $("#about .about-img-wrap").css({
+    //   transform: 'translate(-50%, '+ st/1000 + '%' +')'
+    // });
     $("#about .about-img-wrap").css({
-      transform: 'translate(-50%, '+ st/1000 + '%' +')'
+      // transform: 'translate(-50%, '+ transformI + 'px' +')'
+      top: transformI + 'px'
     });
     $("#about .about-img").css('background-size', backgroundSize + '%');
-    // $("#about .overlay-img").css('background-size', backgroundSize + '%');
    lastScrollTop = st;
 });
 
