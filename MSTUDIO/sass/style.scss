@@ -164,8 +164,8 @@ a {
     width: auto;
     height: 40px;
     height: 40px;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 0;
+    top: auto;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
@@ -737,7 +737,7 @@ header {
         //     background-color: rgba(0, 0, 0, 0.3);
         // }
         article {
-            padding: 250px 0 20px;
+            padding: 200px 0 20px;
             text-align: center;
         }
         .all-info {
@@ -1396,14 +1396,20 @@ footer {
 }
 
 @media screen and (max-width: 1400px) {
-    #about .back-wrapper .cover-about .content-wrap {
-        h1 {
-            font-size: 32px;
-            width: 82%;
+    #about .back-wrapper {
+        .cover-about .content-wrap {
+            h1 {
+                font-size: 32px;
+                width: 82%;
+            }
+            p {
+                font-size: 16px;
+                width: 45%;
+            }
         }
-        p {
-            font-size: 16px;
-            width: 45%;
+
+        article {
+            padding: 170px 0 20px;
         }
     }
 }

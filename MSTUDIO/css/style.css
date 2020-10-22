@@ -134,8 +134,8 @@ a {
   width: auto;
   height: 40px;
   height: 40px;
-  top: 50%;
-  transform: translateY(-50%); }
+  bottom: 0;
+  top: auto; }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
   background-color: transparent;
@@ -576,7 +576,7 @@ header {
       background-size: 250%;
       will-change: transform; }
   #about .back-wrapper article {
-    padding: 250px 0 20px;
+    padding: 200px 0 20px;
     text-align: center; }
   #about .back-wrapper .all-info {
     position: relative;
@@ -1096,7 +1096,9 @@ footer {
     width: 82%; }
   #about .back-wrapper .cover-about .content-wrap p {
     font-size: 16px;
-    width: 45%; } }
+    width: 45%; }
+  #about .back-wrapper article {
+    padding: 170px 0 20px; } }
 @media screen and (max-width: 1199.98px) {
   #about .back-wrapper .about-img-wrap {
     width: 530px; }
