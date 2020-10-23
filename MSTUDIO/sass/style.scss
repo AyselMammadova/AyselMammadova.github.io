@@ -170,7 +170,14 @@ a {
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
     background-color: transparent;
-    background-image: none;
+}
+
+.carousel-control-prev-icon {
+    background: url('../img/left-arrow.png') no-repeat;
+}
+
+.carousel-control-next-icon {
+    background: url('../img/right-arrow.png') no-repeat;
 }
 
 
@@ -473,9 +480,6 @@ header {
         left: 0;
         .container {
             height: 565px; 
-            i {
-                font-size: 40px;
-            }
         }
     }
     .right-sec {
@@ -538,24 +542,6 @@ header {
         height: 525px;
         .container {
             height: 525px; 
-        }
-    }
-    .carousel-control-prev, .carousel-control-next {
-        i {
-            -webkit-transition: 500ms all ease-in-out;
-            -moz-transition: 500ms all ease-in-out;
-            -o-transition: 500ms all ease-in-out;
-            transition: 500ms all ease-in-out;
-        }
-    }
-    .carousel-control-prev:hover {
-        i {
-            color: #dacab3;
-        }
-    }
-    .carousel-control-next:hover {
-        i {
-            color: #dacab3;
         }
     }
 }

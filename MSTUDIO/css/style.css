@@ -138,8 +138,13 @@ a {
   top: auto; }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
-  background-color: transparent;
-  background-image: none; }
+  background-color: transparent; }
+
+.carousel-control-prev-icon {
+  background: url("../img/left-arrow.png") no-repeat; }
+
+.carousel-control-next-icon {
+  background: url("../img/right-arrow.png") no-repeat; }
 
 /* header */
 header {
@@ -377,8 +382,6 @@ header {
     left: 0; }
     #main .navs-slider .container {
       height: 565px; }
-      #main .navs-slider .container i {
-        font-size: 40px; }
   #main .right-sec {
     position: absolute;
     top: 0;
@@ -427,15 +430,6 @@ header {
     height: 525px; }
     .second-design #main .navs-slider .container {
       height: 525px; }
-  .second-design #main .carousel-control-prev i, .second-design #main .carousel-control-next i {
-    -webkit-transition: 500ms all ease-in-out;
-    -moz-transition: 500ms all ease-in-out;
-    -o-transition: 500ms all ease-in-out;
-    transition: 500ms all ease-in-out; }
-  .second-design #main .carousel-control-prev:hover i {
-    color: #dacab3; }
-  .second-design #main .carousel-control-next:hover i {
-    color: #dacab3; }
 
 /* portfolio */
 #portfolio {
