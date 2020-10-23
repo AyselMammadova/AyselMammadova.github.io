@@ -15,6 +15,13 @@ button:focus, input:focus, textarea:focus, .btn:focus {
     outline: 0;
     box-shadow: none;
 }
+
+button, *[type="button"] {
+    appearance: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+}
+
 ul {
     list-style-type: none;
     margin-bottom: 0;
