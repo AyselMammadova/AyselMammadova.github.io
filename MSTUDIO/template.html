@@ -64,8 +64,15 @@
                         <li class="nav-item dropdown dropdown-menu-wrap">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Xidmətlər</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Memarlıq işçi layihələrinin hazırlanması</a>
-                                <a class="dropdown-item" href="#">Eksteryerin və interyerin dizaynı</a>
+                                <a class="dropdown-item" href="#">Eksteryer və interyer dizayn</a>
+                                <a class="dropdown-item" href="#">Landşaft dizaynı</a>
+                                <a class="dropdown-item" href="#">Memarlıq işçi və mühəndis layihələrinin hazırlanması</a>
+                                <a class="dropdown-item" href="#">Tikinti və təmir işləri açar təslim</a>
+                                <a class="dropdown-item" href="#">Bədii rəngkarlıq və rəssamlıq işləri</a>
+                                <a class="dropdown-item" href="#">Bədii tərtibat və dekorasiya işləri</a>
+                                <a class="dropdown-item" href="#">Heykəltaraşlıq</a>
+                                <a class="dropdown-item" href="#">Maketlər və stendlər</a>
+                                <a class="dropdown-item" href="#">Müəllif nəzarəti</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -328,6 +335,18 @@
                 </div>
                 <div class="service">
                     <a href="#">
+                        <img src="img/ser55.jpg" alt="service">
+                        <h3 class="service-text">Bədii rəngkarlıq və rəssamlıq işləri</h3>
+                    </a>
+                </div>
+                <div class="service">
+                    <a href="#">
+                        <img src="img/ser66.jpg" alt="service">
+                        <h3 class="service-text">Bədii tərtibat və dekorasiya işləri</h3>
+                    </a>
+                </div> 
+                <div class="service">
+                    <a href="#">
                         <img src="img/ser5.jpg" alt="service">
                         <h3 class="service-text">Heykəltaraşlıq</h3>
                     </a>
@@ -336,6 +355,12 @@
                     <a href="#">
                         <img src="img/ser6.jpg" alt="service">
                         <h3 class="service-text">Maketlər və stendlər</h3>
+                    </a>
+                </div> 
+                <div class="service">
+                    <a href="#">
+                        <img src="img/ser99.jpg" alt="service">
+                        <h3 class="service-text">Müəllif nəzarəti</h3>
                     </a>
                 </div> 
             </div>
@@ -613,12 +638,33 @@
         <div id="map"></div>
         <div class="contact-info-wrap">
             <div class="contact-info">
-                <h2>Mstudio <br>Architecture and Design</h2>
-                <address>Azərbaycan, Bakı, AZ1000<br>Gurban Abbasov küç. 29, “Bayıl Plaza” 3-cü mərtəbə</address>
-                <ul>
-                    <li><a href="tel:+994124372741">+994 12 437 27 41</a></li>
-                    <li><a href="mailto:info@mstudio.az">info@mstudio.az</a></li>
-                </ul>
+                <div class="loc-box active" data-latitude="40.348223" data-longitude="49.8360911">
+                    <h2>Baş Ofis</h2>
+                    <address>Azərbaycan, Bakı, AZ1000<br>Gurban Abbasov küç. 29, “Bayıl Plaza” 3-cü mərtəbə</address>
+                    <ul>
+                        <li><a href="tel:+994124372741">+994 12 437 27 41</a></li>
+                        <li><a href="tel:+994502460048">+994 50 246 00 48</a></li>
+                        <li class="mail-link"><a href="mailto:info@mstudio.az">info@mstudio.az</a></li>
+                    </ul>
+                </div>
+
+                <div class="loc-box" data-latitude="43.229028" data-longitude="76.945337">
+                    <h2>Gürcüstan filialı</h2>
+                    <address>Mery Davitaşvili küç Nr.3, Tbilisi, Gürcüstan</address>
+                    <ul>
+                        <li><a href="tel:+999999">+999999</a></li>
+                    </ul>
+                </div>
+
+                <div class="loc-box" data-latitude="25.3866476" data-longitude="51.5211027">
+                    <h2>Qətər filialı</h2>
+                    <address>Qətər, Doha 303 Lusail küç.“Marina Twin”<br>Tower-B, mərtəbə-25</address>
+                    <ul>
+                        <li><a href="tel:+97444873143">+974 4 487 31 43</a></li>
+                        <li><a href="tel:+97450729299">+974 5 072 92 99</a></li>
+                        <li><a href="tel:+97466078676">+974 6 607 86 76</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -656,10 +702,20 @@
     <script src="js/main.js"></script>
     <!--map script-->
     <script>
+        var latitude = 40.348223;
+        var longitude = 49.8360911;
+        $('#map-wrapper .contact-info .loc-box').click(function() {
+            $(this).addClass('active').siblings().removeClass('active');
+            latitude = parseFloat($(this).attr('data-latitude'));
+            longitude = parseFloat($(this).attr('data-longitude'));
+            initMap();
+        });
+
+
         function initMap() {
             var uluru = {
-                lat: 40.348223,
-                lng: 49.8360911
+                lat: latitude,
+                lng: longitude
             };
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 15,

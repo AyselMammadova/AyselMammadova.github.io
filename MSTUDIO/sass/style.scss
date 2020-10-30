@@ -90,7 +90,7 @@ a {
         }
 
         .dropdown-item {
-            font-size: 14px;
+            font-size: 15px;
             padding: 10px 32px;
             &:hover, &:focus {
                 background-color: #fbfbf8;
@@ -1231,44 +1231,69 @@ header {
         -webkit-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
         .contact-info {
-            padding: 50px 20px 0px 20px;
+            padding: 0 20px;
             border-color: #eaeaea;
             position: absolute;
             top: 50%;
-            left: 30%;
+            left: 22%;
             -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-            h2 {
-                font-size: 28px;
-                color: #383838;
-                font-weight: bold;
-                letter-spacing: 0px;
-                line-height: 1.2;
-                position: relative;
-                &::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -18px;
-                    left: 0;
-                    width: 100%;
-                    max-width: 40px;
-                    border-bottom: 2px solid #3a3a3a;
-                }
-            }
-            address {
-                margin: 50px 0 20px;
-                color: #788088;
-            }
-            ul {
-                li {
-                    float: left;
-                    a {
-                        color: #788088;
+            .loc-box {
+                padding: 20px;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                -o-border-radius: 8px;
+                border-radius: 8px;
+                cursor: pointer;
+                h2 {
+                    font-size: 28px;
+                    color: #bfbfbf;
+                    font-weight: bold;
+                    letter-spacing: 0px;
+                    line-height: 1.2;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -18px;
+                        left: 0;
+                        width: 100%;
+                        max-width: 40px;
+                        border-bottom: 2px solid #bfbfbf;
                     }
-                    &:nth-child(2) {
+                }
+                address {
+                    margin: 50px 0 20px;
+                    color: #788088;
+                }
+                ul {
+                    height: 25px;
+                    li {
+                        float: left;
                         margin-left: 30px;
                         a {
-                            text-decoration: underline;
+                            color: #788088;
+                        }
+                        &:nth-child(1) {
+                            margin-left: 0;
+                        }
+                        &.mail-link {
+                            a {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                &.active {
+                    background: #fff;
+                    -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+                    -moz-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+                    -o-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+                    h2 {
+                        color: #383838;
+                        &::after {
+                            border-bottom: 2px solid #3a3a3a;
                         }
                     }
                 }
