@@ -1,16 +1,21 @@
 $(document).ready(function() {
     // slider
     $('.slider').owlCarousel({ 
-        loop: false,
+        loop: true,
         lazyLoad:true,
         mouseDrag: false,
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 6000,
         autoplaySpeed: 700,
         dots: false,
         nav: false,
-        items: 1, 
-        transition: "fade",
-        animate: "fadeInUp"	
+        items: 1,
+        animateOut: 'slideOutUp'
     });
+
+    // choose apartment 
+    $('.choose-apartment').click(function() {
+        $('.slider').hide();
+        $('.flat-choose').show();
+    })
 });
