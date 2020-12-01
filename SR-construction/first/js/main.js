@@ -13,9 +13,7 @@ $(document).ready(function() {
         animateOut: 'slideOutUp'
     });
 
-    // choose apartment 
-    $('.choose-apartment').click(function() {
-        $('.slider').hide();
-        $('.flat-choose').show();
-    })
+    // parallax clouds
+    var scene = document.getElementById('scene')
+    var parallax = new Parallax(scene);
 });

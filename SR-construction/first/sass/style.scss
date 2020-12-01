@@ -1,4 +1,9 @@
 /* mixin */
+@mixin d-flex-column {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 @mixin display-f-nowrap {
     display: -ms-flexbox;
     display: flex;
@@ -109,12 +114,19 @@
     animation-delay: 0.8s;
 }
 
+/* base colors */ 
+$dark-color: #191919;
+$white-color: #fff;
+$main-color: #caa866;
+$hover-color: #c59f57;
+
+
 /* general style */
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #191919;
+    color: $dark-color;
     font-family: Proxima Nova, sans-serif;
     overflow-x: hidden;
     @include em;
@@ -141,7 +153,7 @@ ul {
 }
 
 a {
-    color: #191919;
+    color: $dark-color;
 }
 
 .owl-nav.disabled, .owl-dots.disabled {
@@ -225,18 +237,18 @@ header {
                     .nav-link {
                         text-transform: uppercase;
                         letter-spacing: .1em;
-                        color: #fff;
+                        color: $white-color;
                         @include transition-300;
                         &.call-us {
                             font-size: 20px;
                             padding: 0;
                             width: 134px;
                             height: 42px;
-                            color: #fff;
+                            color: $white-color;
                             font-weight: 700;
                             margin-left: 12px;
                             @include display-f-nowrap-center;
-                            background-color: #caa866;
+                            background-color: $main-color;
                             -webkit-border-radius: 25px;
                             -moz-border-radius: 25px;
                             -o-border-radius: 25px;
@@ -246,12 +258,57 @@ header {
                             -ms-transition: background-color .2s ease;
                             -o-transition: background-color .2s ease;
                             transition: background-color .2s ease;
+                            -webkit-animation: play 2s ease infinite;
+                            -moz-animation: play 2s ease infinite;
+                            animation: play 2s ease infinite;
+                            @-webkit-keyframes play {
+                                0% {
+                                    -webkit-transform: scale(1);
+                                    transform: scale(1);
+                                }
+                                15% {
+                                    -webkit-box-shadow: 0 0 0 5px rgba(202, 168, 102, 0.2);
+                                    -moz-box-shadow: 0 0 0 5px rgba(202, 168, 102, 0.2);
+                                    box-shadow: 0 0 0 5px rgba(202, 168, 102, 0.2);
+                                }
+                                25% {
+                                    -webkit-box-shadow: 0 0 0 10px rgba(202, 168, 102, 0.2), 0 0 0 20px rgba(202, 168, 102, 0.1);
+                                    -moz-box-shadow: 0 0 0 10px rgba(202, 168, 102, 0.2), 0 0 0 20px rgba(202, 168, 102, 0.1);
+                                    box-shadow: 0 0 0 10px rgba(202, 168, 102, 0.2), 0 0 0 20px rgba(202, 168, 102, 0.1);
+                                }
+                                25% {
+                                    -webkit-box-shadow: 0 0 0 15px rgba(202, 168, 102, 0.2), 0 0 0 30px rgba(202, 168, 102, 0.1);
+                                    -moz-box-shadow: 0 0 0 15px rgba(202, 168, 102, 0.2), 0 0 0 30px rgba(202, 168, 102, 0.1);
+                                    box-shadow: 0 0 0 15px rgba(202, 168, 102, 0.2), 0 0 0 30px rgba(202, 168, 102, 0.1);
+                                }
+                            }
+                            @keyframes play {
+                                0% {
+                                    -webkit-transform: scale(1);
+                                    transform: scale(1);
+                                }
+                                15% {
+                                    -webkit-box-shadow: 0 0 0 5px rgba(202, 168, 102, 0.2);
+                                    -moz-box-shadow: 0 0 0 5px rgba(202, 168, 102, 0.2);
+                                    box-shadow: 0 0 0 5px rgba(202, 168, 102, 0.2);
+                                }
+                                25% {
+                                    -webkit-box-shadow: 0 0 0 10px rgba(202, 168, 102, 0.2), 0 0 0 20px rgba(202, 168, 102, 0.1);
+                                    -moz-box-shadow: 0 0 0 10px rgba(202, 168, 102, 0.2), 0 0 0 20px rgba(202, 168, 102, 0.1);
+                                    box-shadow: 0 0 0 10px rgba(202, 168, 102, 0.2), 0 0 0 20px rgba(202, 168, 102, 0.1);
+                                }
+                                25% {
+                                    -webkit-box-shadow: 0 0 0 15px rgba(202, 168, 102, 0.2), 0 0 0 30px rgba(202, 168, 102, 0.1);
+                                    -moz-box-shadow: 0 0 0 15px rgba(202, 168, 102, 0.2), 0 0 0 30px rgba(202, 168, 102, 0.1);
+                                    box-shadow: 0 0 0 15px rgba(202, 168, 102, 0.2), 0 0 0 30px rgba(202, 168, 102, 0.1);
+                                }
+                            }
                             img {
                                 height: 26px;
                                 margin-left: 6px;
                             }
                             &:hover {
-                                background-color: #c59f57;
+                                background-color: $hover-color;
                             }
                         }
                         &:not(.call-us) {
@@ -290,11 +347,11 @@ header {
                     position: absolute;
                     @include translateXY;
                     text-align: center;
-                    color: #fff;
+                    color: $white-color;
                     z-index: 21;
                     font-family: Futura, sans-serif;
 
-                    h6 {
+                    h3 {
                         margin: 0;
                         font-size: 34px;
                         letter-spacing: .1em;
@@ -308,7 +365,7 @@ header {
                         -ms-border-radius: 50%;
                         -o-border-radius: 50%;
                         border-radius: 50%;
-                        border: 1px solid #fff;
+                        border: 1px solid $white-color;
                         position: relative;
                         margin: 3em auto;
                         -webkit-transform: scale(0.5);
@@ -322,7 +379,7 @@ header {
                             position: absolute;
                             width: 30em;
                             height: 1px;
-                            background-color: #fff;
+                            background-color: $white-color;
                             margin: 0 10px;
                             @include translateY;
                         }
@@ -392,7 +449,7 @@ header {
             height: 34px;
             margin: 4.5em 0;
             @include radius-50;
-            background-color: #caa866;
+            background-color: $main-color;
             -webkit-transition: background-color .2s ease;
             -moz-transition: background-color .2s ease;
             -ms-transition: background-color .2s ease;
@@ -402,14 +459,14 @@ header {
                 @include display-f-nowrap-center;
                 height: 100%;
                 i {
-                    color: #fff;
+                    color: $white-color;
                     font-size: 2.5em;
                     position: relative;
                     top: 1px;
                 }
             }
             &:hover {
-                background-color: #c59f57;
+                background-color: $hover-color;
             }
         }
     }
@@ -462,15 +519,51 @@ header {
                 line-height: 1.5;
                 letter-spacing: 0.1em;
                 color: rgba(255,255,255,0.9);
-                -webkit-animation: color-anime 1s ease infinite;
-                animation: color-anime 1s ease infinite;
+                -webkit-animation: color-anime 3s ease infinite;
+                animation: color-anime 3s ease infinite;
                 @-webkit-keyframes color-anime {
-                    from { color: rgba(255,255,255,0.9) }
-                    to { color: #eaac32 }
+                    0% { color: rgba(255,255,255,0.9) }
+                    1% { color: #eaac32 }
+                    1.5% { color: rgba(255,255,255,0.9) }
+                    2% { color: #eaac32 }
+                    2.5% { color: rgba(255,255,255,0.9) }
+                    3% { color: #eaac32 }
+                    3.5% { color: rgba(255,255,255,0.9) }
+                    4% { color: #eaac32 }
+                    4.5% { color: rgba(255,255,255,0.9) }
+                    5% { color: #eaac32 }
+                    5.5% { color: rgba(255,255,255,0.9) }
+                    6% { color: #eaac32 }
+                    6.5% { color: rgba(255,255,255,0.9) }
+                    7% { color: #eaac32 }
+                    7.5% { color: rgba(255,255,255,0.9) }
+                    8% { color: #eaac32 }
+                    8.5% { color: rgba(255,255,255,0.9) }
+                    9% { color: #eaac32 }
+                    9.5% { color: rgba(255,255,255,0.9) }
+                    10% { color: rgba(255,255,255,0.9) }
                 }
                 @keyframes color-anime {
-                    from { color: rgba(255,255,255,0.9) }
-                    to { color: #eaac32 }
+                    0% { color: rgba(255,255,255,0.9) }
+                    1% { color: #eaac32 }
+                    1.5% { color: rgba(255,255,255,0.9) }
+                    2% { color: #eaac32 }
+                    2.5% { color: rgba(255,255,255,0.9) }
+                    3% { color: #eaac32 }
+                    3.5% { color: rgba(255,255,255,0.9) }
+                    4% { color: #eaac32 }
+                    4.5% { color: rgba(255,255,255,0.9) }
+                    5% { color: #eaac32 }
+                    5.5% { color: rgba(255,255,255,0.9) }
+                    6% { color: #eaac32 }
+                    6.5% { color: rgba(255,255,255,0.9) }
+                    7% { color: #eaac32 }
+                    7.5% { color: rgba(255,255,255,0.9) }
+                    8% { color: #eaac32 }
+                    8.5% { color: rgba(255,255,255,0.9) }
+                    9% { color: #eaac32 }
+                    9.5% { color: rgba(255,255,255,0.9) }
+                    10% { color: rgba(255,255,255,0.9) } 
                 }
                 img {
                     max-width: 9em;
@@ -481,7 +574,7 @@ header {
                     -webkit-animation: shake-animation 3s ease infinite;
                     animation: shake-animation 3s ease infinite;
                     @-webkit-keyframes shake-animation {
-                        0% { transform:translate(0,0) }
+                       0% { transform:translate(0,0) }
                        1% { transform:translate(5px,0) }
                        1.5% { transform:translate(0,0) }
                        2% { transform:translate(5px,0) }
@@ -501,9 +594,9 @@ header {
                        9% { transform:translate(5px,0) }
                        9.5% { transform:translate(0,0) }
                        10% { transform:translate(0,0) }
-                     }
+                    }
                     @keyframes shake-animation {
-                        0% { transform:translate(0,0) }
+                       0% { transform:translate(0,0) }
                        1% { transform:translate(5px,0) }
                        1.5% { transform:translate(0,0) }
                        2% { transform:translate(5px,0) }
@@ -539,11 +632,149 @@ header {
         }
     }
 
-    .flat-choose {
+    .project-choose-wrapper {
         background: url('../img/sky.png') no-repeat;
         background-size: cover;
         width: 100%;
         @include h-100vh;
+        position: relative;
+        font-family: Futura, sans-serif;
+        &::after {
+            content: '';
+            position: absolute;
+            @include wh-100;
+            top: 0;
+            left: 0;
+            background-color: rgba(34,37,24,0.25);
+        }
+        h3 {
+            position: absolute;
+            @include translateX();
+            bottom: 15em;
+            z-index: 21;
+            margin: 0;
+            font-size: 34px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: $white-color;
+        }
+        .project-choose {
+            position: absolute;
+            @include translateX();
+            bottom: 23em;
+            z-index: 21;
+            @include display-f-nowrap-center;
+            .project-box {
+                margin: 15px;
+                position: relative;
+                @include display-f-nowrap-center;
+                @include d-flex-column;
+                cursor: pointer;
+                img {
+                    width: 150px;
+                    height: 200px;
+                    position: absolute;
+                    bottom: 45px;
+                    object-fit: cover;
+                    -webkit-box-shadow: 3px 3px 1px #555;
+                    -moz-box-shadow: 3px 3px 1px #555;
+                    -o-box-shadow: 3px 3px 1px #555;
+                    box-shadow: 3px 3px 1px #555;
+                    -webkit-transition: all .2s ease;
+                    -moz-transition: all .2s ease;
+                    -ms-transition: all .2s ease;
+                    -o-transition: all .2s ease;
+                    transition: all .2s ease;
+                }
+                .oval-f {
+                    width: 200px;
+                    height: 110px;
+                    display: block;
+                    @include radius-50;
+                    background: linear-gradient(to bottom, $main-color 30%, $hover-color 100%);
+                    -webkit-box-shadow: 0px 20px 100px #555;
+                    -moz-box-shadow: 0px 20px 100px #555;
+                    -o-box-shadow: 0px 20px 100px #555;
+                    box-shadow: 0px 20px 100px #555;
+                }
+                .caption-project {
+                    font-size: 22px;
+                    line-height: 1;
+                    position: absolute;
+                    bottom: -60px;
+                    text-align: center;
+                    color: $white-color;
+                    text-shadow: 1px 1px $main-color;
+                    span {
+                        font-size: 14px;
+                    }
+                }
+                &:nth-child(2) {
+                    -webkit-transform: scale(1.2);
+                    -moz-transform: scale(1.2);
+                    -o-transform: scale(1.2);
+                    transform: scale(1.2);
+                }
+                &:hover {
+                    img {
+                        bottom: 55px;
+                    }
+                }
+            }
+        }
+    }
+
+    .clouds-parallax {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        #scene {
+            z-index: 20;
+            height: 100%;
+            overflow: hidden;
+            .layer {
+                @include wh-100;
+                .cloud {
+                    width: max-content;
+                    position: absolute; 
+                    &.cloudFirst {
+                        top: 15%;
+                        left: 10%;
+                    }
+                    &.cloudSecond {
+                        right: -5px;
+                        top: 42%;
+                        img {
+                            width: 490px;
+                        }
+                    }
+                    &.cloudThird {
+                        top: 24%;
+                        right: 30%;
+                        img {
+                            width: 150px;
+                        }
+                    }
+                    &.cloudFourth {
+                        left: 34%;
+                        bottom: 0;
+                    }
+                    &.cloudFifth {
+                        bottom: 5%;
+                        right: -5%;
+                        img {
+                            width: 400px;
+                        }
+                    }
+                    &.cloudSixth {
+                        left: 0;
+                        top: 47%;
+                    }
+                }
+            }
+        }
     }
 }
 
