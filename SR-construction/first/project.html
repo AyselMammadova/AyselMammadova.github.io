@@ -59,24 +59,24 @@
     <!--main section start-->
     <section id="main">
         <div class="project-choose-wrapper animated fadeIn">
-            <h3>Layihəni seçin</h3>
+            <h1>Layihəni seçin</h1>
             <div class="project-choose">
                 <div class="project-box">
-                    <img src="img/item1.png" alt="project">
+                    <img src="img/building1.png" alt="project">
                     <span class="oval-f"></span>
                     <div class="caption-project">
                         Ahmadli<br><span>Park</span>
                     </div>
                 </div>
                 <div class="project-box">
-                    <img src="img/item2.png" alt="project">
+                    <img src="img/building2.png" alt="project">
                     <span class="oval-f"></span>
                     <div class="caption-project">
                         Teras<br><span>Park</span>
                     </div>
                 </div>
                 <div class="project-box">
-                    <img src="img/item3.png" alt="project">
+                    <img src="img/building3.png" alt="project">
                     <span class="oval-f"></span>
                     <div class="caption-project">
                         Ahmadli<br><span>Park</span>
@@ -152,5 +152,12 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Main Scripts-->
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            // parallax clouds
+            var scene = document.getElementById('scene');
+            var parallax = new Parallax(scene);
+        });
+    </script>
 </body>
 </html>

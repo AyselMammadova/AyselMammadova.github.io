@@ -10,10 +10,6 @@ $(document).ready(function() {
         dots: false,
         nav: false,
         items: 1,
-        animateOut: 'slideOutUp'
+        animateOut: 'fadeOut'
     });
-
-    // parallax clouds
-    var scene = document.getElementById('scene')
-    var parallax = new Parallax(scene);
 });
