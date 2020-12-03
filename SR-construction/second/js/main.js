@@ -4,7 +4,7 @@ $(document).ready(function() {
         loop: true,
         lazyLoad:true,
         mouseDrag: false,
-        autoplay: true,
+        autoplay: false,
         autoplayTimeout: 6000,
         autoplaySpeed: 700,
         dots: false,
