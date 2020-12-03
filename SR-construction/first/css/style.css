@@ -170,7 +170,7 @@ header {
         #main .slider .owl-item .item .slide-caption-wrap h2 {
           margin: 0;
           font-size: 42px;
-          letter-spacing: .1em;
+          letter-spacing: 2px;
           text-transform: uppercase;
           font-weight: 800 !important;
           text-shadow: 2px 1px black; }
@@ -209,7 +209,7 @@ header {
             right: 10px; }
         #main .slider .owl-item .item .slide-caption-wrap p {
           font-size: 12px;
-          letter-spacing: 0.3em;
+          letter-spacing: 2px;
           line-height: 1.4;
           text-transform: uppercase; }
       #main .slider .owl-item .item::after {
@@ -231,12 +231,12 @@ header {
       animation-iteration-count: infinite; }
 @-webkit-keyframes MOVE-BG {
   from {
-    background-position-y: 20%; }
+    background-position-y: 35%; }
   to {
     background-position-y: 50%; } }
 @keyframes MOVE-BG {
   from {
-    background-position-y: 20%; }
+    background-position-y: 35%; }
   to {
     background-position-y: 50%; } }
   #main .social-media {
@@ -256,6 +256,7 @@ header {
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
+      border-radius: 50%;
       background-color: #caa866;
       -webkit-transition: background-color .2s ease;
       -moz-transition: background-color .2s ease;
@@ -307,7 +308,11 @@ header {
     -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0); } }
     #main .chooses-sec li {
-      float: left; }
+      float: left;
+      -webkit-transition: 300ms all ease;
+      -moz-transition: 300ms all ease;
+      -o-transition: 300ms all ease;
+      transition: 300ms all ease; }
       #main .chooses-sec li a {
         display: -ms-flexbox;
         display: flex;
@@ -339,170 +344,102 @@ header {
     color: rgba(255, 255, 255, 0.9); }
   1% {
     color: #eaac32; }
-  1.5% {
-    color: #eaac32; }
   2% {
-    color: #eaac32; }
-  2.5% {
     color: rgba(255, 255, 255, 0.9); }
   3% {
-    color: rgba(255, 255, 255, 0.9); }
-  3.5% {
-    color: rgba(255, 255, 255, 0.9); }
+    color: #eaac32; }
   4% {
-    color: #eaac32; }
-  4.5% {
-    color: #eaac32; }
+    color: rgba(255, 255, 255, 0.9); }
   5% {
     color: #eaac32; }
-  5.5% {
-    color: rgba(255, 255, 255, 0.9); }
   6% {
-    color: rgba(255, 255, 255, 0.9); }
-  6.5% {
     color: rgba(255, 255, 255, 0.9); }
   7% {
     color: #eaac32; }
-  7.5% {
-    color: #eaac32; }
   8% {
-    color: #eaac32; }
-  8.5% {
     color: rgba(255, 255, 255, 0.9); }
   9% {
-    color: rgba(255, 255, 255, 0.9); }
-  9.5% {
-    color: rgba(255, 255, 255, 0.9); }
-  100% {
+    color: #eaac32; }
+  10% {
     color: rgba(255, 255, 255, 0.9); } }
 @keyframes color-anime {
   0% {
     color: rgba(255, 255, 255, 0.9); }
   1% {
     color: #eaac32; }
-  1.5% {
-    color: #eaac32; }
   2% {
-    color: #eaac32; }
-  2.5% {
     color: rgba(255, 255, 255, 0.9); }
   3% {
-    color: rgba(255, 255, 255, 0.9); }
-  3.5% {
-    color: rgba(255, 255, 255, 0.9); }
+    color: #eaac32; }
   4% {
-    color: #eaac32; }
-  4.5% {
-    color: #eaac32; }
+    color: rgba(255, 255, 255, 0.9); }
   5% {
     color: #eaac32; }
-  5.5% {
-    color: rgba(255, 255, 255, 0.9); }
   6% {
-    color: rgba(255, 255, 255, 0.9); }
-  6.5% {
     color: rgba(255, 255, 255, 0.9); }
   7% {
     color: #eaac32; }
-  7.5% {
-    color: #eaac32; }
   8% {
-    color: #eaac32; }
-  8.5% {
     color: rgba(255, 255, 255, 0.9); }
   9% {
-    color: rgba(255, 255, 255, 0.9); }
-  9.5% {
-    color: rgba(255, 255, 255, 0.9); }
-  100% {
+    color: #eaac32; }
+  10% {
     color: rgba(255, 255, 255, 0.9); } }
           #main .chooses-sec li:nth-child(2) a img {
             -webkit-animation: shake-animation 5s ease infinite;
-            animation: shake-animation 5s ease infinite; }
+            animation: shake-animation 5s ease infinite;
+            position: relative;
+            top: -5px; }
 @-webkit-keyframes shake-animation {
   0% {
     transform: translate(0, 0); }
   1% {
     transform: translate(5px, 0); }
-  1.5% {
-    transform: translate(0, 0); }
   2% {
-    transform: translate(5px, 0); }
-  2.5% {
     transform: translate(0, 0); }
   3% {
     transform: translate(5px, 0); }
-  3.5% {
-    transform: translate(0, 0); }
   4% {
-    transform: translate(5px, 0); }
-  4.5% {
     transform: translate(0, 0); }
   5% {
     transform: translate(5px, 0); }
-  5.5% {
-    transform: translate(0, 0); }
   6% {
-    transform: translate(5px, 0); }
-  6.5% {
     transform: translate(0, 0); }
   7% {
     transform: translate(5px, 0); }
-  7.5% {
-    transform: translate(0, 0); }
   8% {
-    transform: translate(5px, 0); }
-  8.5% {
     transform: translate(0, 0); }
   9% {
     transform: translate(5px, 0); }
-  9.5% {
-    transform: translate(0, 0); }
-  100% {
+  10% {
     transform: translate(0, 0); } }
 @keyframes shake-animation {
   0% {
     transform: translate(0, 0); }
   1% {
-    transform: translate(5px, 0); }
-  1.5% {
-    transform: translate(0, 0); }
+    transform: translate(-5px, 0); }
   2% {
-    transform: translate(5px, 0); }
-  2.5% {
     transform: translate(0, 0); }
   3% {
-    transform: translate(5px, 0); }
-  3.5% {
-    transform: translate(0, 0); }
+    transform: translate(-5px, 0); }
   4% {
-    transform: translate(5px, 0); }
-  4.5% {
     transform: translate(0, 0); }
   5% {
-    transform: translate(5px, 0); }
-  5.5% {
-    transform: translate(0, 0); }
+    transform: translate(-5px, 0); }
   6% {
-    transform: translate(5px, 0); }
-  6.5% {
     transform: translate(0, 0); }
   7% {
-    transform: translate(5px, 0); }
-  7.5% {
-    transform: translate(0, 0); }
+    transform: translate(-5px, 0); }
   8% {
-    transform: translate(5px, 0); }
-  8.5% {
     transform: translate(0, 0); }
   9% {
-    transform: translate(5px, 0); }
-  9.5% {
-    transform: translate(0, 0); }
-  100% {
+    transform: translate(-5px, 0); }
+  10% {
     transform: translate(0, 0); } }
       #main .chooses-sec li:nth-child(3) a img {
         max-height: 52px; }
+      #main .chooses-sec li:hover {
+        opacity: .7; }
   #main .project-choose-wrapper {
     background: url("../img/sky.png") no-repeat;
     background-size: cover;
@@ -579,6 +516,7 @@ header {
           -moz-border-radius: 50%;
           -ms-border-radius: 50%;
           -o-border-radius: 50%;
+          border-radius: 50%;
           background: linear-gradient(to bottom, #caa866 30%, #c59f57 100%);
           -webkit-box-shadow: 0px 20px 100px #555;
           -moz-box-shadow: 0px 20px 100px #555;

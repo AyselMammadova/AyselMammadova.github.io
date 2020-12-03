@@ -84,6 +84,7 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    border-radius: 50%;
 }
 
 @mixin em {
@@ -308,7 +309,7 @@ header {
                     h2 {
                         margin: 0;
                         font-size: 42px;
-                        letter-spacing: .1em;
+                        letter-spacing: 2px;
                         text-transform: uppercase;
                         font-weight: 800 !important;
                         text-shadow: 2px 1px black;
@@ -348,7 +349,7 @@ header {
                     }
                     p {
                         font-size: 12px;
-                        letter-spacing: 0.3em;
+                        letter-spacing: 2px;
                         line-height: 1.4;
                         text-transform: uppercase;
                     }
@@ -375,7 +376,7 @@ header {
 
                     @-webkit-keyframes MOVE-BG {
                         from {
-                            background-position-y: 20%;
+                            background-position-y: 35%;
                         }
                         to { 
                             background-position-y: 50%;
@@ -384,7 +385,7 @@ header {
 
                     @keyframes MOVE-BG {
                         from {
-                            background-position-y: 20%;
+                            background-position-y: 35%;
                         }
                         to { 
                             background-position-y: 50%;
@@ -465,6 +466,7 @@ header {
 
         li {
             float: left;
+            @include transition-300;
             a {
                 @include display-f-nowrap-center;
                 height: 100%;
@@ -491,93 +493,59 @@ header {
                     @-webkit-keyframes color-anime {
                         0% { color: rgba(255,255,255,0.9) }
                         1% { color: #eaac32 }
-                        1.5% { color: #eaac32 }
-                        2% { color: #eaac32 }
-                        2.5% { color: rgba(255,255,255,0.9) }
-                        3% { color: rgba(255,255,255,0.9) }
-                        3.5% { color: rgba(255,255,255,0.9) }
-                        4% { color: #eaac32 }
-                        4.5% { color: #eaac32 }
+                        2% { color: rgba(255,255,255,0.9) }
+                        3% { color: #eaac32 }
+                        4% { color: rgba(255,255,255,0.9) }
                         5% { color: #eaac32 }
-                        5.5% { color: rgba(255,255,255,0.9) }
                         6% { color: rgba(255,255,255,0.9) }
-                        6.5% { color: rgba(255,255,255,0.9) }
                         7% { color: #eaac32 }
-                        7.5% { color: #eaac32 }
-                        8% { color: #eaac32 }
-                        8.5% { color: rgba(255,255,255,0.9) }
-                        9% { color:rgba(255,255,255,0.9) }
-                        9.5% { color: rgba(255,255,255,0.9) }
-                        100% { color: rgba(255,255,255,0.9) }
+                        8% { color: rgba(255,255,255,0.9) }
+                        9% { color: #eaac32 }
+                        10% { color: rgba(255,255,255,0.9) }
                     }
                     @keyframes color-anime {
                         0% { color: rgba(255,255,255,0.9) }
                         1% { color: #eaac32 }
-                        1.5% { color: #eaac32 }
-                        2% { color: #eaac32 }
-                        2.5% { color: rgba(255,255,255,0.9) }
-                        3% { color: rgba(255,255,255,0.9) }
-                        3.5% { color: rgba(255,255,255,0.9) }
-                        4% { color: #eaac32 }
-                        4.5% { color: #eaac32 }
+                        2% { color: rgba(255,255,255,0.9) }
+                        3% { color: #eaac32 }
+                        4% { color: rgba(255,255,255,0.9) }
                         5% { color: #eaac32 }
-                        5.5% { color: rgba(255,255,255,0.9) }
                         6% { color: rgba(255,255,255,0.9) }
-                        6.5% { color: rgba(255,255,255,0.9) }
                         7% { color: #eaac32 }
-                        7.5% { color: #eaac32 }
-                        8% { color: #eaac32 }
-                        8.5% { color: rgba(255,255,255,0.9) }
-                        9% { color:rgba(255,255,255,0.9) }
-                        9.5% { color: rgba(255,255,255,0.9) }
-                        100% { color: rgba(255,255,255,0.9) }
+                        8% { color: rgba(255,255,255,0.9) }
+                        9% { color: #eaac32 }
+                        10% { color: rgba(255,255,255,0.9) }
                     }
                     img {
                         -webkit-animation: shake-animation 5s ease infinite;
                         animation: shake-animation 5s ease infinite;
+                        position: relative;
+                        top: -5px;
                         @-webkit-keyframes shake-animation {
-                        0% { transform:translate(0,0) }
-                        1% { transform:translate(5px,0) }
-                        1.5% { transform:translate(0,0) }
-                        2% { transform:translate(5px,0) }
-                        2.5% { transform:translate(0,0) }
-                        3% { transform:translate(5px,0) }
-                        3.5% { transform:translate(0,0) }
-                        4% { transform:translate(5px,0) }
-                        4.5% { transform:translate(0,0) }
-                        5% { transform:translate(5px,0) }
-                        5.5% { transform:translate(0,0) }
-                        6% { transform:translate(5px,0) }
-                        6.5% { transform:translate(0,0) }
-                        7% { transform:translate(5px,0) }
-                        7.5% { transform:translate(0,0) }
-                        8% { transform:translate(5px,0) }
-                        8.5% { transform:translate(0,0) }
-                        9% { transform:translate(5px,0) }
-                        9.5% { transform:translate(0,0) }
-                        100% { transform:translate(0,0) }
+                            0% { transform:translate(0,0) }
+                            1% { transform:translate(5px,0) }
+                            2% { transform:translate(0,0) }
+                            3% { transform:translate(5px,0) }
+                            4% { transform:translate(0,0) }
+                            5% { transform:translate(5px,0) }
+                            6% { transform:translate(0,0) }
+                            7% { transform:translate(5px,0) }
+                            8% { transform:translate(0,0) }
+                            9% { transform:translate(5px,0) }
+                            10% { transform:translate(0,0) }
                         }
                         @keyframes shake-animation {
-                        0% { transform:translate(0,0) }
-                        1% { transform:translate(5px,0) }
-                        1.5% { transform:translate(0,0) }
-                        2% { transform:translate(5px,0) }
-                        2.5% { transform:translate(0,0) }
-                        3% { transform:translate(5px,0) }
-                        3.5% { transform:translate(0,0) }
-                        4% { transform:translate(5px,0) }
-                        4.5% { transform:translate(0,0) }
-                        5% { transform:translate(5px,0) }
-                        5.5% { transform:translate(0,0) }
-                        6% { transform:translate(5px,0) }
-                        6.5% { transform:translate(0,0) }
-                        7% { transform:translate(5px,0) }
-                        7.5% { transform:translate(0,0) }
-                        8% { transform:translate(5px,0) }
-                        8.5% { transform:translate(0,0) }
-                        9% { transform:translate(5px,0) }
-                        9.5% { transform:translate(0,0) }
-                        100% { transform:translate(0,0) }
+                            0% { transform:translate(0,0) }
+                            1% { transform:translate(-5px,0) }
+                            2% { transform:translate(0,0) }
+                            3% { transform:translate(-5px,0) }
+                            4% { transform:translate(0,0) }
+                            5% { transform:translate(-5px,0) }
+                            6% { transform:translate(0,0) }
+                            7% { transform:translate(-5px,0) }
+                            8% { transform:translate(0,0) }
+                            9% { transform:translate(-5px,0) }
+                            10% { transform:translate(0,0) }
                         }
                     }
                 }
@@ -588,6 +556,9 @@ header {
                         max-height: 52px;
                     }
                 }
+            }
+            &:hover {
+                opacity: .7;
             }
         }
     }
