@@ -136,7 +136,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     color: $dark-color;
-    font-family: Proxima Nova, sans-serif;
+    font-family: 'okmedia1', sans-serif;
+    font-family: 'okmedia2', sans-serif;
     overflow-x: hidden;
     @include em;
     line-height: 1.2;
@@ -198,43 +199,6 @@ header {
         background-color: transparent;
         .navbar-brand {
             @include p-0;
-            -webkit-animation-name: MOVE-LOGO;
-            animation-name: MOVE-LOGO;
-            -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-            -webkit-animation-delay: 0.2s;
-            animation-delay: 0.2s;
-
-            @-webkit-keyframes MOVE-LOGO {
-                from {
-                    opacity: 0;
-                    -webkit-transform: translate3d(0, 300%, 0);
-                    transform: translate3d(0, 300%, 0);
-                }
-              
-                to {
-                    opacity: 1;
-                    -webkit-transform: translate3d(0, 0, 0);
-                    transform: translate3d(0, 0, 0);
-                }
-            }
-              
-            @keyframes MOVE-LOGO {
-                from {
-                    opacity: 0;
-                    -webkit-transform: translate3d(0, 300%, 0);
-                    transform: translate3d(0, 300%, 0);
-                }
-              
-                to {
-                    opacity: 1;
-                    -webkit-transform: translate3d(0, 0, 0);
-                    transform: translate3d(0, 0, 0);
-                }
-            }
-
             img {
                 height: 50px;
             }
@@ -307,12 +271,6 @@ header {
                         @include translateXY;
                     }
                 }
-                .link-text {
-                    font-size: 16px;
-                    font-weight: 500;
-                    color: $white-color;
-                    line-height: 0;
-                }
                 .hover-text {
                     visibility: hidden;
                     padding-left: 3.5em;
@@ -327,7 +285,6 @@ header {
                     -o-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
                     transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
                     position: absolute;
-                    width: 200px;
                     height: 50px;                
                     span {
                         vertical-align: middle;
@@ -353,11 +310,23 @@ header {
                     }
                 }
                 &:first-child {
+                    width: 170px;
                     .icon {
-                        left: -24px;
+                        left: -42px;
                         &::before {
                             background-image: url('../img/headset.png');
                         }
+                    }
+                    .link-text {
+                        position: relative;
+                        left: -22px;
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: $white-color;
+                        line-height: 0;
+                    }
+                    .hover-text {
+                        width: 170px;
                     }
                     &:hover {
                         .hover-text {
@@ -367,8 +336,8 @@ header {
                     }
                 }
                 &:last-child {
+                    width: 200px;
                     margin-left: 4em;
-                    width: 250px;
                     position: relative;
                     &::before {
                         content: '';
@@ -385,6 +354,7 @@ header {
                         -o-transition: opacity .3s ease;
                         transition: opacity .3s ease;
                         @include radius-25px;
+                        z-index: 1;
                     }
                     .icon {
                         position: relative;
@@ -396,6 +366,7 @@ header {
                     .hover-text {
                         visibility: visible;
                         opacity: 1;
+                        width: 200px;
                     }
                     &:hover {
                         &::before {
@@ -424,10 +395,16 @@ header {
             .item {
                 @include h-100vh;
                 position: relative;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position:center center;
-                transition:all 4s ease-in;
+                .background {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include wh-100;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position:center center;
+                    transition:all 4s ease-in;
+                }
                 .slide-caption-wrap {
                     position: absolute;
                     left: 5.3125%;
@@ -435,8 +412,14 @@ header {
                     color: $white-color;
                     z-index: 21;
                     h2 {
-                        text-transform: lowercase;
+                        text-transform: uppercase;
                         font-size: 9em;
+                        line-height: 1;
+                        margin-bottom: 30px;
+                    }
+                    p {
+                        text-transform: lowercase;
+                        font-size: 4em;
                         line-height: 1;
                         margin-bottom: 50px;
                     }
@@ -448,6 +431,8 @@ header {
                         @include radius-25px;
                         background-color: $main-color;
                         color: $white-color;
+                        display: block;
+                        width: fit-content;
                         &::before {
                             content: '';
                             position: absolute;
@@ -484,228 +469,121 @@ header {
                 .background {
                     -webkit-animation-name: MOVE-BG;
                     animation-name: MOVE-BG;
-                    -webkit-animation-duration: 10s;
-                    animation-duration: 10s;
+                    -webkit-animation-duration: 4s;
+                    animation-duration: 4s;
                     -webkit-animation-timing-function: linear;
                     animation-timing-function: linear;
                     -webkit-animation-iteration-count: infinite;
                     animation-iteration-count: infinite;
 
-                    // @-webkit-keyframes MOVE-BG {
-                    //     from {
-                    //         transform:scale(1.5);
-                    //     }
-                    //     to { 
-                    //         transform:scale(1);
-                    //     }
-                    // }
+                    @-webkit-keyframes MOVE-BG {
+                        from {
+                            transform:scale(1.1);
+                        }
+                        to { 
+                            transform:scale(1);
+                        }
+                    }
 
-                    // @keyframes MOVE-BG {
-                    //     from {
-                    //         transform:scale(1.5);
-                    //     }
-                    //     to { 
-                    //         transform:scale(1);
-                    //     }
-                    // }
+                    @keyframes MOVE-BG {
+                        from {
+                            transform:scale(1.1);
+                        }
+                        to { 
+                            transform:scale(1);
+                        }
+                    }
                 }
             }
         }
     }
 
-    .social-media {
+    /* footer */
+    footer {
         position: absolute;
-        @include translateY;
-        left: 13em;
+        bottom: 7.40741%;
+        right: 4.94792%;
         z-index: 21;
-        li {
-            width: 34px;
-            height: 34px;
-            margin: 4.5em 0;
-            @include radius-50;
-            background-color: $main-color;
-            -webkit-transition: background-color .2s ease;
-            -moz-transition: background-color .2s ease;
-            -ms-transition: background-color .2s ease;
-            -o-transition: background-color .2s ease;
-            transition: background-color .2s ease;
-            a {
-                @include display-f-nowrap-center;
-                height: 100%;
-                i {
-                    color: $white-color;
-                    font-size: 2.5em;
-                    position: relative;
-                    top: 1px;
-                }
-            }
-            &:hover {
-                background-color: $hover-color;
-            }
-        }
-    }
-
-    .chooses-sec {
-        position: absolute;
-        bottom: 23em;
-        @include translateX;
-        z-index: 21; 
-        -webkit-animation-name: MOVE-SEC;
-        animation-name: MOVE-SEC;   
-
-        @-webkit-keyframes MOVE-SEC {
-            from {
-              opacity: 0;
-              -webkit-transform: translate3d(-50%, 100%, 0);
-              transform: translate3d(-50%, 100%, 0);
-            }
-          
-            to {
-              opacity: 1;
-              -webkit-transform: translate3d(-50%, 0, 0);
-              transform: translate3d(-50%, 0, 0);
-            }
-        }
-          
-        @keyframes MOVE-SEC {
-            from {
-                opacity: 0;
-                -webkit-transform: translate3d(-50%, 100%, 0);
-                transform: translate3d(-50%, 100%, 0);
-              }
-            
-              to {
-                opacity: 1;
-                -webkit-transform: translate3d(-50%, 0, 0);
-                transform: translate3d(-50%, 0, 0);
-              }
-        } 
-
-        li {
-            float: left;
-            a {
-                @include display-f-nowrap-center;
-                height: 100%;
-                vertical-align: middle;
-                font-size: 13px;
-                font-weight: 600;
-                text-transform: uppercase;
-                line-height: 1.5;
-                letter-spacing: 0.1em;
-                color: rgba(255,255,255,0.9);
-                img {
-                    max-width: 9em;
-                    max-height: 55px;
-                    margin-right: 10px;
-                    vertical-align: middle;
-                    opacity: 0.8;
-                }
-            }
-            &:nth-child(2) {
-                margin: 0 9em;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: flex-end;
+        align-items: flex-end;
+        @include d-flex-column;
+        .social-media {
+            height: 20px;
+            margin-bottom: 24px;
+            li {
+                float: left;
+                width: 20px;
+                height: 20px;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                -ms-border-radius: 4px;
+                -o-border-radius: 4px;
+                border-radius: 4px;
+                background-color: #fbfbfb;
+                @include transition-300;
                 a {
-                    -webkit-animation: color-anime 5s ease infinite;
-                    animation: color-anime 5s ease infinite;
-                    @-webkit-keyframes color-anime {
-                        0% { color: rgba(255,255,255,0.9) }
-                        1% { color: #eaac32 }
-                        1.5% { color: #eaac32 }
-                        2% { color: #eaac32 }
-                        2.5% { color: rgba(255,255,255,0.9) }
-                        3% { color: rgba(255,255,255,0.9) }
-                        3.5% { color: rgba(255,255,255,0.9) }
-                        4% { color: #eaac32 }
-                        4.5% { color: #eaac32 }
-                        5% { color: #eaac32 }
-                        5.5% { color: rgba(255,255,255,0.9) }
-                        6% { color: rgba(255,255,255,0.9) }
-                        6.5% { color: rgba(255,255,255,0.9) }
-                        7% { color: #eaac32 }
-                        7.5% { color: #eaac32 }
-                        8% { color: #eaac32 }
-                        8.5% { color: rgba(255,255,255,0.9) }
-                        9% { color:rgba(255,255,255,0.9) }
-                        9.5% { color: rgba(255,255,255,0.9) }
-                        100% { color: rgba(255,255,255,0.9) }
+                    @include display-f-nowrap-center;
+                    height: 100%;
+                    i {
+                        color: #2a2d24;
+                        font-size: 12px;
+                        position: relative;
+                        top: 1px;
+                        @include transition-300;
                     }
-                    @keyframes color-anime {
-                        0% { color: rgba(255,255,255,0.9) }
-                        1% { color: #eaac32 }
-                        1.5% { color: #eaac32 }
-                        2% { color: #eaac32 }
-                        2.5% { color: rgba(255,255,255,0.9) }
-                        3% { color: rgba(255,255,255,0.9) }
-                        3.5% { color: rgba(255,255,255,0.9) }
-                        4% { color: #eaac32 }
-                        4.5% { color: #eaac32 }
-                        5% { color: #eaac32 }
-                        5.5% { color: rgba(255,255,255,0.9) }
-                        6% { color: rgba(255,255,255,0.9) }
-                        6.5% { color: rgba(255,255,255,0.9) }
-                        7% { color: #eaac32 }
-                        7.5% { color: #eaac32 }
-                        8% { color: #eaac32 }
-                        8.5% { color: rgba(255,255,255,0.9) }
-                        9% { color:rgba(255,255,255,0.9) }
-                        9.5% { color: rgba(255,255,255,0.9) }
-                        100% { color: rgba(255,255,255,0.9) }
-                    }
-                    img {
-                        -webkit-animation: shake-animation 5s ease infinite;
-                        animation: shake-animation 5s ease infinite;
-                        @-webkit-keyframes shake-animation {
-                        0% { transform:translate(0,0) }
-                        1% { transform:translate(5px,0) }
-                        1.5% { transform:translate(0,0) }
-                        2% { transform:translate(5px,0) }
-                        2.5% { transform:translate(0,0) }
-                        3% { transform:translate(5px,0) }
-                        3.5% { transform:translate(0,0) }
-                        4% { transform:translate(5px,0) }
-                        4.5% { transform:translate(0,0) }
-                        5% { transform:translate(5px,0) }
-                        5.5% { transform:translate(0,0) }
-                        6% { transform:translate(5px,0) }
-                        6.5% { transform:translate(0,0) }
-                        7% { transform:translate(5px,0) }
-                        7.5% { transform:translate(0,0) }
-                        8% { transform:translate(5px,0) }
-                        8.5% { transform:translate(0,0) }
-                        9% { transform:translate(5px,0) }
-                        9.5% { transform:translate(0,0) }
-                        100% { transform:translate(0,0) }
-                        }
-                        @keyframes shake-animation {
-                        0% { transform:translate(0,0) }
-                        1% { transform:translate(5px,0) }
-                        1.5% { transform:translate(0,0) }
-                        2% { transform:translate(5px,0) }
-                        2.5% { transform:translate(0,0) }
-                        3% { transform:translate(5px,0) }
-                        3.5% { transform:translate(0,0) }
-                        4% { transform:translate(5px,0) }
-                        4.5% { transform:translate(0,0) }
-                        5% { transform:translate(5px,0) }
-                        5.5% { transform:translate(0,0) }
-                        6% { transform:translate(5px,0) }
-                        6.5% { transform:translate(0,0) }
-                        7% { transform:translate(5px,0) }
-                        7.5% { transform:translate(0,0) }
-                        8% { transform:translate(5px,0) }
-                        8.5% { transform:translate(0,0) }
-                        9% { transform:translate(5px,0) }
-                        9.5% { transform:translate(0,0) }
-                        100% { transform:translate(0,0) }
+                }
+                &:nth-child(2) {
+                    margin: 0 1.7em;
+                }
+                &:hover {
+                    background-color: $main-color;
+                    a {
+                        i {
+                            color: $white-color;
                         }
                     }
                 }
             }
-            &:nth-child(3) {
-                a {
-                    img {
-                        max-height: 52px;
+        }
+        .copyright {
+            a {
+                font-size: 1.5em;
+                color: $white-color;
+                -webkit-transition: all .3s;
+                -moz-transition: all .3s;
+                -ms-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    width: 100%;
+                    height: 1px;
+                    display: block;
+                    background-color: $white-color;
+                    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+                    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+                    -webkit-transform-origin: 0 50%;
+                    transform-origin: 0 50%;
+                    -webkit-transition-property: all;
+                    transition-property: all;
+                    -webkit-transition-duration: 0.5s;
+                    transition-duration: 0.5s;
+                }
+                &:hover {
+                    &::after {
+                        width: 0;
                     }
                 }
+            }
+            span {
+                font-size: 1.4em;
+                color: rgba(255, 255, 255, 0.69);
+                margin-left: 3.5em;
             }
         }
     }
@@ -852,21 +730,6 @@ header {
         }
     }
 }
-
-
-/* footer */
-footer {
-    position: absolute;
-    bottom: 9.2em;
-    left: 13em;
-    z-index: 21;
-    .copyright {
-        font-size: 1.8em;
-        color: rgba(255,255,255,0.7);
-    }
-}
-
-
 
 /* responsive */
 @media only screen and (min-width: 1200px) {
