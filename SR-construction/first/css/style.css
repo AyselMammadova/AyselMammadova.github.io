@@ -147,7 +147,8 @@ header {
   width: 100%;
   position: relative;
   z-index: 10;
-  overflow: hidden; }
+  overflow: hidden;
+  /* footer */ }
   #main .slider {
     height: 100vh;
     position: relative; }
@@ -239,7 +240,7 @@ header {
     background-position-y: 35%; }
   to {
     background-position-y: 50%; } }
-  #main .social-media {
+  #main .main-social-media {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -248,15 +249,15 @@ header {
     transform: translateY(-50%);
     left: 13em;
     z-index: 21; }
-    #main .social-media li {
+    #main .main-social-media li {
       margin: 4.5em 0; }
-      #main .social-media li a {
+      #main .main-social-media li a {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-align: center;
         align-items: center;
         height: 100%; }
-        #main .social-media li a .social-icon {
+        #main .main-social-media li a .social-icon {
           width: 40px;
           height: 40px;
           display: -ms-flexbox;
@@ -276,19 +277,19 @@ header {
           -ms-transition: background-color .2s ease;
           -o-transition: background-color .2s ease;
           transition: background-color .2s ease; }
-          #main .social-media li a .social-icon i {
+          #main .main-social-media li a .social-icon i {
             color: #fff;
             font-size: 2.5em;
             position: relative;
             top: 1px; }
-        #main .social-media li a span {
+        #main .main-social-media li a span {
           text-transform: uppercase;
           margin-left: 2em;
           font-size: 12px;
           font-weight: bold;
           letter-spacing: .1em;
           color: #fff; }
-      #main .social-media li:hover a .social-icon {
+      #main .main-social-media li:hover a .social-icon {
         background-color: #c59f57; }
   #main .chooses-sec {
     position: absolute;
@@ -452,6 +453,88 @@ header {
         max-height: 52px; }
       #main .chooses-sec li:hover {
         opacity: .7; }
+  #main footer {
+    position: absolute;
+    bottom: 7.40741%;
+    right: 4.94792%;
+    z-index: 21;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    #main footer .social-media {
+      height: 20px;
+      margin-bottom: 24px; }
+      #main footer .social-media li {
+        float: left;
+        width: 20px;
+        height: 20px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+        border-radius: 4px;
+        background-color: #fbfbfb;
+        -webkit-transition: 300ms all ease;
+        -moz-transition: 300ms all ease;
+        -o-transition: 300ms all ease;
+        transition: 300ms all ease; }
+        #main footer .social-media li a {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: center;
+          align-items: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          height: 100%; }
+          #main footer .social-media li a i {
+            color: #2a2d24;
+            font-size: 12px;
+            position: relative;
+            top: 1px;
+            -webkit-transition: 300ms all ease;
+            -moz-transition: 300ms all ease;
+            -o-transition: 300ms all ease;
+            transition: 300ms all ease; }
+        #main footer .social-media li:nth-child(2) {
+          margin: 0 1.7em; }
+        #main footer .social-media li:hover {
+          background-color: #caa866; }
+          #main footer .social-media li:hover a i {
+            color: #fff; }
+    #main footer .copyright a {
+      font-size: 10.4px;
+      color: #fff;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      position: relative; }
+      #main footer .copyright a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        width: 100%;
+        height: 1px;
+        display: block;
+        background-color: #fff;
+        -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+        transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+        -webkit-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s; }
+      #main footer .copyright a:hover::after {
+        width: 0; }
+    #main footer .copyright span {
+      font-size: 9.7px;
+      color: rgba(255, 255, 255, 0.69);
+      margin-left: 3.5em; }
   #main .project-choose-wrapper {
     background: url("../img/sky.png") no-repeat;
     background-size: cover;
@@ -465,7 +548,7 @@ header {
       height: 100%;
       top: 0;
       left: 0;
-      background-color: rgba(34, 37, 24, 0.25); }
+      background-image: linear-gradient(to bottom, transparent 30%, rgba(34, 37, 24, 0.25) 70%); }
     #main .project-choose-wrapper h1 {
       position: absolute;
       left: 50%;
@@ -473,7 +556,7 @@ header {
       -moz-transform: translateX(-50%);
       -o-transform: translateX(-50%);
       transform: translateX(-50%);
-      bottom: 12em;
+      bottom: 77%;
       z-index: 21;
       margin: 0;
       font-size: 55px;
@@ -490,7 +573,7 @@ header {
       -moz-transform: translateX(-50%);
       -o-transform: translateX(-50%);
       transform: translateX(-50%);
-      bottom: 34em;
+      bottom: 20%;
       z-index: 21;
       display: -ms-flexbox;
       display: flex;
@@ -499,7 +582,7 @@ header {
       -ms-flex-pack: center;
       justify-content: center; }
       #main .project-choose-wrapper .project-choose .project-box {
-        margin: 15px;
+        margin: 15px 30px;
         position: relative;
         display: -ms-flexbox;
         display: flex;
@@ -545,10 +628,10 @@ header {
           #main .project-choose-wrapper .project-choose .project-box .caption-project span {
             font-size: 14px; }
         #main .project-choose-wrapper .project-choose .project-box:nth-child(2) {
-          -webkit-transform: scale(1.2);
-          -moz-transform: scale(1.2);
-          -o-transform: scale(1.2);
-          transform: scale(1.2); }
+          -webkit-transform: scale(1.3);
+          -moz-transform: scale(1.3);
+          -o-transform: scale(1.3);
+          transform: scale(1.3); }
         #main .project-choose-wrapper .project-choose .project-box:hover img {
           bottom: 55px; }
   #main .clouds-parallax {
@@ -593,7 +676,7 @@ header {
             top: 47%; }
 
 /* footer */
-footer {
+footer.main-footer {
   position: absolute;
   bottom: 9.2em;
   left: 0;
@@ -608,10 +691,10 @@ footer {
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%; }
-  footer .copyright {
+  footer.main-footer .copyright {
     font-size: 1.8em;
     color: rgba(255, 255, 255, 0.7); }
-  footer a {
+  footer.main-footer a {
     font-size: 1.8em;
     color: #fff;
     -webkit-transition: all .3s;
@@ -620,7 +703,7 @@ footer {
     -o-transition: all .3s;
     transition: all .3s;
     position: relative; }
-    footer a::after {
+    footer.main-footer a::after {
       content: '';
       position: absolute;
       bottom: -2px;
@@ -636,7 +719,7 @@ footer {
       transition-property: all;
       -webkit-transition-duration: 0.5s;
       transition-duration: 0.5s; }
-    footer a:hover::after {
+    footer.main-footer a:hover::after {
       width: 0; }
 
 /* responsive */
