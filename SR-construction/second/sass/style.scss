@@ -127,7 +127,7 @@
 $dark-color: #191919;
 $white-color: #fff;
 $main-color: #7ca1bf;
-$hover-color: #c59f57;
+$hover-color: #7699b5;
 
 
 /* general style */
@@ -701,12 +701,12 @@ header {
             @include wh-100;
             top: 0;
             left: 0;
-            background-color: rgba(34,37,24,0.25);
+            background-image: linear-gradient(to bottom, transparent 30%, rgba(34,37,24,0.25) 70%);
         }
         h1 {
             position: absolute;
-            @include translateX();
-            bottom: 12em;
+            @include translateX;
+            bottom: 77%;
             z-index: 21;
             margin: 0;
             font-size: 55px;
@@ -720,11 +720,11 @@ header {
         .project-choose {
             position: absolute;
             @include translateX();
-            bottom: 34em;
+            bottom: 20%;
             z-index: 21;
             @include display-f-nowrap-center;
             .project-box {
-                margin: 15px;
+                margin: 15px 30px;
                 position: relative;
                 @include display-f-nowrap-center;
                 @include d-flex-column;
@@ -764,10 +764,10 @@ header {
                     }
                 }
                 &:nth-child(2) {
-                    -webkit-transform: scale(1.2);
-                    -moz-transform: scale(1.2);
-                    -o-transform: scale(1.2);
-                    transform: scale(1.2);
+                    -webkit-transform: scale(1.3);
+                    -moz-transform: scale(1.3);
+                    -o-transform: scale(1.3);
+                    transform: scale(1.3);
                 }
                 &:hover {
                     img {
