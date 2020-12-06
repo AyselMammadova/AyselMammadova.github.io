@@ -108,6 +108,48 @@ header {
             padding-left: 1.2em; }
             header nav #menu .navbar-nav .nav-item .nav-link:hover::before {
               width: 0.6em; }
+    header nav #menu.menu-inside-pages {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100vh;
+      background-color: #759cbc; }
+      header nav #menu.menu-inside-pages .navbar-nav {
+        right: -100%;
+        width: inherit;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%); }
+        header nav #menu.menu-inside-pages .navbar-nav .nav-item {
+          margin-top: 4em; }
+          header nav #menu.menu-inside-pages .navbar-nav .nav-item .nav-link {
+            padding-right: 0 !important; }
+      header nav #menu.menu-inside-pages::before, header nav #menu.menu-inside-pages::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%; }
+      header nav #menu.menu-inside-pages::before {
+        left: -35%;
+        width: 70%;
+        height: 70vh;
+        background: linear-gradient(to left, #7699b5 50%, transparent 50%); }
+      header nav #menu.menu-inside-pages::after {
+        left: -17.5%;
+        width: 35%;
+        height: 35vh;
+        background: linear-gradient(to left, #759cbc 50%, transparent 50%); }
     header nav .right-side-wrapper {
       display: -ms-flexbox;
       display: flex;
@@ -237,6 +279,71 @@ header {
             width: 200px; }
           header nav .right-side-wrapper .box-link:last-child:hover::before {
             opacity: 1; }
+      header nav .right-side-wrapper.change-border .box-link .icon {
+        border: 1px solid rgba(0, 0, 0, 0.05); }
+      header nav .right-side-wrapper.change-border .box-link .hover-text {
+        visibility: visible;
+        opacity: 1; }
+    header nav .navbar-toggler {
+      padding: 0;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-left: 1.5em; }
+      header nav .navbar-toggler .menu-title {
+        font-size: 16px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-right: 20px;
+        font-weight: 500; }
+      header nav .navbar-toggler .menu-icon {
+        width: 50px;
+        height: 50px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        background-color: #7ca1bf;
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+        -webkit-transition: -webkit-transform 0.5s;
+        -moz-transition: -moz-transform 0.5s;
+        -ms-transition: -ms-transform 0.5s;
+        -o-transition: -o-transform 0.5s;
+        transition: transform 0.5s; }
+        header nav .navbar-toggler .menu-icon span {
+          width: 18px;
+          height: 2.5px;
+          background-color: #fff; }
+          header nav .navbar-toggler .menu-icon span:nth-child(2) {
+            margin: 3px 0; }
+        header nav .navbar-toggler .menu-icon.close {
+          background-color: #191919;
+          -webkit-transform: rotate(0);
+          -moz-transform: rotate(0);
+          -ms-transform: rotate(0);
+          -o-transform: rotate(0);
+          transform: rotate(0);
+          opacity: 1 !important;
+          background-image: url("../img/close-button.png");
+          background-repeat: no-repeat;
+          background-size: 18px;
+          background-position: center; }
+          header nav .navbar-toggler .menu-icon.close span {
+            display: none; }
 
 /* main section style */
 #main {
