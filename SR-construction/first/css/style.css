@@ -107,9 +107,7 @@ header {
         transition: 300ms all ease; }
         header nav #menu .navbar-nav .nav-item .nav-link.call-us {
           font-size: 20px;
-          padding: 0;
-          width: 134px;
-          height: 42px;
+          padding: 10px 27px;
           color: #fff;
           font-weight: 700;
           margin-left: 12px;
@@ -131,7 +129,7 @@ header {
           transition: background-color .2s ease; }
           header nav #menu .navbar-nav .nav-item .nav-link.call-us img {
             height: 26px;
-            margin-left: 6px; }
+            margin-left: 20px; }
           header nav #menu .navbar-nav .nav-item .nav-link.call-us:hover {
             background-color: #c59f57; }
         header nav #menu .navbar-nav .nav-item .nav-link:not(.call-us) {
@@ -209,7 +207,7 @@ header {
           #main .slider .owl-item .item .slide-caption-wrap .line-words::after {
             right: 10px; }
         #main .slider .owl-item .item .slide-caption-wrap p {
-          font-size: 12px;
+          font-size: 20px;
           letter-spacing: 2px;
           line-height: 1.4;
           text-transform: uppercase; }
@@ -258,8 +256,8 @@ header {
         align-items: center;
         height: 100%; }
         #main .main-social-media li a .social-icon {
-          width: 40px;
-          height: 40px;
+          width: 54px;
+          height: 54px;
           display: -ms-flexbox;
           display: flex;
           -ms-flex-align: center;
@@ -279,13 +277,13 @@ header {
           transition: background-color .2s ease; }
           #main .main-social-media li a .social-icon i {
             color: #fff;
-            font-size: 2.5em;
+            font-size: 24px;
             position: relative;
             top: 1px; }
         #main .main-social-media li a span {
           text-transform: uppercase;
           margin-left: 2em;
-          font-size: 12px;
+          font-size: 14px;
           font-weight: bold;
           letter-spacing: .1em;
           color: #fff; }
@@ -344,7 +342,7 @@ header {
         #main .chooses-sec li a img {
           max-width: 9em;
           max-height: 55px;
-          margin-right: 10px;
+          margin-right: 24px;
           vertical-align: middle;
           opacity: 0.8; }
       #main .chooses-sec li:nth-child(2) {
@@ -505,7 +503,7 @@ header {
           #main footer .social-media li:hover a i {
             color: #fff; }
     #main footer .copyright a {
-      font-size: 10.4px;
+      font-size: 14px;
       color: #fff;
       -webkit-transition: all .3s;
       -moz-transition: all .3s;
@@ -532,7 +530,7 @@ header {
       #main footer .copyright a:hover::after {
         width: 0; }
     #main footer .copyright span {
-      font-size: 9.7px;
+      font-size: 14px;
       color: rgba(255, 255, 255, 0.69);
       margin-left: 3.5em; }
   #main .project-choose-wrapper {
@@ -692,10 +690,10 @@ footer.main-footer {
   justify-content: space-between;
   width: 100%; }
   footer.main-footer .copyright {
-    font-size: 1.8em;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.7); }
   footer.main-footer a {
-    font-size: 1.8em;
+    font-size: 14px;
     color: #fff;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
