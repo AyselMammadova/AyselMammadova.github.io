@@ -76,66 +76,26 @@
 
     <!--main section start-->
     <section id="main">
-        <div class="project-choose-wrapper animated fadeIn">
-            <h1>Layihəni seçin</h1>
-            <div class="project-choose">
-                <a class="project-box" href="floor.html">
-                    <img src="img/building1.png" alt="project">
-                    <span class="oval-f"></span>
-                    <div class="caption-project">
-                        Ahmadli<br><span>Park</span>
-                    </div>
-                </a>
-                <a class="project-box" href="floor.html">
-                    <img src="img/building2.png" alt="project">
-                    <span class="oval-f"></span>
-                    <div class="caption-project">
-                        Teras<br><span>Park</span>
-                    </div>
-                </a>
-                <a class="project-box" href="floor.html">
-                    <img src="img/building3.png" alt="project">
-                    <span class="oval-f"></span>
-                    <div class="caption-project">
-                        Ahmadli<br><span>Park</span>
-                    </div>
-                </a>
-            </div>
-            <div class="clouds-parallax">
-                <div id="scene">
-                    <div class="layer" data-depth=".1">
-                        <div class="cloud cloudFirst">
-                            <img src="img/cloud1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="layer" data-depth=".1">
-                        <div class="cloud cloudSecond">
-                            <img src="img/cloud2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="layer" data-depth=".1">
-                        <div class="cloud cloudThird">
-                            <img src="img/cloud3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="layer" data-depth=".1">
-                        <div class="cloud cloudFourth">
-                            <img src="img/cloud4.png" alt="">
-                        </div>
-                    </div>
-                    <div class="layer" data-depth=".1">
-                        <div class="cloud cloudFifth">
-                            <img src="img/cloud5.png" alt="">
-                        </div>
-                    </div>
-                    <div class="layer" data-depth=".1">
-                        <div class="cloud cloudSixth">
-                            <img src="img/cloud6.png" alt="">
-                        </div>
-                    </div>
+        <div class="floor-choose-wrapper">
+            <div class="floor-choose-background"></div>
+            <a class="back-link" href="project.html">
+                <div class="icon"></div>
+                <div class="hover-text"><span>Geri</span></div>
+            </a>
+            <div class="floor-wrap">
+                <div class="floor-svg">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" width="100%" height="100%">-->
+                
+                        <!-- <a id="b" class="mr" href="flat.html"><polygon data-hoverid="4" points="2,26.9 5.5,24.8 7.2,25.2 7.2,24 14.5,19.8 17.7,20.7 17.7,21.3 20.4,20 19.6,16.8 24,14.5 28,15.8 24.6,18 24,24.2 2.7,33.6  2.8,27" style="fill:black;stroke-width:0.5" id="b" text="16" class="floor"></polygon></a> -->
+                        <!-- <a id="b" class="mr" href="flat.html"><polygon data-hoverid="4" id="b" points="2.7,34 24,23.8 24,30 2.8,38.9" style="fill:#fff" class="floor"></polygon></a> -->
+                        <!-- <path d="M 50,50 L 100,100 l 25,0" style="fill:#fff" class="floor"></path> -->
+                        <!-- <a id="b" class="mr" href="flat.html"><polygon data-hoverid="4" id="b" points="2.8,38.9 24,30 24,35.7 2.9,43.9" style="fill:#fff" class="floor"></polygon></a>
+                        <a id="b" class="mr" href="flat.html"><polygon data-hoverid="4" id="b" points="2.9,43.9 24,35.7 24,41.4 2.9,48.8" style="fill:#fff" class="floor"></polygon></a>
+                        <a id="b" class="mr" href="flat.html"><polygon data-hoverid="4" id="b" points="2.9,48.8 24,41.4 24,47.1 2.9,53.4" style="fill:#fff" class="floor"></polygon></a> -->
+                    <!--</svg> -->
                 </div>
             </div>
-        </div>  
+        </div>
         <!--footer start-->
         <footer>
             <ul class="social-media">
@@ -186,12 +146,5 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Main Scripts-->
     <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function() {
-            // parallax clouds
-            var scene = document.getElementById('scene');
-            var parallax = new Parallax(scene);
-        });
-    </script>
 </body>
 </html>
