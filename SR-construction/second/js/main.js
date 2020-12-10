@@ -15,19 +15,19 @@ $(document).ready(function() {
 
     // hamburger menu
     $('body').click(function(e) {
-        $('.menu-icon').removeClass('close', 600);
-        $('.menu-inside-pages').slideUp(600);
+        $('.menu-icon').removeClass('close', 300);
+        $('.menu-inside-pages').slideUp(300);
         $('.navbar-nav').animate({right:'-100%'}, 200);
     });
     $('.menu-icon').click(function(e) {
         e.stopPropagation();
         if(!($(this).hasClass('close'))) {
-            $(this).addClass('close', 600);
-            $('.menu-inside-pages').slideDown(600);
-            $('.navbar-nav').animate({right:'130px'}, 1000);
+            $(this).addClass('close', 300);
+            $('.menu-inside-pages').slideDown(300);
+            $('.navbar-nav').animate({right:'130px'}, 500);
         } else {
-            $(this).removeClass('close', 600);
-            $('.menu-inside-pages').slideUp(600);
+            $(this).removeClass('close', 300);
+            $('.menu-inside-pages').slideUp(300);
             $('.navbar-nav').animate({right:'-100%'}, 200);
         }
     });
