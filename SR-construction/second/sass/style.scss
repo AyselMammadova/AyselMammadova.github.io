@@ -1052,17 +1052,23 @@ header {
                 @include wh-100; 
                 position: absolute;
                 @include translateXY;
+                
                 svg {
                     @include wh-100;
+                    /*Chrome,Safari*/
+-webkit-clip-path: inherit;
+
+/*Firefox*/
+clip-path: url(#clipPolygon);
                     .floor {
-                        pointer-events:all;
-                        cursor: pointer;
+                        fill: #ad7529 !important;
+                        fill-opacity: 1;
                         // opacity: 0;
-                        &:hover {
-                            fill: #7ca1bf !important;
-                            fill-opacity: 1;
-                            stroke-width: 0.5;
-                        }
+                        // &:hover {
+                        //     fill: #7ca1bf !important;
+                        //     fill-opacity: 1;
+                        //     stroke-width: 0.5;
+                        // }
                     }
                 }
             }
