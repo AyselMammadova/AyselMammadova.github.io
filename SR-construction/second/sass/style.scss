@@ -949,6 +949,7 @@ header {
             position: absolute;
             left: 5.3125%;
             top: 200px;
+            z-index: 10000;
             &::before {
                 content: '';
                 position: absolute;
@@ -1048,6 +1049,7 @@ header {
             position: absolute;
             @include translateXY;
             @include wh-100; 
+            z-index: 1000;
             .floor-svg {
                 @include wh-100; 
                 position: absolute;
@@ -1055,20 +1057,24 @@ header {
                 
                 svg {
                     @include wh-100;
-                    /*Chrome,Safari*/
--webkit-clip-path: inherit;
-
-/*Firefox*/
-clip-path: url(#clipPolygon);
-                    .floor {
-                        fill: #ad7529 !important;
-                        fill-opacity: 1;
-                        // opacity: 0;
-                        // &:hover {
-                        //     fill: #7ca1bf !important;
-                        //     fill-opacity: 1;
-                        //     stroke-width: 0.5;
-                        // }
+                    a {
+                        -webkit-transition: all .2s ease-in-out;
+                        -moz-transition: all .2s ease-in-out;
+                        -ms-transition: all .2s ease-in-out;
+                        -o-transition: all .2s ease-in-out;
+                        transition: all .2s ease-in-out;
+                        .floor {
+                            fill: #fff;
+                            fill-opacity: 0;
+                            pointer-events: all;
+                        }
+                        &:hover {
+                            .floor {
+                                fill: #7ca1bf;
+                                fill-opacity: 1;
+                                stroke-width: 0.5;
+                            }
+                        }
                     }
                 }
             }

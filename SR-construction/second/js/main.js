@@ -34,4 +34,10 @@ $(document).ready(function() {
     $('.menu-inside-pages').click(function(e) {
         e.stopPropagation();
     });
+
+    // $( ".floor-svg svg a" ).hover(function() {
+    //     if($(this).parent().id === $(this).parents().eq(1).find('.floor').data('id')) {
+    //         $(this).parents().eq(1).find('.floor').addClass('hover-rect');
+    //     }
+    // });
 });
