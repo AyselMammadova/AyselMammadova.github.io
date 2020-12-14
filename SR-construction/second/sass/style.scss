@@ -1058,21 +1058,22 @@ header {
                 svg {
                     @include wh-100;
                     a {
+                        transform: translate(-2px, -1px) scale(1.04);
                         -webkit-transition: all .2s ease-in-out;
                         -moz-transition: all .2s ease-in-out;
                         -ms-transition: all .2s ease-in-out;
                         -o-transition: all .2s ease-in-out;
                         transition: all .2s ease-in-out;
                         .floor {
-                            // fill: #fff;
-                            // fill-opacity: 0;
-                            fill: #ffff0069;
-                            fill-opacity: 1;
+                            fill: #fff;
+                            fill-opacity: 0;
+                            // fill: #ffff0069;
+                            // fill-opacity: 1;
                             pointer-events: all;
                         }
                         &:hover {
                             .floor {
-                                fill: #7ca1bf;
+                                fill: #ffff0069;
                                 fill-opacity: 1;
                                 stroke-width: 0.5;
                             }
@@ -1235,5 +1236,11 @@ header {
 @media only screen and (min-width: 1200px) {
     header nav .navbar-brand img {
         height: 84px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #main .floor-choose-wrapper .floor-wrap .floor-svg svg a {
+        transform: translate(-2px, -1px) scale(0.874);
     }
 }
