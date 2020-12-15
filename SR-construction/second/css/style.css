@@ -920,8 +920,8 @@ header {
             -o-transition: all .2s ease-in-out;
             transition: all .2s ease-in-out; }
             #main .floor-choose-wrapper .floor-wrap .floor-svg svg a .floor {
-              fill: #fff;
-              fill-opacity: 0;
+              fill: #ffff0069;
+              fill-opacity: 1;
               pointer-events: all; }
             #main .floor-choose-wrapper .floor-wrap .floor-svg svg a:hover .floor {
               fill: #ffff0069;

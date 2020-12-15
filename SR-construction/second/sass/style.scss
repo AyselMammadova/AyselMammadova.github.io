@@ -1065,10 +1065,10 @@ header {
                         -o-transition: all .2s ease-in-out;
                         transition: all .2s ease-in-out;
                         .floor {
-                            fill: #fff;
-                            fill-opacity: 0;
-                            // fill: #ffff0069;
-                            // fill-opacity: 1;
+                            // fill: #fff;
+                            // fill-opacity: 0;
+                            fill: #ffff0069;
+                            fill-opacity: 1;
                             pointer-events: all;
                         }
                         &:hover {
