@@ -933,8 +933,6 @@ header {
         width: 100%;
         @include h-100vh;
         position: relative;
-        background: url('../img/item1.png') no-repeat;
-        background-size: cover;
         &::after {
             content: '';
             position: absolute;
@@ -942,6 +940,9 @@ header {
             top: 0;
             left: 0;
             background-image: linear-gradient(to bottom, transparent 30%, rgba(34,37,24,0.25) 70%);
+        }
+        .floor-choose-background {
+            @include wh-100;
         }
         .back-link {
             @include display-f-nowrap-center;
@@ -1058,7 +1059,7 @@ header {
                 svg {
                     @include wh-100;
                     a {
-                        transform: translate(-2px, -1px) scale(1.04);
+                        transform: translate(-2px, 1px) scale(1.04) scaleY(0.82);
                         -webkit-transition: all .2s ease-in-out;
                         -moz-transition: all .2s ease-in-out;
                         -ms-transition: all .2s ease-in-out;
@@ -1236,6 +1237,12 @@ header {
 @media only screen and (min-width: 1200px) {
     header nav .navbar-brand img {
         height: 84px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    #main .floor-choose-wrapper .floor-choose-background {
+        object-fit: cover;
     }
 }
 
