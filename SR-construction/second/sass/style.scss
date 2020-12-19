@@ -1065,6 +1065,7 @@ header {
                         -ms-transition: all .2s ease-in-out;
                         -o-transition: all .2s ease-in-out;
                         transition: all .2s ease-in-out;
+                        position: relative;
                         .floor {
                             // fill: #fff;
                             // fill-opacity: 0;
@@ -1077,6 +1078,55 @@ header {
                                 fill: #ffff0069;
                                 fill-opacity: 1;
                                 stroke-width: 0.5;
+                            }
+                        }
+                    }
+                }
+
+                .tooltip-box-wrapper {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 30;
+                    pointer-events: none;
+                    width: 136px;
+                    padding: 20px;
+                    background-color: $white-color;
+                    display: none;
+                    -webkit-transition: opacity .2s ease;
+                    -moz-transition: opacity .2s ease;
+                    -ms-transition: opacity .2s ease;
+                    -o-transition: opacity .2s ease;
+                    transition: opacity .2s ease;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        top: 100%;
+                        margin-top: -1px;
+                        border-top: 8px solid $white-color;
+                        border-left: 12px solid transparent;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background: url('../img/right-arrow.png') no-repeat;
+                        background-position: center;
+                        width: 16px;
+                        height: 16px;
+                        right: 15px;
+                        @include translateY;
+                    }
+                    .tooltip-box {
+                        white-space: nowrap;
+                        color: #2d2f42;
+                        div {
+                            font-size: 12px;
+                            margin-right: 15px;
+                            font-weight: 500;
+                            line-height: 12px;
+                            span {
+                                font-size: 28px;
                             }
                         }
                     }
