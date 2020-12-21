@@ -174,6 +174,109 @@ a {
     margin-bottom: 0;
 }
 
+// .custom-btn {
+//     @include display-f-nowrap-center;
+//     width: 170px;
+//     position: absolute;
+//     left: 5.3125%;
+//     top: 200px;
+//     z-index: 10000;
+//     &::before {
+//         content: '';
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//         top: 0;
+//         left: 0;
+//         opacity: 0;
+//         background-color: rgba(25, 22, 15, 0.08);
+//         -webkit-transition: opacity .3s ease;
+//         -moz-transition: opacity .3s ease;
+//         -ms-transition: opacity .3s ease;
+//         -o-transition: opacity .3s ease;
+//         transition: opacity .3s ease;
+//         -webkit-border-radius: 25px;
+//         -moz-border-radius: 25px;
+//         -ms-border-radius: 25px;
+//         -o-border-radius: 25px;
+//         border-radius: 25px;
+//         z-index: 1;
+//     }
+//     .icon {
+//         background-color: $main-color;
+//         width: 50px;
+//         height: 50px;
+//         z-index: 1;
+//         vertical-align: middle;
+//         @include radius-50;
+//         position: relative;
+//         left: -60px;
+//         &::before {
+//             content: '';
+//             position: absolute;
+//             background-image: url('../img/back.png');
+//             background-position: center;
+//             background-repeat: no-repeat;
+//             width: 100%;
+//             height: 100%;
+//             font-size: 1rem;
+//             @include translateXY;
+//         }
+//     }
+//     .link-text {
+//         position: relative;
+//         left: -22px;
+//         font-size: 20px;
+//         font-weight: 500;
+//         color: $white-color;
+//         line-height: 0;
+//     }
+//     .hover-text {
+//         visibility: visible;
+//         opacity: 1;
+//         padding-left: 3.5em;
+//         overflow: hidden;
+//         background-color: $main-color;
+//         text-align: center;
+//         @include radius-25px;
+//         -webkit-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
+//         -moz-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
+//         -ms-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
+//         -o-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
+//         transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
+//         position: absolute;
+//         width: 170px;
+//         height: 50px;                
+//         span {
+//             vertical-align: middle;
+//             font-size: 14px;
+//             position: relative;
+//             color: $white-color;
+//         }
+//         &::before {
+//             content: '';
+//             position: absolute;
+//             width: 100%;
+//             height: 100%;
+//             top: 0;
+//             left: 0;
+//             background-color: rgba(0,0,0,0.05);
+//         }
+//         &::after {
+//             content: '';
+//             display: inline-block;
+//             width: 0;
+//             height: 100%;
+//             vertical-align: middle;
+//         }
+//     }
+//     &:hover {
+//         &::before {
+//             opacity: 1;
+//         }
+//     }
+// }
+
 
 
 
@@ -803,7 +906,7 @@ header {
                 svg {
                     @include wh-100;
                     a {
-                        transform: translate(-2px, 1px) scale(1.04) scaleY(0.82);
+                        transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
                         -webkit-transition: all .2s ease-in-out;
                         -moz-transition: all .2s ease-in-out;
                         -ms-transition: all .2s ease-in-out;
@@ -811,10 +914,10 @@ header {
                         transition: all .2s ease-in-out;
                         position: relative;
                         .floor {
-                            // fill: #fff;
-                            // fill-opacity: 0;
-                            fill: #caa86673;
-                            fill-opacity: 1;
+                            fill: #fff;
+                            fill-opacity: 0;
+                            // fill: #caa86673;
+                            // fill-opacity: 1;
                             pointer-events: all;
                         }
                         &:hover {
