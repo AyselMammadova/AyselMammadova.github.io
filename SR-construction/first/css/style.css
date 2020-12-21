@@ -702,16 +702,17 @@ header {
           left: 0;
           z-index: 30;
           pointer-events: none;
-          width: 136px;
-          padding: 20px;
-          margin: -74px -136px;
+          width: 175px;
+          padding: 10px 22px;
+          margin: -87px -175px;
           background-color: #fff;
-          display: none;
+          opacity: 0;
           -webkit-transition: opacity .2s ease;
           -moz-transition: opacity .2s ease;
           -ms-transition: opacity .2s ease;
           -o-transition: opacity .2s ease;
-          transition: opacity .2s ease; }
+          transition: opacity .2s ease;
+          will-change: transform; }
           #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper::before {
             content: '';
             position: absolute;
@@ -720,29 +721,26 @@ header {
             margin-top: -1px;
             border-top: 8px solid #fff;
             border-left: 12px solid transparent; }
-          #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper::after {
-            content: '';
-            position: absolute;
-            background: url("../img/right-arrow.png") no-repeat;
-            background-position: center;
-            width: 16px;
-            height: 16px;
-            right: 15px;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -o-transform: translateY(-50%);
-            transform: translateY(-50%); }
           #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper .tooltip-box {
             white-space: nowrap;
             color: #2d2f42; }
             #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper .tooltip-box div {
-              font-size: 12px;
-              margin-right: 15px;
+              font-size: 13px;
+              line-height: 26px;
               font-weight: 500;
-              line-height: 12px; }
-              #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper .tooltip-box div span {
-                font-size: 28px; }
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-pack: justify;
+              justify-content: space-between;
+              -ms-flex-align: center;
+              align-items: center; }
+              #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper .tooltip-box div.number-b {
+                margin-bottom: 15px; }
+                #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper .tooltip-box div.number-b .number {
+                  font-size: 26px; }
+              #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper .tooltip-box div.number-f .number {
+                font-size: 40px;
+                font-weight: 600; }
 
 /* footer */
 footer {
@@ -753,8 +751,8 @@ footer {
   z-index: 21;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
   -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-align: center;
   align-items: center;
   width: 100%; }
