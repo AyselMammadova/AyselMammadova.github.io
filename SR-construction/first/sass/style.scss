@@ -174,108 +174,91 @@ a {
     margin-bottom: 0;
 }
 
-// .custom-btn {
-//     @include display-f-nowrap-center;
-//     width: 170px;
-//     position: absolute;
-//     left: 5.3125%;
-//     top: 200px;
-//     z-index: 10000;
-//     &::before {
-//         content: '';
-//         position: absolute;
-//         width: 100%;
-//         height: 100%;
-//         top: 0;
-//         left: 0;
-//         opacity: 0;
-//         background-color: rgba(25, 22, 15, 0.08);
-//         -webkit-transition: opacity .3s ease;
-//         -moz-transition: opacity .3s ease;
-//         -ms-transition: opacity .3s ease;
-//         -o-transition: opacity .3s ease;
-//         transition: opacity .3s ease;
-//         -webkit-border-radius: 25px;
-//         -moz-border-radius: 25px;
-//         -ms-border-radius: 25px;
-//         -o-border-radius: 25px;
-//         border-radius: 25px;
-//         z-index: 1;
-//     }
-//     .icon {
-//         background-color: $main-color;
-//         width: 50px;
-//         height: 50px;
-//         z-index: 1;
-//         vertical-align: middle;
-//         @include radius-50;
-//         position: relative;
-//         left: -60px;
-//         &::before {
-//             content: '';
-//             position: absolute;
-//             background-image: url('../img/back.png');
-//             background-position: center;
-//             background-repeat: no-repeat;
-//             width: 100%;
-//             height: 100%;
-//             font-size: 1rem;
-//             @include translateXY;
-//         }
-//     }
-//     .link-text {
-//         position: relative;
-//         left: -22px;
-//         font-size: 20px;
-//         font-weight: 500;
-//         color: $white-color;
-//         line-height: 0;
-//     }
-//     .hover-text {
-//         visibility: visible;
-//         opacity: 1;
-//         padding-left: 3.5em;
-//         overflow: hidden;
-//         background-color: $main-color;
-//         text-align: center;
-//         @include radius-25px;
-//         -webkit-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
-//         -moz-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
-//         -ms-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
-//         -o-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
-//         transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
-//         position: absolute;
-//         width: 170px;
-//         height: 50px;                
-//         span {
-//             vertical-align: middle;
-//             font-size: 14px;
-//             position: relative;
-//             color: $white-color;
-//         }
-//         &::before {
-//             content: '';
-//             position: absolute;
-//             width: 100%;
-//             height: 100%;
-//             top: 0;
-//             left: 0;
-//             background-color: rgba(0,0,0,0.05);
-//         }
-//         &::after {
-//             content: '';
-//             display: inline-block;
-//             width: 0;
-//             height: 100%;
-//             vertical-align: middle;
-//         }
-//     }
-//     &:hover {
-//         &::before {
-//             opacity: 1;
-//         }
-//     }
-// }
+.custom-btn {
+    @include display-f-nowrap-center;
+    height: 50px;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background-color: rgba(25, 22, 15, 0.08);
+        -webkit-transition: opacity .3s ease;
+        -moz-transition: opacity .3s ease;
+        -ms-transition: opacity .3s ease;
+        -o-transition: opacity .3s ease;
+        transition: opacity .3s ease;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        border-radius: 25px;
+        z-index: 1;
+    }
+    .icon {
+        background-color: $main-color;
+        width: 50px;
+        height: 50px;
+        z-index: 1;
+        vertical-align: middle;
+        @include radius-50;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            @include translateXY;
+        }
+    }
+    .hover-text {
+        visibility: visible;
+        opacity: 1;
+        overflow: hidden;
+        background-color: $main-color;
+        text-align: center;
+        @include radius-25px;
+        -webkit-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
+        -moz-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
+        -ms-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
+        -o-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
+        transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
+        position: absolute;
+        height: 50px;                
+        span {
+            vertical-align: middle;
+            font-size: 14px;
+            position: relative;
+            color: $white-color;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.05);
+        }
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            vertical-align: middle;
+        }
+    }
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+    }
+}
 
 
 
@@ -352,28 +335,24 @@ header {
                         color: $white-color;
                         @include transition-300;
                         &.call-us {
-                            font-size: 20px;
-                            padding: 10px 27px;
-                            color: $white-color;
-                            font-weight: 700;
+                            width: 148px;
                             margin-left: 12px;
-                            @include display-f-nowrap-center;
-                            background-color: $main-color;
-                            -webkit-border-radius: 25px;
-                            -moz-border-radius: 25px;
-                            -o-border-radius: 25px;
-                            border-radius: 25px;
-                            -webkit-transition: background-color .2s ease;
-                            -moz-transition: background-color .2s ease;
-                            -ms-transition: background-color .2s ease;
-                            -o-transition: background-color .2s ease;
-                            transition: background-color .2s ease;
-                            img {
-                                height: 26px;
-                                margin-left: 20px;
+                            position: relative;
+                            .icon {
+                                right: -60px;
+                                &::before {
+                                    background-image: url('../img/headset.png');
+                                    background-size: 30px;
+                                }
                             }
-                            &:hover {
-                                background-color: $hover-color;
+                            .hover-text {
+                                padding-right: 4.5em;
+                                width: 148px; 
+                                span {
+                                    font-size: 20px;     
+                                    font-weight: 700; 
+                                    top: 2px;
+                                }        
                             }
                         }
                         &:not(.call-us) {
@@ -790,107 +769,25 @@ header {
         }
         .floor-choose-background {
             @include wh-100;
+            &.big-image, &.image-1200 {
+                display: none;
+            }
         }
         .back-link {
-            @include display-f-nowrap-center;
             width: 170px;
             position: absolute;
             left: 5.3125%;
             top: 200px;
             z-index: 10000;
-            &::before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                opacity: 0;
-                background-color: rgba(25, 22, 15, 0.08);
-                -webkit-transition: opacity .3s ease;
-                -moz-transition: opacity .3s ease;
-                -ms-transition: opacity .3s ease;
-                -o-transition: opacity .3s ease;
-                transition: opacity .3s ease;
-                -webkit-border-radius: 25px;
-                -moz-border-radius: 25px;
-                -ms-border-radius: 25px;
-                -o-border-radius: 25px;
-                border-radius: 25px;
-                z-index: 1;
-            }
             .icon {
-                background-color: $main-color;
-                width: 50px;
-                height: 50px;
-                z-index: 1;
-                vertical-align: middle;
-                @include radius-50;
-                position: relative;
                 left: -60px;
                 &::before {
-                    content: '';
-                    position: absolute;
                     background-image: url('../img/back.png');
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    width: 100%;
-                    height: 100%;
-                    font-size: 1rem;
-                    @include translateXY;
                 }
-            }
-            .link-text {
-                position: relative;
-                left: -22px;
-                font-size: 20px;
-                font-weight: 500;
-                color: $white-color;
-                line-height: 0;
             }
             .hover-text {
-                visibility: visible;
-                opacity: 1;
                 padding-left: 3.5em;
-                overflow: hidden;
-                background-color: $main-color;
-                text-align: center;
-                @include radius-25px;
-                -webkit-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
-                -moz-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
-                -ms-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
-                -o-transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
-                transition: visibility .4s ease,opacity .4s ease,background-color .4s ease;
-                position: absolute;
-                width: 170px;
-                height: 50px;                
-                span {
-                    vertical-align: middle;
-                    font-size: 14px;
-                    position: relative;
-                    color: $white-color;
-                }
-                &::before {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    background-color: rgba(0,0,0,0.05);
-                }
-                &::after {
-                    content: '';
-                    display: inline-block;
-                    width: 0;
-                    height: 100%;
-                    vertical-align: middle;
-                }
-            }
-            &:hover {
-                &::before {
-                    opacity: 1;
-                }
+                width: 170px;                
             }
         }
         .floor-wrap {
@@ -914,10 +811,10 @@ header {
                         transition: all .2s ease-in-out;
                         position: relative;
                         .floor {
-                            fill: #fff;
-                            fill-opacity: 0;
-                            // fill: #caa86673;
-                            // fill-opacity: 1;
+                            // fill: #fff;
+                            // fill-opacity: 0;
+                            fill: #caa86673;
+                            fill-opacity: 1;
                             pointer-events: all;
                         }
                         &:hover {
@@ -1032,6 +929,9 @@ footer {
                     }
                 }
             }
+            &:last-child {
+                margin-right: 0;
+            }
             &:hover {
                 a {
                     .social-icon {
@@ -1046,6 +946,20 @@ footer {
 
 
 /* responsive */
+
+@media only screen and (min-width: 1440px) {
+    #main .floor-choose-wrapper {
+        .floor-choose-background {
+            display: none;
+            &.big-image {
+                display: block;
+            }
+        }
+        .floor-wrap .floor-svg svg a {
+            transform: translate(-2px, -183px) scale(0.9) scaleY(0.977);
+        }
+    }
+}
 @media only screen and (min-width: 1200px) {
     header nav .navbar-brand img {
         height: 66px;
@@ -1053,5 +967,35 @@ footer {
 
     header nav #menu .navbar-nav .nav-item .nav-link:not(.call-us) {
         font-size: 14px;
+    }
+}
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+    #main .floor-choose-wrapper {
+        .floor-choose-background {
+            display: none;
+            &.image-1200 {
+                display: block;
+            }
+        }
+        .floor-wrap .floor-svg svg a {
+            transform: translate(-101px, 1px) scale(1.085) scaleY(0.639);
+        }
+    }
+}
+@media only screen and (max-width: 990.91px) {
+    #main .floor-choose-wrapper {
+        overflow-x: scroll;
+        .floor-choose-background {
+            width: 1440px;
+        }
+        &::after {
+            width: 1440px;
+        }
+        .floor-wrap .floor-svg svg {
+            width: 1440px;
+            a {
+                transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+            }
+        }
     }
 }
