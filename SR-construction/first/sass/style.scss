@@ -1022,11 +1022,16 @@ footer {
     #main {
         .floor-choose-wrapper {
             overflow-x: scroll;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
             .floor-choose-background {
                 width: 1440px;
             }
             &::after {
                 width: 1440px;
+            }
+            &::-webkit-scrollbar {
+                display: none;
             }
             .floor-wrap .floor-svg svg {
                 width: 1440px;

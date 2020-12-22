@@ -850,11 +850,17 @@ footer {
     transform: translate(-101px, 1px) scale(1.085) scaleY(0.639); } }
 @media only screen and (max-width: 990.91px) {
   #main .floor-choose-wrapper {
-    overflow-x: scroll; }
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */ }
     #main .floor-choose-wrapper .floor-choose-background {
       width: 1440px; }
     #main .floor-choose-wrapper::after {
       width: 1440px; }
+    #main .floor-choose-wrapper::-webkit-scrollbar {
+      display: none; }
     #main .floor-choose-wrapper .floor-wrap .floor-svg svg {
       width: 1440px; }
       #main .floor-choose-wrapper .floor-wrap .floor-svg svg a {
