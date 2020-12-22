@@ -776,7 +776,7 @@ header {
         .back-link {
             width: 170px;
             position: absolute;
-            left: 5.3125%;
+            left: 13em;
             top: 200px;
             z-index: 10000;
             .icon {
@@ -884,6 +884,42 @@ header {
             }
         }
     }
+
+    .mob-scroll-notification {
+        display: none;
+        position: fixed;
+        @include wh-100;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.87);
+        -webkit-transition: opacity 500ms linear, visibility 500ms linear;
+        -moz-transition: opacity 500ms linear, visibility 500ms linear;
+        -ms-transition: opacity 500ms linear, visibility 500ms linear;
+        -o-transition: opacity 500ms linear, visibility 500ms linear;
+        transition: opacity 500ms linear, visibility 500ms linear;
+        &.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .notification-wrap {
+            position: absolute;
+            @include translateXY;
+            .notification {
+                @include display-f-nowrap-center;
+                @include d-flex-column;
+                p {
+                    margin-top: 15px;
+                    font-size: 22px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    line-height: normal;
+                    color: $white-color;
+                }
+            }
+        }
+    }
 }
 
 
@@ -983,19 +1019,24 @@ footer {
     }
 }
 @media only screen and (max-width: 990.91px) {
-    #main .floor-choose-wrapper {
-        overflow-x: scroll;
-        .floor-choose-background {
-            width: 1440px;
-        }
-        &::after {
-            width: 1440px;
-        }
-        .floor-wrap .floor-svg svg {
-            width: 1440px;
-            a {
-                transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+    #main {
+        .floor-choose-wrapper {
+            overflow-x: scroll;
+            .floor-choose-background {
+                width: 1440px;
             }
+            &::after {
+                width: 1440px;
+            }
+            .floor-wrap .floor-svg svg {
+                width: 1440px;
+                a {
+                    transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+                }
+            }
+        }
+        .mob-scroll-notification {
+            display: block;
         }
     }
 }

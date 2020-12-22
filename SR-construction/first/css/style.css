@@ -635,7 +635,7 @@ header {
     #main .floor-choose-wrapper .back-link {
       width: 170px;
       position: absolute;
-      left: 5.3125%;
+      left: 13em;
       top: 200px;
       z-index: 10000; }
       #main .floor-choose-wrapper .back-link .icon {
@@ -730,6 +730,48 @@ header {
               #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper .tooltip-box div.number-f .number {
                 font-size: 40px;
                 font-weight: 600; }
+  #main .mob-scroll-notification {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.87);
+    -webkit-transition: opacity 500ms linear, visibility 500ms linear;
+    -moz-transition: opacity 500ms linear, visibility 500ms linear;
+    -ms-transition: opacity 500ms linear, visibility 500ms linear;
+    -o-transition: opacity 500ms linear, visibility 500ms linear;
+    transition: opacity 500ms linear, visibility 500ms linear; }
+    #main .mob-scroll-notification.hide {
+      opacity: 0;
+      visibility: hidden; }
+    #main .mob-scroll-notification .notification-wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+      #main .mob-scroll-notification .notification-wrap .notification {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        #main .mob-scroll-notification .notification-wrap .notification p {
+          margin-top: 15px;
+          font-size: 22px;
+          text-align: center;
+          text-transform: uppercase;
+          line-height: normal;
+          color: #fff; }
 
 /* footer */
 footer {
@@ -816,6 +858,8 @@ footer {
     #main .floor-choose-wrapper .floor-wrap .floor-svg svg {
       width: 1440px; }
       #main .floor-choose-wrapper .floor-wrap .floor-svg svg a {
-        transform: translate(-2px, 1px) scale(0.9) scaleY(0.77); } }
+        transform: translate(-2px, 1px) scale(0.9) scaleY(0.77); }
+  #main .mob-scroll-notification {
+    display: block; } }
 
 /*# sourceMappingURL=style.css.map */

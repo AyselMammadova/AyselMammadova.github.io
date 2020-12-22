@@ -28,4 +28,12 @@ $(document).ready(function() {
     myPolygon.mouseout(function(e) {
         myTooltip.css('opacity', '0');
     });
+
+    setTimeout(function() {
+        $('.mob-scroll-notification').addClass('hide');
+    }, 2000);
+
+    $('body').click(function(e) {
+        $('.mob-scroll-notification').addClass('hide');
+    });
 });
