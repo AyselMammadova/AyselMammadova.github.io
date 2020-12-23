@@ -678,8 +678,8 @@ header {
             transition: all .2s ease-in-out;
             position: relative; }
             #main .floor-choose-wrapper .floor-wrap .floor-svg svg a .floor {
-              fill: #caa86673;
-              fill-opacity: 1;
+              fill: #fff;
+              fill-opacity: 0;
               pointer-events: all; }
             #main .floor-choose-wrapper .floor-wrap .floor-svg svg a:hover .floor {
               fill: #caa86673;
@@ -693,7 +693,7 @@ header {
           pointer-events: none;
           width: 175px;
           padding: 10px 22px;
-          margin: -87px -175px;
+          margin: -96px -175px;
           background-color: #fff;
           opacity: 0;
           -webkit-transition: opacity .2s ease;
@@ -834,7 +834,7 @@ footer {
     #main .floor-choose-wrapper .floor-choose-background.big-image {
       display: block; }
   #main .floor-choose-wrapper .floor-wrap .floor-svg svg a {
-    transform: translate(-2px, -183px) scale(0.9) scaleY(0.977); } }
+    transform: translate(-2px, -87px) scale(0.9) scaleY(0.87); } }
 @media only screen and (min-width: 1200px) {
   header nav .navbar-brand img {
     height: 66px; }
