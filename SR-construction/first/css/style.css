@@ -827,7 +827,7 @@ header {
         -ms-flex-direction: column;
         flex-direction: column; }
         #main .mob-scroll-notification .notification-wrap .notification p {
-          margin-top: 15px;
+          margin: 15px 0 0;
           font-size: 22px;
           text-align: center;
           text-transform: uppercase;
@@ -940,7 +940,7 @@ footer {
   header nav .call-us {
     margin: 0 0 0 auto; }
     header nav .call-us .icon {
-      right: -79px; }
+      right: -80px; }
   header nav #menu {
     position: fixed;
     top: 0;
@@ -948,7 +948,6 @@ footer {
     width: 70%;
     height: 100vh;
     background-color: #caa866;
-    padding: 0 100px;
     z-index: 100; }
     header nav #menu .navbar-nav {
       position: absolute;
@@ -999,15 +998,52 @@ footer {
   header nav #menu {
     width: 100%; } }
 @media only screen and (max-width: 575.91px) {
+  header, footer {
+    padding: 0 3em 0 6em; }
+
+  #main .back-link {
+    left: 6em;
+    height: 40px;
+    width: 140px; }
+    #main .back-link .hover-text {
+      height: 40px;
+      width: 140px; }
+    #main .back-link .icon {
+      width: 40px;
+      height: 40px; }
+
   header nav .call-us {
     display: none !important; }
+    header nav .call-us.show {
+      display: block !important;
+      z-index: 1000;
+      margin: 0;
+      position: absolute; }
+      header nav .call-us.show .icon {
+        border: 1px solid #bf9c59; }
+  header nav .navbar-toggler {
+    margin-left: 0; }
 
-  header nav #menu .navbar-nav .nav-item:last-child {
-    display: block;
-    width: auto; }
-    header nav #menu .navbar-nav .nav-item:last-child .call-us {
-      display: block !important; }
-      header nav #menu .navbar-nav .nav-item:last-child .call-us .nav-link {
-        padding: 0 !important; } }
+  #main .mob-scroll-notification .notification-wrap .notification p {
+    font-size: 18px; } }
+@media only screen and (max-width: 400px) {
+  header nav .navbar-brand img {
+    height: 62px; }
+  header nav .navbar-toggler .menu-title {
+    font-size: 14px;
+    margin-right: 14px; }
+
+  footer .copyright {
+    font-size: 12px; }
+  footer .social-media li {
+    margin: 0 5px; }
+    footer .social-media li a .social-icon {
+      width: 36px;
+      height: 36px; }
+      footer .social-media li a .social-icon i {
+        font-size: 16px; }
+
+  #main .mob-scroll-notification .notification-wrap .notification p {
+    font-size: 15px; } }
 
 /*# sourceMappingURL=style.css.map */
