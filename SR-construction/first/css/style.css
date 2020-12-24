@@ -198,7 +198,7 @@ header {
         font-size: 16px;
         color: #fff;
         text-transform: uppercase;
-        margin-right: 20px;
+        margin-right: 12px;
         font-weight: 500; }
       header nav .navbar-toggler .menu-icon {
         width: 50px;
@@ -381,6 +381,15 @@ header {
   to {
     background-position-y: 50%; } }
   #main .chooses-sec {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     position: absolute;
     bottom: 23em;
     left: 50%;
@@ -542,11 +551,14 @@ header {
         max-height: 52px; }
       #main .chooses-sec li:hover {
         opacity: .7; }
+  #main.project-main {
+    height: 970px;
+    overflow-y: auto; }
   #main .project-choose-wrapper {
     background: url("../img/sky.png") no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative; }
     #main .project-choose-wrapper::after {
       content: '';
@@ -563,7 +575,7 @@ header {
       -moz-transform: translateX(-50%);
       -o-transform: translateX(-50%);
       transform: translateX(-50%);
-      bottom: 77%;
+      top: 185px;
       z-index: 21;
       margin: 0;
       font-size: 55px;
@@ -580,7 +592,7 @@ header {
       -moz-transform: translateX(-50%);
       -o-transform: translateX(-50%);
       transform: translateX(-50%);
-      bottom: 20%;
+      bottom: 37em;
       z-index: 21;
       display: -ms-flexbox;
       display: flex;
@@ -679,7 +691,8 @@ header {
   #main .floor-choose-wrapper {
     width: 100%;
     height: 100vh;
-    position: relative; }
+    position: relative;
+    z-index: 21; }
     #main .floor-choose-wrapper::after {
       content: '';
       position: absolute;
@@ -733,51 +746,6 @@ header {
               fill: #caa86673;
               fill-opacity: 1;
               stroke-width: 0.5; }
-        #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper {
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: 30;
-          pointer-events: none;
-          width: 175px;
-          padding: 10px 22px;
-          margin: -96px -175px;
-          background-color: #fff;
-          opacity: 0;
-          -webkit-transition: opacity .2s ease;
-          -moz-transition: opacity .2s ease;
-          -ms-transition: opacity .2s ease;
-          -o-transition: opacity .2s ease;
-          transition: opacity .2s ease;
-          will-change: transform; }
-          #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper::before {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 100%;
-            margin-top: -1px;
-            border-top: 8px solid #fff;
-            border-left: 12px solid transparent; }
-          #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper .tooltip-box {
-            white-space: nowrap;
-            color: #2d2f42; }
-            #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper .tooltip-box div {
-              font-size: 13px;
-              line-height: 26px;
-              font-weight: 500;
-              display: -ms-flexbox;
-              display: flex;
-              -ms-flex-pack: justify;
-              justify-content: space-between;
-              -ms-flex-align: center;
-              align-items: center; }
-              #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper .tooltip-box div.number-b {
-                margin-bottom: 15px; }
-                #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper .tooltip-box div.number-b .number {
-                  font-size: 26px; }
-              #main .floor-choose-wrapper .floor-wrap .floor-svg .tooltip-box-wrapper .tooltip-box div.number-f .number {
-                font-size: 40px;
-                font-weight: 600; }
   #main .back-link {
     width: 170px;
     position: absolute;
@@ -791,6 +759,54 @@ header {
     #main .back-link .hover-text {
       padding-left: 3.5em;
       width: 170px; }
+  #main .tooltip-box-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    pointer-events: none;
+    width: 175px;
+    padding: 10px 22px;
+    margin: -96px -175px;
+    background-color: #fff;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease;
+    -moz-transition: opacity .2s ease;
+    -ms-transition: opacity .2s ease;
+    -o-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    will-change: transform; }
+    #main .tooltip-box-wrapper::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 100%;
+      margin-top: -1px;
+      border-top: 8px solid #fff;
+      border-left: 12px solid transparent; }
+    #main .tooltip-box-wrapper.mob-position {
+      transform: none !important; }
+    #main .tooltip-box-wrapper .tooltip-box {
+      white-space: nowrap;
+      color: #2d2f42;
+      background-color: #fff; }
+      #main .tooltip-box-wrapper .tooltip-box div {
+        font-size: 13px;
+        line-height: 26px;
+        font-weight: 500;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center; }
+        #main .tooltip-box-wrapper .tooltip-box div.number-b {
+          margin-bottom: 15px; }
+          #main .tooltip-box-wrapper .tooltip-box div.number-b .number {
+            font-size: 26px; }
+        #main .tooltip-box-wrapper .tooltip-box div.number-f .number {
+          font-size: 40px;
+          font-weight: 600; }
   #main .mob-scroll-notification {
     display: none;
     position: fixed;
@@ -976,6 +992,24 @@ footer {
         header nav #menu .navbar-nav .nav-item:hover:not(:last-child) {
           box-shadow: 0px 2px 5px #c59f57; }
 
+  #main .project-choose-wrapper h1 {
+    font-size: 40px; }
+  #main .project-choose-wrapper .project-choose .project-box {
+    margin: 15px 20px; }
+  #main .tooltip-box-wrapper {
+    left: auto;
+    right: 6em;
+    top: 125px;
+    margin: 0; }
+    #main .tooltip-box-wrapper::before {
+      right: auto;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent; }
   #main .floor-choose-wrapper {
     overflow-x: scroll;
     -ms-overflow-style: none;
@@ -996,11 +1030,47 @@ footer {
     display: block; } }
 @media only screen and (max-width: 766.91px) {
   header nav #menu {
-    width: 100%; } }
+    width: 100%; }
+
+  #main .project-choose-wrapper h1 {
+    font-size: 32px;
+    top: 150px; }
+  #main .project-choose-wrapper .project-choose {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    bottom: 11em; }
+    #main .project-choose-wrapper .project-choose .project-box {
+      margin: 38px 20px; }
+      #main .project-choose-wrapper .project-choose .project-box img {
+        width: auto;
+        height: 165px;
+        bottom: 34px; }
+      #main .project-choose-wrapper .project-choose .project-box .oval-f {
+        width: 150px;
+        height: 150px; }
+      #main .project-choose-wrapper .project-choose .project-box .caption-project {
+        bottom: auto;
+        left: 170px; }
+      #main .project-choose-wrapper .project-choose .project-box:hover img {
+        bottom: 44px; } }
 @media only screen and (max-width: 575.91px) {
   header, footer {
     padding: 0 3em 0 6em; }
 
+  #main .project-choose-wrapper h1 {
+    font-size: 24px;
+    width: 100%;
+    text-align: center; }
+  #main .project-choose-wrapper .project-choose {
+    left: 42%;
+    bottom: 20em; }
+    #main .project-choose-wrapper .project-choose .project-box img {
+      height: 150px; }
+    #main .project-choose-wrapper .project-choose .project-box .oval-f {
+      width: 130px;
+      height: 130px; }
+    #main .project-choose-wrapper .project-choose .project-box .caption-project {
+      left: 150px; }
   #main .back-link {
     left: 6em;
     height: 40px;
@@ -1011,6 +1081,13 @@ footer {
     #main .back-link .icon {
       width: 40px;
       height: 40px; }
+  #main .tooltip-box-wrapper {
+    right: 3em;
+    width: 150px; }
+    #main .tooltip-box-wrapper .tooltip-box div.number-b {
+      margin-bottom: 10px; }
+  #main .mob-scroll-notification .notification-wrap .notification p {
+    font-size: 18px; }
 
   header nav .call-us {
     display: none !important; }
@@ -1022,16 +1099,12 @@ footer {
       header nav .call-us.show .icon {
         border: 1px solid #bf9c59; }
   header nav .navbar-toggler {
-    margin-left: 0; }
-
-  #main .mob-scroll-notification .notification-wrap .notification p {
-    font-size: 18px; } }
+    margin-left: 0; } }
 @media only screen and (max-width: 400px) {
   header nav .navbar-brand img {
     height: 62px; }
   header nav .navbar-toggler .menu-title {
-    font-size: 14px;
-    margin-right: 14px; }
+    font-size: 14px; }
 
   footer .copyright {
     font-size: 12px; }
@@ -1043,6 +1116,19 @@ footer {
       footer .social-media li a .social-icon i {
         font-size: 16px; }
 
+  #main .project-choose-wrapper .project-choose {
+    left: 35%; }
+  #main .back-link {
+    width: 120px; }
+    #main .back-link .hover-text {
+      width: 120px; }
+    #main .back-link .icon {
+      left: -39px; }
+  #main .tooltip-box-wrapper {
+    width: 110px;
+    padding: 10px; }
+    #main .tooltip-box-wrapper .tooltip-box div.number-f .number {
+      font-size: 30px; }
   #main .mob-scroll-notification .notification-wrap .notification p {
     font-size: 15px; } }
 

@@ -332,7 +332,7 @@ header {
                 font-size: 16px;
                 color: $white-color;
                 text-transform: uppercase;
-                margin-right: 20px;
+                margin-right: 12px;
                 font-weight: 500;
             }
             .menu-icon {
@@ -540,6 +540,8 @@ header {
     }
 
     .chooses-sec {
+        width: 100%;
+        @include display-f-wrap-center;
         position: absolute;
         bottom: 23em;
         @include translateX;
@@ -674,11 +676,15 @@ header {
         }
     }
 
+    &.project-main {
+        height: 970px;
+        overflow-y: auto;
+    }
+
     .project-choose-wrapper {
         background: url('../img/sky.png') no-repeat;
         background-size: cover;
-        width: 100%;
-        @include h-100vh;
+        @include wh-100;
         position: relative;
         &::after {
             content: '';
@@ -691,7 +697,7 @@ header {
         h1 {
             position: absolute;
             @include translateX;
-            bottom: 77%;
+            top: 185px;
             z-index: 21;
             margin: 0;
             font-size: 55px;
@@ -705,7 +711,7 @@ header {
         .project-choose {
             position: absolute;
             @include translateX();
-            bottom: 20%;
+            bottom: 37em;
             z-index: 21;
             @include display-f-nowrap-center;
             .project-box {
@@ -814,6 +820,7 @@ header {
         width: 100%;
         @include h-100vh;
         position: relative;
+        z-index: 21;
         &::after {
             content: '';
             position: absolute;
@@ -864,61 +871,6 @@ header {
                         }
                     }
                 }
-
-                .tooltip-box-wrapper {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    z-index: 30;
-                    pointer-events: none;
-                    width: 175px;
-                    padding: 10px 22px;
-                    margin: -96px -175px;
-                    background-color: $white-color;
-                    opacity: 0;
-                    -webkit-transition: opacity .2s ease;
-                    -moz-transition: opacity .2s ease;
-                    -ms-transition: opacity .2s ease;
-                    -o-transition: opacity .2s ease;
-                    transition: opacity .2s ease;
-                    will-change: transform;
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        right: 0;
-                        top: 100%;
-                        margin-top: -1px;
-                        border-top: 8px solid $white-color;
-                        border-left: 12px solid transparent;
-                    }
-                    .tooltip-box {
-                        white-space: nowrap;
-                        color: #2d2f42;
-                        div {
-                            font-size: 13px;
-                            line-height: 26px;
-                            font-weight: 500;
-                            display: -ms-flexbox;
-                            display: flex;
-                            -ms-flex-pack: justify;
-                            justify-content: space-between;
-                            -ms-flex-align: center;
-                            align-items: center;
-                            &.number-b {
-                                margin-bottom: 15px;
-                                .number {
-                                    font-size: 26px;
-                                }
-                            }
-                            &.number-f {
-                                .number {
-                                    font-size: 40px;
-                                    font-weight: 600;
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -938,6 +890,65 @@ header {
         .hover-text {
             padding-left: 3.5em;
             width: 170px;                
+        }
+    }
+
+    .tooltip-box-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 30;
+        pointer-events: none;
+        width: 175px;
+        padding: 10px 22px;
+        margin: -96px -175px;
+        background-color: $white-color;
+        opacity: 0;
+        -webkit-transition: opacity .2s ease;
+        -moz-transition: opacity .2s ease;
+        -ms-transition: opacity .2s ease;
+        -o-transition: opacity .2s ease;
+        transition: opacity .2s ease;
+        will-change: transform;
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 100%;
+            margin-top: -1px;
+            border-top: 8px solid $white-color;
+            border-left: 12px solid transparent;
+        }
+        &.mob-position {
+            transform: none !important;
+        }
+        .tooltip-box {
+            white-space: nowrap;
+            color: #2d2f42;
+            background-color: $white-color;
+            div {
+                font-size: 13px;
+                line-height: 26px;
+                font-weight: 500;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -ms-flex-align: center;
+                align-items: center;
+                &.number-b {
+                    margin-bottom: 15px;
+                    .number {
+                        font-size: 26px;
+                    }
+                }
+                &.number-f {
+                    .number {
+                        font-size: 40px;
+                        font-weight: 600;
+                    }
+                }
+            }
         }
     }
 
@@ -1160,6 +1171,26 @@ footer {
     }
 
     #main {
+        .project-choose-wrapper {
+            h1 {
+                font-size: 40px;
+            }
+            .project-choose .project-box {
+                margin: 15px 20px;
+            }
+        }
+        .tooltip-box-wrapper {
+            left: auto;
+            right: 6em;
+            top: 125px;
+            margin: 0;
+            &::before {
+                right: auto;
+                @include translateX;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+            }
+        }
         .floor-choose-wrapper {
             overflow-x: scroll;
             -ms-overflow-style: none;  /* IE and Edge */
@@ -1173,10 +1204,12 @@ footer {
             &::-webkit-scrollbar {
                 display: none;
             }
-            .floor-wrap .floor-svg svg {
-                width: 1440px;
-                a {
-                    transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+            .floor-wrap .floor-svg {
+                svg {
+                    width: 1440px;
+                    a {
+                        transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+                    }
                 }
             }
         }
@@ -1191,6 +1224,39 @@ footer {
     header nav #menu {
         width: 100%;
     }
+    #main {
+        .project-choose-wrapper {
+            h1 {
+                font-size: 32px;
+                top: 150px;
+            }
+            .project-choose {
+                @include d-flex-column;
+                bottom: 11em;
+                .project-box {
+                    margin: 38px 20px;
+                    img {
+                        width: auto;
+                        height: 165px;
+                        bottom: 34px;
+                    }
+                    .oval-f {
+                        width: 150px;
+                        height: 150px;
+                    }
+                    .caption-project {
+                        bottom: auto;
+                        left: 170px;
+                    }
+                    &:hover {
+                        img {
+                            bottom: 44px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -1198,17 +1264,52 @@ footer {
     header, footer {
         padding: 0 3em 0 6em;
     }
-    #main .back-link {
-        left: 6em;
-        height: 40px;
-        width: 140px;
-        .hover-text {
+    #main {
+        .project-choose-wrapper {
+            h1 {
+                font-size: 24px;
+                width: 100%;
+                text-align: center;
+            }
+            .project-choose {
+                left: 42%;
+                bottom: 20em;
+                .project-box {
+                    img {
+                        height: 150px;
+                    }
+                    .oval-f {
+                        width: 130px;
+                        height: 130px;
+                    }
+                    .caption-project {
+                        left: 150px;
+                    }
+                }
+            }
+        }
+        .back-link {
+            left: 6em;
             height: 40px;
             width: 140px;
+            .hover-text {
+                height: 40px;
+                width: 140px;
+            }
+            .icon {
+                width: 40px;
+                height: 40px;
+            }
         }
-        .icon {
-            width: 40px;
-            height: 40px;
+        .tooltip-box-wrapper {
+            right: 3em;
+            width: 150px;
+            .tooltip-box div.number-b {
+                margin-bottom: 10px;
+            }
+        }
+        .mob-scroll-notification .notification-wrap .notification p {
+            font-size: 18px;
         }
     }
     header nav {
@@ -1228,12 +1329,6 @@ footer {
             margin-left: 0;
         }
     }
-
-    #main .mob-scroll-notification .notification-wrap .notification p {
-        font-size: 18px;
-    }
-
-
 }
 
 
@@ -1244,7 +1339,6 @@ footer {
         }
         .navbar-toggler .menu-title {
             font-size: 14px;
-            margin-right: 14px;
         }
     }
     
@@ -1264,7 +1358,28 @@ footer {
         }
     }
 
-    #main .mob-scroll-notification .notification-wrap .notification p {
-        font-size: 15px;
+    #main {
+        .project-choose-wrapper .project-choose {
+            left: 35%;
+        }
+        .back-link {
+            width: 120px;
+            .hover-text {
+                width: 120px;
+            }
+            .icon {
+                left: -39px;
+            }
+        }
+        .tooltip-box-wrapper {
+            width: 110px;
+            padding: 10px;
+            .tooltip-box div.number-f .number {
+                font-size: 30px;
+            }
+        }
+        .mob-scroll-notification .notification-wrap .notification p {
+            font-size: 15px;
+        }
     } 
 }

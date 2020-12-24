@@ -18,21 +18,21 @@ $(document).ready(function() {
 
     var myPolygon = $('.floor');
     var myTooltip = $('#myTooltip');
-    // var w = $(window);
+    var w = $(window);
 
-    // function checkWidth() {
-    //     if (w.width() < 990.91) {
-    //         $('#myTooltip').addClass('mob-position');
-    //     } else {
-    //         $('#myTooltip').removeClass('mob-position');
-    //     }
-    // }
+    function checkWidth() {
+        if (w.width() < 990.91) {
+            $('#myTooltip').addClass('mob-position');
+        } else {
+            $('#myTooltip').removeClass('mob-position');
+        }
+    }
     
-    // window.onload = function() {
-    //   checkWidth();
-    // };
+    window.onload = function() {
+      checkWidth();
+    };
     
-    // w.resize(checkWidth);
+    w.resize(checkWidth);
 
     myPolygon.mousemove(function(e) {
         var floorN = $(this).parent().data('floor');
@@ -40,9 +40,8 @@ $(document).ready(function() {
         $('.tooltip-box-wrapper').html('');
         $('.tooltip-box-wrapper').append('<div class="tooltip-box"><div class="number-b"><span class="title">Bina</span><span class="number">' + buildingN + '</span></div><div class="number-f"><span class="title">Mərtəbə</span><span class="number">' + floorN + '</span></div></div>');
         myTooltip.css('transform', 'translate('+ e.clientX + 'px' + ',' + e.clientY + 'px' +')');
-        // $('.mob-position').css('transform', 'translate('+ e.clientX + 'px' + ',' + e.clientY + 'px' +')');
+        $('.mob-position').css('transform', 'none');
         myTooltip.css('opacity', '1');
-        // console.log(w.scrollLeft());
     });
 
     myPolygon.mouseout(function(e) {
