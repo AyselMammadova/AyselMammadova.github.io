@@ -754,12 +754,12 @@ header {
           #main .clouds-parallax #scene .layer .cloud.cloudSixth {
             left: 0;
             top: 47%; }
-  #main .floor-choose-wrapper {
+  #main .custom-choose-wrapper {
     width: 100%;
     height: 100vh;
     position: relative;
     z-index: 21; }
-    #main .floor-choose-wrapper::after {
+    #main .custom-choose-wrapper::after {
       content: '';
       position: absolute;
       width: 100%;
@@ -767,12 +767,10 @@ header {
       top: 0;
       left: 0;
       background-image: linear-gradient(to bottom, transparent 30%, rgba(34, 37, 24, 0.25) 70%); }
-    #main .floor-choose-wrapper .floor-choose-background {
+    #main .custom-choose-wrapper .custom-choose-background {
       width: 100%;
       height: 100%; }
-      #main .floor-choose-wrapper .floor-choose-background.big-image, #main .floor-choose-wrapper .floor-choose-background.image-1200 {
-        display: none; }
-    #main .floor-choose-wrapper .floor-wrap {
+    #main .custom-choose-wrapper .custom-wrap {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -783,7 +781,7 @@ header {
       width: 100%;
       height: 100%;
       z-index: 1000; }
-      #main .floor-choose-wrapper .floor-wrap .floor-svg {
+      #main .custom-choose-wrapper .custom-wrap .custom-svg {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -793,25 +791,30 @@ header {
         -moz-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%); }
-        #main .floor-choose-wrapper .floor-wrap .floor-svg svg {
-          width: 100%;
-          height: 100%; }
-          #main .floor-choose-wrapper .floor-wrap .floor-svg svg a {
-            transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
-            -webkit-transition: all .2s ease-in-out;
-            -moz-transition: all .2s ease-in-out;
-            -ms-transition: all .2s ease-in-out;
-            -o-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
-            position: relative; }
-            #main .floor-choose-wrapper .floor-wrap .floor-svg svg a .floor {
-              fill: #fff;
-              fill-opacity: 0;
-              pointer-events: all; }
-            #main .floor-choose-wrapper .floor-wrap .floor-svg svg a:hover .floor {
-              fill: #caa86673;
-              fill-opacity: 1;
-              stroke-width: 0.5; }
+  #main .floor-choose-wrapper .floor-choose-background.big-image, #main .floor-choose-wrapper .floor-choose-background.image-1200 {
+    display: none; }
+  #main .floor-choose-wrapper .floor-wrap .floor-svg svg {
+    width: 100%;
+    height: 100%; }
+    #main .floor-choose-wrapper .floor-wrap .floor-svg svg a {
+      transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      position: relative; }
+      #main .floor-choose-wrapper .floor-wrap .floor-svg svg a .floor {
+        fill: #fff;
+        fill-opacity: 0;
+        pointer-events: all; }
+      #main .floor-choose-wrapper .floor-wrap .floor-svg svg a:hover .floor {
+        fill: #caa86673;
+        fill-opacity: 1;
+        stroke-width: 0.5; }
+  #main .flat-choose-wrapper .flat-choose-background {
+    filter: blur(24px);
+    -webkit-filter: blur(24px); }
   #main .back-link {
     width: 170px;
     position: absolute;
@@ -825,6 +828,51 @@ header {
     #main .back-link .hover-text {
       padding-left: 3.5em;
       width: 170px; }
+  #main .box-flat {
+    position: absolute;
+    right: 6em;
+    background: url("../img/flat.png") no-repeat;
+    z-index: 100;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    #main .box-flat.floor-info {
+      background-size: 150px;
+      width: 150px;
+      height: 150px;
+      top: 150px; }
+      #main .box-flat.floor-info .number {
+        font-size: 26px; }
+      #main .box-flat.floor-info .title {
+        font-size: 14px; }
+      #main .box-flat.floor-info .arrow-change {
+        position: absolute;
+        border-top: 5px solid #caa866;
+        border-right: 5px solid #caa866;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid transparent; }
+        #main .box-flat.floor-info .arrow-change.up-floor {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+    #main .box-flat.block-info {
+      background-size: 100px;
+      width: 100px;
+      height: 100px;
+      top: 350px;
+      margin-right: 25px; }
+      #main .box-flat.block-info .number {
+        font-size: 20px; }
+      #main .box-flat.block-info .title {
+        font-size: 12px; }
+    #main .box-flat span {
+      display: block;
+      color: #191919;
+      line-height: 1; }
   #main .tooltip-box-wrapper {
     position: absolute;
     top: 0;
@@ -1194,6 +1242,8 @@ footer {
     #main .back-link .icon {
       width: 40px;
       height: 40px; }
+  #main .box-flat {
+    right: 3em; }
   #main .tooltip-box-wrapper {
     right: 3em;
     width: 150px; }
