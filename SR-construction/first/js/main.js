@@ -14,17 +14,17 @@ $(document).ready(function() {
     });
 
 
-    // tooltip svg
+    // floor tooltip svg
 
-    var myPolygon = $('.floor');
-    var myTooltip = $('#myTooltip');
+    var myPolygon = $('.floor-svg .hover-me');
+    var myTooltip = $('.floor-tooltip-wrapper');
     var w = $(window);
 
     function checkWidth() {
         if (w.width() < 990.91) {
-            $('#myTooltip').addClass('mob-position');
+            $('.floor-tooltip-wrapper').addClass('mob-position');
         } else {
-            $('#myTooltip').removeClass('mob-position');
+            $('.floor-tooltip-wrapper').removeClass('mob-position');
         }
     }
     
@@ -37,8 +37,8 @@ $(document).ready(function() {
     myPolygon.mousemove(function(e) {
         var floorN = $(this).parent().data('floor');
         var blockN = $(this).parent().data('block');
-        $('.tooltip-box-wrapper').html('');
-        $('.tooltip-box-wrapper').append('<div class="tooltip-box"><div class="number-b"><span class="title">Blok</span><span class="number">' + blockN + '</span></div><div class="number-f"><span class="title">Mərtəbə</span><span class="number">' + floorN + '</span></div></div>');
+        $('.floor-tooltip-wrapper').html('');
+        $('.floor-tooltip-wrapper').append('<div class="tooltip-box"><div class="number-b"><span class="title">Blok</span><span class="number">' + blockN + '</span></div><div class="number-f"><span class="title">Mərtəbə</span><span class="number">' + floorN + '</span></div></div>');
         myTooltip.css('transform', 'translate('+ e.clientX + 'px' + ',' + e.clientY + 'px' +')');
         $('.mob-position').css('transform', 'none');
         myTooltip.css('opacity', '1');
@@ -46,6 +46,24 @@ $(document).ready(function() {
 
     myPolygon.mouseout(function(e) {
         myTooltip.css('opacity', '0');
+    });
+
+
+     // flat tooltip svg
+
+     var myPolygon1 = $('.flat-svg .hover-me');
+     var myTooltip1 = $('.flat-tooltip-wrapper');
+ 
+     myPolygon1.mousemove(function(e) {
+         var roomN = $(this).parent().data('room');
+         var areaN = $(this).parent().data('area');
+         myTooltip1.find('.room-flat .number').text(roomN);
+         myTooltip1.find('.area-flat .number').text(areaN);
+     });
+
+     myPolygon1.mouseout(function(e) {
+        myTooltip1.find('.room-flat .number').text('-');
+         myTooltip1.find('.area-flat .number').text('-');
     });
 
 

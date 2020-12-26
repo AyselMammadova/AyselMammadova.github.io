@@ -922,7 +922,29 @@ header {
             .custom-svg {
                 @include wh-100; 
                 position: absolute;
-                @include translateXY;
+                svg {
+                    @include wh-100;
+                    a {
+                        -webkit-transition: all .2s ease-in-out;
+                        -moz-transition: all .2s ease-in-out;
+                        -ms-transition: all .2s ease-in-out;
+                        -o-transition: all .2s ease-in-out;
+                        transition: all .2s ease-in-out;
+                        position: relative;
+                        .hover-me {
+                            fill: #fff;
+                            fill-opacity: 0;
+                            pointer-events: all;
+                        }
+                        &:hover {
+                            .hover-me {
+                                fill: #caa86673;
+                                fill-opacity: 1;
+                                stroke-width: 0.5;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -935,28 +957,13 @@ header {
         }
         .floor-wrap {
             .floor-svg {
+                @include translateXY;
                 svg {
-                    @include wh-100;
                     a {
+                        -webkit-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+                        -moz-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+                        -o-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
                         transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
-                        -webkit-transition: all .2s ease-in-out;
-                        -moz-transition: all .2s ease-in-out;
-                        -ms-transition: all .2s ease-in-out;
-                        -o-transition: all .2s ease-in-out;
-                        transition: all .2s ease-in-out;
-                        position: relative;
-                        .floor {
-                            fill: #fff;
-                            fill-opacity: 0;
-                            pointer-events: all;
-                        }
-                        &:hover {
-                            .floor {
-                                fill: #caa86673;
-                                fill-opacity: 1;
-                                stroke-width: 0.5;
-                            }
-                        }
                     }
                 }
             }
@@ -967,11 +974,26 @@ header {
         .flat-choose-background {
             filter: blur(24px);
             -webkit-filter: blur(24px);
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            transform: scale(1.1);
         }
         .draft-flats {
             position: absolute;
             @include translateXY;
-            width: 22vw;
+            margin-top: 24px;
+        }
+        .draft-flats, .flat-svg {
+            width: 410px !important;
+            height: 73vh;
+        }
+        .flat-svg {
+            -webkit-transform: translate(-50%, 23px) scaleY(0.73);
+            -moz-transform: translate(-50%, 23px) scaleY(0.73);
+            -o-transform: translate(-50%, 23px) scaleY(0.73);
+            transform: translate(-50%, 23px) scaleY(0.73);
+            left: 50%;
         }
     }
 
@@ -993,115 +1015,112 @@ header {
         }
     }
 
-    .box-flat {
+    .flat-info-wrapper {
         position: absolute;
+        @include translateY;
         right: 3em;
-        background: url('../img/flat.png') no-repeat;
-        z-index: 100;
         @include display-f-nowrap-center;
         @include d-flex-column;
-        &.floor-info {
-            background-size: 120px;
-            width: 120px;
-            height: 120px;
-            top: 150px;
-            margin-right: 31px;
-            .number {
-                font-size: 36px;
-            }
-            .title {
-                font-size: 14px;
-            }
-            .floor-change {
-                position: absolute;
-                display: block;
-                div {
-                    -webkit-transform: rotate(45deg);
-                    transform: rotate(45deg);
-                    width: 26px;
-                    height: 26px;
-                }
-                &.up-floor {
-                    top: -22px;
-                    div {
-                        border-top: 2px solid $main-color;
-                        border-left: 2px solid $main-color;
-                    }
-                }
-                &.down-floor {
-                    bottom: -22px;
-                    div {
-                        border-bottom: 2px solid $main-color;
-                        border-right: 2px solid $main-color;
-                    }
-                }
-            }
-        }
-        &.block-info {
-            background-size: 70px;
-            width: 70px;
-            height: 70px;
-            top: 330px;
-            margin-right: 57px;
-            .number {
-                font-size: 20px;
-            }
-            .title {
-                font-size: 12px;
-            }
-        }
-        span {
-            display: block;
-            line-height: 1;
-            font-weight: 500;
-            color: $white-color;
-            text-shadow: 1px 1px $main-color;
-            &.number {
-                font-weight: 600;
-            }
-        }
-    }
-
-    .flat-tooltip-wrapper  {
-        position: absolute;
-        bottom: 22em;
-        right: 3em;
-        width: 184px;
-        height: 184px;
-        background: url('../img/frame.png') no-repeat;
-        background-size: 184px;
         z-index: 100;
-        @include display-f-nowrap-center;
-        @include d-flex-column;
-        .tooltip-box {
+        .box-flat {
             @include display-f-nowrap-center;
             @include d-flex-column;
-            position: relative;
-            top: 14px;
-            div {
-                @include display-f-nowrap-center;
-                @include d-flex-column;
-                span {
-                    line-height: 1.1;
-                    font-weight: 500;
-                    color: $white-color;
-                    text-shadow: 1px 1px $main-color;
-                    &.number {
-                        font-size: 26px;
-                        font-weight: 600;
+            background-color: $main-color;
+            @include radius-50;
+            &.floor-info {
+                width: 120px;
+                height: 120px;
+                position: relative;
+                .number {
+                    font-size: 36px;
+                }
+                .title {
+                    font-size: 14px;
+                }
+                .floor-change {
+                    position: absolute;
+                    display: block;
+                    div {
+                        -webkit-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                        width: 26px;
+                        height: 26px;
                     }
-                    &.title {
-                        font-size: 10px;
+                    &.up-floor {
+                        top: -22px;
+                        div {
+                            border-top: 2px solid $main-color;
+                            border-left: 2px solid $main-color;
+                        }
+                    }
+                    &.down-floor {
+                        bottom: -22px;
+                        div {
+                            border-bottom: 2px solid $main-color;
+                            border-right: 2px solid $main-color;
+                        }
                     }
                 }
-                &:first-child {
-                    margin-bottom: 10px;
+            }
+            &.block-info {
+                width: 70px;
+                height: 70px;
+                margin: 50px 0;
+                .number {
+                    font-size: 20px;
+                }
+                .title {
+                    font-size: 12px;
+                }
+            }
+            span {
+                display: block;
+                line-height: 1;
+                font-weight: 500;
+                color: $white-color;
+                text-shadow: 1px 1px $main-color;
+                &.number {
+                    font-weight: 600;
+                }
+            }
+        }
+    
+        .flat-tooltip-wrapper  {
+            width: 150px;
+            height: 150px;
+            background-color: $main-color;
+            @include radius-50;
+            @include display-f-nowrap-center;
+            @include d-flex-column;
+            .tooltip-box {
+                @include display-f-nowrap-center;
+                @include d-flex-column;
+                div {
+                    @include display-f-nowrap-center;
+                    @include d-flex-column;
+                    span {
+                        line-height: 1.1;
+                        font-weight: 500;
+                        color: $white-color;
+                        text-shadow: 1px 1px $main-color;
+                        &.number {
+                            font-size: 26px;
+                            font-weight: 600;
+                        }
+                        &.title {
+                            font-size: 10px;
+                        }
+                    }
+                    &:first-child {
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }
     }
 
-    .tooltip-box-wrapper {
+
+    .floor-tooltip-wrapper {
         position: absolute;
         top: 0;
         left: 0;
@@ -1452,7 +1471,7 @@ footer {
                 margin: 15px 20px;
             }
         }
-        .tooltip-box-wrapper {
+        .floor-tooltip-wrapper {
             left: auto;
             right: 6em;
             top: 125px;
@@ -1616,7 +1635,7 @@ footer {
         .box-flat {
             right: 3em;
         }
-        .tooltip-box-wrapper {
+        .floor-tooltip-wrapper {
             right: 3em;
             width: 150px;
             .tooltip-box div.number-b {
@@ -1695,7 +1714,7 @@ footer {
                 left: -39px;
             }
         }
-        .tooltip-box-wrapper {
+        .floor-tooltip-wrapper {
             width: 110px;
             padding: 10px;
             .tooltip-box div.number-f .number {

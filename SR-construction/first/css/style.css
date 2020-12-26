@@ -781,37 +781,46 @@ header {
       #main .custom-choose-wrapper .custom-wrap .custom-svg {
         width: 100%;
         height: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); }
+        position: absolute; }
+        #main .custom-choose-wrapper .custom-wrap .custom-svg svg {
+          width: 100%;
+          height: 100%; }
+          #main .custom-choose-wrapper .custom-wrap .custom-svg svg a {
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            position: relative; }
+            #main .custom-choose-wrapper .custom-wrap .custom-svg svg a .hover-me {
+              fill: #fff;
+              fill-opacity: 0;
+              pointer-events: all; }
+            #main .custom-choose-wrapper .custom-wrap .custom-svg svg a:hover .hover-me {
+              fill: #caa86673;
+              fill-opacity: 1;
+              stroke-width: 0.5; }
   #main .floor-choose-wrapper .floor-choose-background.big-image, #main .floor-choose-wrapper .floor-choose-background.image-1200 {
     display: none; }
-  #main .floor-choose-wrapper .floor-wrap .floor-svg svg {
-    width: 100%;
-    height: 100%; }
+  #main .floor-choose-wrapper .floor-wrap .floor-svg {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
     #main .floor-choose-wrapper .floor-wrap .floor-svg svg a {
-      transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
-      -webkit-transition: all .2s ease-in-out;
-      -moz-transition: all .2s ease-in-out;
-      -ms-transition: all .2s ease-in-out;
-      -o-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out;
-      position: relative; }
-      #main .floor-choose-wrapper .floor-wrap .floor-svg svg a .floor {
-        fill: #fff;
-        fill-opacity: 0;
-        pointer-events: all; }
-      #main .floor-choose-wrapper .floor-wrap .floor-svg svg a:hover .floor {
-        fill: #caa86673;
-        fill-opacity: 1;
-        stroke-width: 0.5; }
+      -webkit-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+      -moz-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+      -o-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+      transform: translate(-2px, 1px) scale(0.9) scaleY(0.77); }
   #main .flat-choose-wrapper .flat-choose-background {
     filter: blur(24px);
-    -webkit-filter: blur(24px); }
+    -webkit-filter: blur(24px);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); }
   #main .flat-choose-wrapper .draft-flats {
     position: absolute;
     top: 50%;
@@ -820,7 +829,16 @@ header {
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 22vw; }
+    margin-top: 24px; }
+  #main .flat-choose-wrapper .draft-flats, #main .flat-choose-wrapper .flat-svg {
+    width: 410px !important;
+    height: 73vh; }
+  #main .flat-choose-wrapper .flat-svg {
+    -webkit-transform: translate(-50%, 23px) scaleY(0.73);
+    -moz-transform: translate(-50%, 23px) scaleY(0.73);
+    -o-transform: translate(-50%, 23px) scaleY(0.73);
+    transform: translate(-50%, 23px) scaleY(0.73);
+    left: 50%; }
   #main .back-link {
     width: 170px;
     position: absolute;
@@ -834,11 +852,14 @@ header {
     #main .back-link .hover-text {
       padding-left: 3.5em;
       width: 170px; }
-  #main .box-flat {
+  #main .flat-info-wrapper {
     position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
     right: 3em;
-    background: url("../img/flat.png") no-repeat;
-    z-index: 100;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -846,71 +867,9 @@ header {
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-direction: column;
-    flex-direction: column; }
-    #main .box-flat.floor-info {
-      background-size: 120px;
-      width: 120px;
-      height: 120px;
-      top: 150px;
-      margin-right: 31px; }
-      #main .box-flat.floor-info .number {
-        font-size: 36px; }
-      #main .box-flat.floor-info .title {
-        font-size: 14px; }
-      #main .box-flat.floor-info .floor-change {
-        position: absolute;
-        display: block; }
-        #main .box-flat.floor-info .floor-change div {
-          -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-          width: 26px;
-          height: 26px; }
-        #main .box-flat.floor-info .floor-change.up-floor {
-          top: -22px; }
-          #main .box-flat.floor-info .floor-change.up-floor div {
-            border-top: 2px solid #caa866;
-            border-left: 2px solid #caa866; }
-        #main .box-flat.floor-info .floor-change.down-floor {
-          bottom: -22px; }
-          #main .box-flat.floor-info .floor-change.down-floor div {
-            border-bottom: 2px solid #caa866;
-            border-right: 2px solid #caa866; }
-    #main .box-flat.block-info {
-      background-size: 70px;
-      width: 70px;
-      height: 70px;
-      top: 330px;
-      margin-right: 57px; }
-      #main .box-flat.block-info .number {
-        font-size: 20px; }
-      #main .box-flat.block-info .title {
-        font-size: 12px; }
-    #main .box-flat span {
-      display: block;
-      line-height: 1;
-      font-weight: 500;
-      color: #fff;
-      text-shadow: 1px 1px #caa866; }
-      #main .box-flat span.number {
-        font-weight: 600; }
-  #main .flat-tooltip-wrapper {
-    position: absolute;
-    bottom: 22em;
-    right: 3em;
-    width: 184px;
-    height: 184px;
-    background: url("../img/frame.png") no-repeat;
-    background-size: 184px;
-    z-index: 100;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    #main .flat-tooltip-wrapper .tooltip-box {
+    flex-direction: column;
+    z-index: 100; }
+    #main .flat-info-wrapper .box-flat {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-align: center;
@@ -919,9 +878,72 @@ header {
       justify-content: center;
       -ms-flex-direction: column;
       flex-direction: column;
-      position: relative;
-      top: 14px; }
-      #main .flat-tooltip-wrapper .tooltip-box div {
+      background-color: #caa866;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%; }
+      #main .flat-info-wrapper .box-flat.floor-info {
+        width: 120px;
+        height: 120px;
+        position: relative; }
+        #main .flat-info-wrapper .box-flat.floor-info .number {
+          font-size: 36px; }
+        #main .flat-info-wrapper .box-flat.floor-info .title {
+          font-size: 14px; }
+        #main .flat-info-wrapper .box-flat.floor-info .floor-change {
+          position: absolute;
+          display: block; }
+          #main .flat-info-wrapper .box-flat.floor-info .floor-change div {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            width: 26px;
+            height: 26px; }
+          #main .flat-info-wrapper .box-flat.floor-info .floor-change.up-floor {
+            top: -22px; }
+            #main .flat-info-wrapper .box-flat.floor-info .floor-change.up-floor div {
+              border-top: 2px solid #caa866;
+              border-left: 2px solid #caa866; }
+          #main .flat-info-wrapper .box-flat.floor-info .floor-change.down-floor {
+            bottom: -22px; }
+            #main .flat-info-wrapper .box-flat.floor-info .floor-change.down-floor div {
+              border-bottom: 2px solid #caa866;
+              border-right: 2px solid #caa866; }
+      #main .flat-info-wrapper .box-flat.block-info {
+        width: 70px;
+        height: 70px;
+        margin: 50px 0; }
+        #main .flat-info-wrapper .box-flat.block-info .number {
+          font-size: 20px; }
+        #main .flat-info-wrapper .box-flat.block-info .title {
+          font-size: 12px; }
+      #main .flat-info-wrapper .box-flat span {
+        display: block;
+        line-height: 1;
+        font-weight: 500;
+        color: #fff;
+        text-shadow: 1px 1px #caa866; }
+        #main .flat-info-wrapper .box-flat span.number {
+          font-weight: 600; }
+    #main .flat-info-wrapper .flat-tooltip-wrapper {
+      width: 150px;
+      height: 150px;
+      background-color: #caa866;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      #main .flat-info-wrapper .flat-tooltip-wrapper .tooltip-box {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-align: center;
@@ -930,19 +952,28 @@ header {
         justify-content: center;
         -ms-flex-direction: column;
         flex-direction: column; }
-        #main .flat-tooltip-wrapper .tooltip-box div span {
-          line-height: 1.1;
-          font-weight: 500;
-          color: #fff;
-          text-shadow: 1px 1px #caa866; }
-          #main .flat-tooltip-wrapper .tooltip-box div span.number {
-            font-size: 26px;
-            font-weight: 600; }
-          #main .flat-tooltip-wrapper .tooltip-box div span.title {
-            font-size: 10px; }
-        #main .flat-tooltip-wrapper .tooltip-box div:first-child {
-          margin-bottom: 10px; }
-  #main .tooltip-box-wrapper {
+        #main .flat-info-wrapper .flat-tooltip-wrapper .tooltip-box div {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: center;
+          align-items: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -ms-flex-direction: column;
+          flex-direction: column; }
+          #main .flat-info-wrapper .flat-tooltip-wrapper .tooltip-box div span {
+            line-height: 1.1;
+            font-weight: 500;
+            color: #fff;
+            text-shadow: 1px 1px #caa866; }
+            #main .flat-info-wrapper .flat-tooltip-wrapper .tooltip-box div span.number {
+              font-size: 26px;
+              font-weight: 600; }
+            #main .flat-info-wrapper .flat-tooltip-wrapper .tooltip-box div span.title {
+              font-size: 10px; }
+          #main .flat-info-wrapper .flat-tooltip-wrapper .tooltip-box div:first-child {
+            margin-bottom: 10px; }
+  #main .floor-tooltip-wrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -959,7 +990,7 @@ header {
     -o-transition: opacity .2s ease;
     transition: opacity .2s ease;
     will-change: transform; }
-    #main .tooltip-box-wrapper::before {
+    #main .floor-tooltip-wrapper::before {
       content: '';
       position: absolute;
       right: 0;
@@ -967,13 +998,13 @@ header {
       margin-top: -1px;
       border-top: 8px solid #fff;
       border-left: 12px solid transparent; }
-    #main .tooltip-box-wrapper.mob-position {
+    #main .floor-tooltip-wrapper.mob-position {
       transform: none !important; }
-    #main .tooltip-box-wrapper .tooltip-box {
+    #main .floor-tooltip-wrapper .tooltip-box {
       white-space: nowrap;
       color: #2d2f42;
       background-color: #fff; }
-      #main .tooltip-box-wrapper .tooltip-box div {
+      #main .floor-tooltip-wrapper .tooltip-box div {
         font-size: 13px;
         line-height: 26px;
         font-weight: 500;
@@ -983,11 +1014,11 @@ header {
         justify-content: space-between;
         -ms-flex-align: center;
         align-items: center; }
-        #main .tooltip-box-wrapper .tooltip-box div.number-b {
+        #main .floor-tooltip-wrapper .tooltip-box div.number-b {
           margin-bottom: 15px; }
-          #main .tooltip-box-wrapper .tooltip-box div.number-b .number {
+          #main .floor-tooltip-wrapper .tooltip-box div.number-b .number {
             font-size: 26px; }
-        #main .tooltip-box-wrapper .tooltip-box div.number-f .number {
+        #main .floor-tooltip-wrapper .tooltip-box div.number-f .number {
           font-size: 40px;
           font-weight: 600; }
   #main .mob-scroll-notification {
@@ -1213,12 +1244,12 @@ footer {
 
   #main .project-choose-wrapper .project-choose .project-box {
     margin: 15px 20px; }
-  #main .tooltip-box-wrapper {
+  #main .floor-tooltip-wrapper {
     left: auto;
     right: 6em;
     top: 125px;
     margin: 0; }
-    #main .tooltip-box-wrapper::before {
+    #main .floor-tooltip-wrapper::before {
       right: auto;
       left: 50%;
       -webkit-transform: translateX(-50%);
@@ -1324,10 +1355,10 @@ footer {
       height: 40px; }
   #main .box-flat {
     right: 3em; }
-  #main .tooltip-box-wrapper {
+  #main .floor-tooltip-wrapper {
     right: 3em;
     width: 150px; }
-    #main .tooltip-box-wrapper .tooltip-box div.number-b {
+    #main .floor-tooltip-wrapper .tooltip-box div.number-b {
       margin-bottom: 10px; }
   #main .mob-scroll-notification .notification-wrap .notification p {
     font-size: 18px; }
@@ -1370,10 +1401,10 @@ footer {
       width: 120px; }
     #main .back-link .icon {
       left: -39px; }
-  #main .tooltip-box-wrapper {
+  #main .floor-tooltip-wrapper {
     width: 110px;
     padding: 10px; }
-    #main .tooltip-box-wrapper .tooltip-box div.number-f .number {
+    #main .floor-tooltip-wrapper .tooltip-box div.number-f .number {
       font-size: 30px; }
   #main .mob-scroll-notification .notification-wrap .notification p {
     font-size: 15px; } }
