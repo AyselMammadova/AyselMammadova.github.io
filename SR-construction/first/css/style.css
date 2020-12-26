@@ -922,8 +922,7 @@ header {
         display: block;
         line-height: 1;
         font-weight: 500;
-        color: #fff;
-        text-shadow: 1px 1px #caa866; }
+        color: #fff; }
         #main .flat-info-wrapper .box-flat span.number {
           font-weight: 600; }
     #main .flat-info-wrapper .flat-tooltip-wrapper {
@@ -964,8 +963,7 @@ header {
           #main .flat-info-wrapper .flat-tooltip-wrapper .tooltip-box div span {
             line-height: 1.1;
             font-weight: 500;
-            color: #fff;
-            text-shadow: 1px 1px #caa866; }
+            color: #fff; }
             #main .flat-info-wrapper .flat-tooltip-wrapper .tooltip-box div span.number {
               font-size: 26px;
               font-weight: 600; }
