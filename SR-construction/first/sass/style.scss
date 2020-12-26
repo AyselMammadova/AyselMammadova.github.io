@@ -968,6 +968,11 @@ header {
             filter: blur(24px);
             -webkit-filter: blur(24px);
         }
+        .draft-flats {
+            position: absolute;
+            @include translateXY;
+            width: 30vw;
+        }
     }
 
     .back-link {
@@ -990,40 +995,54 @@ header {
 
     .box-flat {
         position: absolute;
-        right: 6em;
+        right: 3em;
         background: url('../img/flat.png') no-repeat;
         z-index: 100;
         @include display-f-nowrap-center;
         @include d-flex-column;
         &.floor-info {
-            background-size: 150px;
-            width: 150px;
-            height: 150px;
+            background-size: 120px;
+            width: 120px;
+            height: 120px;
             top: 150px;
+            margin-right: 31px;
             .number {
-                font-size: 26px;
+                font-size: 36px;
             }
             .title {
                 font-size: 14px;
             }
-            .arrow-change {
+            .floor-change {
                 position: absolute;
-                border-top: 5px solid $main-color;
-                border-right: 5px solid $main-color;
-                border-bottom: 5px solid transparent;
-                border-left: 5px solid transparent;
+                display: block;
+                div {
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    width: 26px;
+                    height: 26px;
+                }
                 &.up-floor {
-                    -webkit-transform: rotate(-45deg);
-                    transform: rotate(-45deg);
+                    top: -22px;
+                    div {
+                        border-top: 2px solid $main-color;
+                        border-left: 2px solid $main-color;
+                    }
+                }
+                &.down-floor {
+                    bottom: -22px;
+                    div {
+                        border-bottom: 2px solid $main-color;
+                        border-right: 2px solid $main-color;
+                    }
                 }
             }
         }
         &.block-info {
-            background-size: 100px;
-            width: 100px;
-            height: 100px;
-            top: 350px;
-            margin-right: 25px;
+            background-size: 70px;
+            width: 70px;
+            height: 70px;
+            top: 330px;
+            margin-right: 57px;
             .number {
                 font-size: 20px;
             }
@@ -1033,8 +1052,52 @@ header {
         }
         span {
             display: block;
-            color: $dark-color;
             line-height: 1;
+            font-weight: 500;
+            color: $white-color;
+            text-shadow: 1px 1px $main-color;
+            &.number {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .flat-tooltip-wrapper  {
+        position: absolute;
+        bottom: 22em;
+        right: 3em;
+        width: 184px;
+        height: 184px;
+        background: url('../img/frame.png') no-repeat;
+        background-size: 184px;
+        z-index: 100;
+        @include display-f-nowrap-center;
+        @include d-flex-column;
+        .tooltip-box {
+            @include display-f-nowrap-center;
+            @include d-flex-column;
+            position: relative;
+            top: 14px;
+            div {
+                @include display-f-nowrap-center;
+                @include d-flex-column;
+                span {
+                    line-height: 1.1;
+                    font-weight: 500;
+                    color: $white-color;
+                    text-shadow: 1px 1px $main-color;
+                    &.number {
+                        font-size: 26px;
+                        font-weight: 600;
+                    }
+                    &.title {
+                        font-size: 10px;
+                    }
+                }
+                &:first-child {
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
 
@@ -1176,6 +1239,9 @@ footer {
                         font-size: 18px;
                     }
                 }
+            }
+            &:first-child {
+                margin-left: 0;
             }
             &:last-child {
                 margin-right: 0;

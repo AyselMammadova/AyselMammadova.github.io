@@ -36,9 +36,9 @@ $(document).ready(function() {
 
     myPolygon.mousemove(function(e) {
         var floorN = $(this).parent().data('floor');
-        var buildingN = $(this).parent().data('building');
+        var blockN = $(this).parent().data('block');
         $('.tooltip-box-wrapper').html('');
-        $('.tooltip-box-wrapper').append('<div class="tooltip-box"><div class="number-b"><span class="title">Bina</span><span class="number">' + buildingN + '</span></div><div class="number-f"><span class="title">Mərtəbə</span><span class="number">' + floorN + '</span></div></div>');
+        $('.tooltip-box-wrapper').append('<div class="tooltip-box"><div class="number-b"><span class="title">Blok</span><span class="number">' + blockN + '</span></div><div class="number-f"><span class="title">Mərtəbə</span><span class="number">' + floorN + '</span></div></div>');
         myTooltip.css('transform', 'translate('+ e.clientX + 'px' + ',' + e.clientY + 'px' +')');
         $('.mob-position').css('transform', 'none');
         myTooltip.css('opacity', '1');

@@ -812,6 +812,15 @@ header {
   #main .flat-choose-wrapper .flat-choose-background {
     filter: blur(24px);
     -webkit-filter: blur(24px); }
+  #main .flat-choose-wrapper .draft-flats {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 30vw; }
   #main .back-link {
     width: 170px;
     position: absolute;
@@ -827,7 +836,7 @@ header {
       width: 170px; }
   #main .box-flat {
     position: absolute;
-    right: 6em;
+    right: 3em;
     background: url("../img/flat.png") no-repeat;
     z-index: 100;
     display: -ms-flexbox;
@@ -839,37 +848,100 @@ header {
     -ms-flex-direction: column;
     flex-direction: column; }
     #main .box-flat.floor-info {
-      background-size: 150px;
-      width: 150px;
-      height: 150px;
-      top: 150px; }
+      background-size: 120px;
+      width: 120px;
+      height: 120px;
+      top: 150px;
+      margin-right: 31px; }
       #main .box-flat.floor-info .number {
-        font-size: 26px; }
+        font-size: 36px; }
       #main .box-flat.floor-info .title {
         font-size: 14px; }
-      #main .box-flat.floor-info .arrow-change {
+      #main .box-flat.floor-info .floor-change {
         position: absolute;
-        border-top: 5px solid #caa866;
-        border-right: 5px solid #caa866;
-        border-bottom: 5px solid transparent;
-        border-left: 5px solid transparent; }
-        #main .box-flat.floor-info .arrow-change.up-floor {
-          -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
+        display: block; }
+        #main .box-flat.floor-info .floor-change div {
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          width: 26px;
+          height: 26px; }
+        #main .box-flat.floor-info .floor-change.up-floor {
+          top: -22px; }
+          #main .box-flat.floor-info .floor-change.up-floor div {
+            border-top: 2px solid #caa866;
+            border-left: 2px solid #caa866; }
+        #main .box-flat.floor-info .floor-change.down-floor {
+          bottom: -22px; }
+          #main .box-flat.floor-info .floor-change.down-floor div {
+            border-bottom: 2px solid #caa866;
+            border-right: 2px solid #caa866; }
     #main .box-flat.block-info {
-      background-size: 100px;
-      width: 100px;
-      height: 100px;
-      top: 350px;
-      margin-right: 25px; }
+      background-size: 70px;
+      width: 70px;
+      height: 70px;
+      top: 330px;
+      margin-right: 57px; }
       #main .box-flat.block-info .number {
         font-size: 20px; }
       #main .box-flat.block-info .title {
         font-size: 12px; }
     #main .box-flat span {
       display: block;
-      color: #191919;
-      line-height: 1; }
+      line-height: 1;
+      font-weight: 500;
+      color: #fff;
+      text-shadow: 1px 1px #caa866; }
+      #main .box-flat span.number {
+        font-weight: 600; }
+  #main .flat-tooltip-wrapper {
+    position: absolute;
+    bottom: 22em;
+    right: 3em;
+    width: 184px;
+    height: 184px;
+    background: url("../img/frame.png") no-repeat;
+    background-size: 184px;
+    z-index: 100;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    #main .flat-tooltip-wrapper .tooltip-box {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      position: relative;
+      top: 14px; }
+      #main .flat-tooltip-wrapper .tooltip-box div {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        #main .flat-tooltip-wrapper .tooltip-box div span {
+          line-height: 1.1;
+          font-weight: 500;
+          color: #fff;
+          text-shadow: 1px 1px #caa866; }
+          #main .flat-tooltip-wrapper .tooltip-box div span.number {
+            font-size: 26px;
+            font-weight: 600; }
+          #main .flat-tooltip-wrapper .tooltip-box div span.title {
+            font-size: 10px; }
+        #main .flat-tooltip-wrapper .tooltip-box div:first-child {
+          margin-bottom: 10px; }
   #main .tooltip-box-wrapper {
     position: absolute;
     top: 0;
@@ -1010,6 +1082,8 @@ footer {
         footer .social-media li a .social-icon i {
           color: #fff;
           font-size: 18px; }
+    footer .social-media li:first-child {
+      margin-left: 0; }
     footer .social-media li:last-child {
       margin-right: 0; }
     footer .social-media li:hover a .social-icon {
