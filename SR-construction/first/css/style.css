@@ -617,14 +617,11 @@ header {
         max-height: 52px; }
       #main .chooses-sec li:hover {
         opacity: .7; }
-  #main.project-main {
-    height: 1050px;
-    overflow-y: auto; }
   #main .project-choose-wrapper {
     background: url("../img/sky.png") no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative; }
     #main .project-choose-wrapper::after {
       content: '';
@@ -641,10 +638,10 @@ header {
       -moz-transform: translateX(-50%);
       -o-transform: translateX(-50%);
       transform: translateX(-50%);
-      top: 185px;
+      top: 130px;
       z-index: 21;
       margin: 0;
-      font-size: 55px;
+      font-size: 40px;
       line-height: 40px;
       font-weight: 800;
       letter-spacing: 2.1px;
@@ -719,7 +716,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; }
+    height: 100vh; }
     #main .clouds-parallax #scene {
       z-index: 20;
       height: 100%;
@@ -1026,6 +1023,10 @@ footer {
       display: block; }
   #main .floor-choose-wrapper .floor-wrap .floor-svg svg a {
     transform: translate(-2px, -87px) scale(0.9) scaleY(0.87); } }
+@media only screen and (min-width: 1300px) {
+  #main .project-choose-wrapper h1 {
+    top: 185px;
+    font-size: 55px; } }
 @media only screen and (min-width: 1199.91px) {
   header nav .navbar-brand img {
     height: 66px; }
@@ -1136,8 +1137,6 @@ footer {
   header nav .dropdown-menu-wrap.show:hover {
     box-shadow: none !important; }
 
-  #main .project-choose-wrapper h1 {
-    font-size: 40px; }
   #main .project-choose-wrapper .project-choose .project-box {
     margin: 15px 20px; }
   #main .tooltip-box-wrapper {
@@ -1189,27 +1188,34 @@ footer {
     #main .chooses-sec li a img {
       max-height: 50px;
       margin-right: 18px; }
-  #main .project-choose-wrapper h1 {
-    font-size: 32px;
-    top: 150px; }
-  #main .project-choose-wrapper .project-choose {
-    -ms-flex-direction: column;
-    flex-direction: column;
-    bottom: 11em; }
-    #main .project-choose-wrapper .project-choose .project-box {
-      margin: 38px 20px; }
-      #main .project-choose-wrapper .project-choose .project-box img {
-        width: auto;
-        height: 165px;
-        bottom: 34px; }
-      #main .project-choose-wrapper .project-choose .project-box .oval-f {
-        width: 150px;
-        height: 150px; }
-      #main .project-choose-wrapper .project-choose .project-box .caption-project {
-        bottom: auto;
-        left: 170px; }
-      #main .project-choose-wrapper .project-choose .project-box:hover img {
-        bottom: 44px; } }
+  #main.project-main {
+    height: 990px;
+    overflow-y: auto; }
+  #main .project-choose-wrapper {
+    height: 100%; }
+    #main .project-choose-wrapper h1 {
+      font-size: 32px;
+      top: 150px; }
+    #main .project-choose-wrapper .project-choose {
+      -ms-flex-direction: column;
+      flex-direction: column;
+      bottom: 11em; }
+      #main .project-choose-wrapper .project-choose .project-box {
+        margin: 38px 20px; }
+        #main .project-choose-wrapper .project-choose .project-box img {
+          width: auto;
+          height: 165px;
+          bottom: 34px; }
+        #main .project-choose-wrapper .project-choose .project-box .oval-f {
+          width: 150px;
+          height: 150px; }
+        #main .project-choose-wrapper .project-choose .project-box .caption-project {
+          bottom: auto;
+          left: 170px; }
+        #main .project-choose-wrapper .project-choose .project-box:hover img {
+          bottom: 44px; }
+  #main .clouds-parallax {
+    height: 100%; } }
 @media only screen and (max-width: 575.91px) {
   header, footer {
     padding: 0 3em 0 6em; }
