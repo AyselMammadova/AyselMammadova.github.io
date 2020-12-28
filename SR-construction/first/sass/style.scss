@@ -468,8 +468,11 @@ header {
             width: 148px;
             margin-left: 12px;
             position: relative;
+            &::before {
+                opacity: 1;
+            }
             .icon {
-                right: -60px;
+                right: -48px;
                 &::before {
                     background-image: url('../img/headset.png');
                     background-size: 30px;
@@ -949,13 +952,13 @@ header {
                             -o-transform: scale(1.168);
                             transform: scale(1.168);
                             .hover-me {
-                                fill: #80808033;
+                                fill: #ffffff75;
                                 fill-opacity: 1;
                                 stroke-width: 0.5;
                             }
                             &:hover {
                                 .hover-me {
-                                    fill: #80808033;
+                                    fill: #ffffff75;
                                 }
                             }
                         }
@@ -991,7 +994,7 @@ header {
 
     .flat-choose-wrapper {
         &::after {
-            background-color: rgba(0, 0, 0, .6);
+            background-color: rgba(0, 0, 0, .5);
         }
         .flat-choose-background {
             filter: blur(24px);
@@ -1028,6 +1031,7 @@ header {
         z-index: 10000;
         .icon {
             left: -60px;
+            background-color: #494949;
             &::before {
                 background-image: url('../img/back.png');
             }
@@ -1035,7 +1039,7 @@ header {
         .hover-text {
             padding-left: 3.5em;
             width: 170px; 
-                           
+            background-color: #666666;
         }
     }
 
@@ -1049,14 +1053,13 @@ header {
         .box-flat {
             @include display-f-nowrap-center;
             @include d-flex-column;
-            background-color: $main-color;
             @include radius-50;
             &.floor-info {
                 width: 115px;
                 height: 115px;
                 position: relative;
-                border: 5px solid #dfbb63;
-                background-color: #fee9ba;
+                border: 5px solid #6e6e6e;
+                background-color: #5d5555;
                 .number {
                     font-size: 42px;
                 }
@@ -1070,24 +1073,43 @@ header {
                     position: absolute;
                     display: block;
                     div {
-                        -webkit-transform: rotate(45deg);
-                        transform: rotate(45deg);
-                        width: 26px;
+                        width: 50px;
                         height: 26px;
+                        position: relative;
+                        left: -5px;
+                        &::before, &::after {
+                            content: '';
+                            position: absolute;
+                            border: 1px solid $main-color;
+                            padding: 10px;
+                        }
+                        &::before {
+                            border-width: 0 3px 0 0;
+                            -webkit-transform: rotate(60deg) translateX(-50%);
+                            -moz-transform: rotate(60deg) translateX(-50%);
+                            -o-transform: rotate(60deg) translateX(-50%);
+                            transform: rotate(60deg) translateX(-50%);
+                            top: 6px;
+                            left: 52%;
+                        }
+                        &::after {
+                            border-width: 0 0 3px 0;
+                            -webkit-transform: rotate(32deg) translateX(-50%);
+                            -moz-transform: rotate(32deg) translateX(-50%);
+                            -o-transform: rotate(32deg) translateX(-50%);
+                            transform: rotate(32deg) translateX(-50%);
+                            left: 50%;
+                        }
                     }
                     &.up-floor {
-                        top: -22px;
-                        div {
-                            border-top: 2px solid $main-color;
-                            border-left: 2px solid $main-color;
-                        }
+                        top: -29px;
+                        -webkit-transform: rotate(180deg);
+                        -moz-transform: rotate(180deg);
+                        -o-transform: rotate(180deg);
+                        transform: rotate(180deg);
                     }
                     &.down-floor {
-                        bottom: -22px;
-                        div {
-                            border-bottom: 2px solid $main-color;
-                            border-right: 2px solid $main-color;
-                        }
+                        bottom: -26px;
                     }
                 }
             }
@@ -1095,8 +1117,8 @@ header {
                 width: 70px;
                 height: 70px;
                 margin: 50px 0;
-                border: 5px solid #ba9753;
-                background-color: #c3a157;
+                border: 5px solid #5d5555;
+                background-color: #6e6e6e;
                 .number {
                     font-size: 20px;
                 }
