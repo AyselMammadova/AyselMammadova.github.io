@@ -902,19 +902,17 @@ header {
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
-      border-radius: 50%; }
+      border-radius: 50%;
+      border: 5px solid #666666;
+      background-color: #363636; }
       #main .flat-info-wrapper .box-flat.floor-info {
         width: 115px;
         height: 115px;
-        position: relative;
-        border: 5px solid #6e6e6e;
-        background-color: #5d5555; }
+        position: relative; }
         #main .flat-info-wrapper .box-flat.floor-info .number {
           font-size: 42px; }
         #main .flat-info-wrapper .box-flat.floor-info .title {
           font-size: 14px; }
-        #main .flat-info-wrapper .box-flat.floor-info span {
-          color: #8b6e32; }
         #main .flat-info-wrapper .box-flat.floor-info .floor-change {
           position: absolute;
           display: block; }
@@ -922,7 +920,11 @@ header {
             width: 50px;
             height: 26px;
             position: relative;
-            left: -5px; }
+            left: -5px;
+            -webkit-transition: 500ms all ease;
+            -moz-transition: 500ms all ease;
+            -o-transition: 500ms all ease;
+            transition: 500ms all ease; }
             #main .flat-info-wrapper .box-flat.floor-info .floor-change div::before, #main .flat-info-wrapper .box-flat.floor-info .floor-change div::after {
               content: '';
               position: absolute;
@@ -951,12 +953,12 @@ header {
             transform: rotate(180deg); }
           #main .flat-info-wrapper .box-flat.floor-info .floor-change.down-floor {
             bottom: -26px; }
+          #main .flat-info-wrapper .box-flat.floor-info .floor-change:hover div {
+            opacity: .5; }
       #main .flat-info-wrapper .box-flat.block-info {
         width: 70px;
         height: 70px;
-        margin: 50px 0;
-        border: 5px solid #5d5555;
-        background-color: #6e6e6e; }
+        margin: 50px 0; }
         #main .flat-info-wrapper .box-flat.block-info .number {
           font-size: 20px; }
         #main .flat-info-wrapper .box-flat.block-info .title {
@@ -965,7 +967,7 @@ header {
         display: block;
         line-height: 1;
         font-weight: 500;
-        color: #fff; }
+        color: #f3d390; }
         #main .flat-info-wrapper .box-flat span.number {
           font-weight: 600; }
     #main .flat-info-wrapper .flat-tooltip-wrapper {
