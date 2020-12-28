@@ -991,7 +991,7 @@ header {
 
     .flat-choose-wrapper {
         &::after {
-            background-color: rgba(0, 0, 0, .2);
+            background-color: rgba(0, 0, 0, .8);
         }
         .flat-choose-background {
             filter: blur(24px);
@@ -1006,6 +1006,7 @@ header {
             @include translateXY;
             margin-top: 24px;
             height: 73vh;
+            z-index: 100;
         }
         .draft-flats, .flat-svg {
             width: 410px !important;
