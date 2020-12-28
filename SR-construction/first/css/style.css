@@ -1138,8 +1138,8 @@ footer {
       align-items: center;
       height: 100%; }
       footer .social-media li a .social-icon {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-align: center;
@@ -1151,7 +1151,7 @@ footer {
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
         border-radius: 50%;
-        background-color: #caa866;
+        background-color: #1d1d1d;
         -webkit-transition: background-color .2s ease;
         -moz-transition: background-color .2s ease;
         -ms-transition: background-color .2s ease;
@@ -1159,7 +1159,7 @@ footer {
         transition: background-color .2s ease; }
         footer .social-media li a .social-icon i {
           color: #fff;
-          font-size: 18px; }
+          font-size: 14px; }
     footer .social-media li:first-child {
       margin-left: 0; }
     footer .social-media li:last-child {
