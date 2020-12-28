@@ -949,13 +949,13 @@ header {
                             -o-transform: scale(1.168);
                             transform: scale(1.168);
                             .hover-me {
-                                fill: #fee9ba61;
+                                fill: #80808033;
                                 fill-opacity: 1;
                                 stroke-width: 0.5;
                             }
                             &:hover {
                                 .hover-me {
-                                    fill: #fee9ba61;
+                                    fill: #80808033;
                                 }
                             }
                         }
@@ -991,7 +991,7 @@ header {
 
     .flat-choose-wrapper {
         &::after {
-            background-color: rgba(0, 0, 0, .8);
+            background-color: rgba(0, 0, 0, .6);
         }
         .flat-choose-background {
             filter: blur(24px);
@@ -1034,7 +1034,8 @@ header {
         }
         .hover-text {
             padding-left: 3.5em;
-            width: 170px;                
+            width: 170px; 
+                           
         }
     }
 
@@ -1735,11 +1736,55 @@ footer {
     }
 }
 
+@media only screen and (max-width: 540px) {
+    #main {
+        .flat-info-wrapper {
+            -webkit-transform: translate(-50%, -50%) scale(0.58) rotate(-90deg);
+            -moz-transform: translate(-50%, -50%) scale(0.58) rotate(-90deg);
+            -o-transform: translate(-50%, -50%) scale(0.58) rotate(-90deg);
+            transform: translate(-50%, -50%) scale(0.58) rotate(-90deg);
+            top: 270px;
+            left: 50%;
+            right: auto;
+            &>div {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+                &.block-info {
+                    margin: 20px 0 !important;
+                }
+            }
+        }
+        .flat-choose-wrapper {
+            .draft-flats {
+                margin-top: 80px;
+                height: 46vh;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            .flat-svg {
+                -webkit-transform: translate(-50%, 80px) scaleY(0.46);
+                -moz-transform: translate(-50%, 80px) scaleY(0.46);
+                -o-transform: translate(-50%, 80px) scaleY(0.46);
+                transform: translate(-50%, 80px) scaleY(0.46);
+            }
+            .draft-flats, .flat-svg {
+                width: 72% !important;
+                left: 50%;
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 500px) {
-    #main .chooses-sec li{
-        &:not(:nth-child(2)) {
-            display: none;
+    #main {
+        .chooses-sec li{
+            &:not(:nth-child(2)) {
+                display: none;
+            }
         }
     }
 }
@@ -1793,6 +1838,11 @@ footer {
         }
         .mob-scroll-notification .notification-wrap .notification p {
             font-size: 15px;
+        }
+        .flat-choose-wrapper {
+            .draft-flats, .flat-svg {
+                width: 86% !important;
+            }
         }
     } 
 }
