@@ -331,6 +331,8 @@ header {
           font-size: 20px;
           font-weight: 700;
           top: 2px; }
+      header nav .call-us:hover::before {
+        opacity: 0; }
     header nav #menu .navbar-nav {
       -ms-flex-align: center;
       align-items: center; }

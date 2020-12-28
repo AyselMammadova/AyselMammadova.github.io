@@ -487,6 +487,11 @@ header {
                     top: 2px;
                 }        
             }
+            &:hover {
+                &::before {
+                    opacity: 0;
+                }
+            }
         }
         #menu {
             .navbar-nav {
