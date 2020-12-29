@@ -927,7 +927,7 @@ header {
     -ms-flex-direction: column;
     flex-direction: column; }
     #main .flat-choose-wrapper .flat-order-wrapper img {
-      width: 50%; }
+      height: 64vh; }
     #main .flat-choose-wrapper .flat-order-wrapper .order-btn {
       background-color: #363636;
       border: 3px solid #666666;

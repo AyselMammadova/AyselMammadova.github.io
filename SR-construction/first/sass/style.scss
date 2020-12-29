@@ -1086,7 +1086,7 @@ header {
             @include display-f-nowrap-center;
             @include d-flex-column;
             img {
-                width: 50%;
+               height: 64vh;
             }
             .order-btn {
                 background-color: #363636;
