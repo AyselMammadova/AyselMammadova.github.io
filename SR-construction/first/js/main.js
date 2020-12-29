@@ -115,9 +115,7 @@ $(document).ready(function() {
 
         if(modalL === modalD.data('modal')) {
             modalD.show();
-        } else {
-            modalD.hide();  
-        }
+        } 
         // $('.modal-wrapper .modal-wrap').show();
     });
 
