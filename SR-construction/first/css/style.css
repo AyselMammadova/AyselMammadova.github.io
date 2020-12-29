@@ -250,9 +250,19 @@ a {
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 50%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px; }
     .modal-wrapper .modal-wrap .modal-head {
-      padding: 15px; }
+      padding: 15px;
+      font-size: 20px;
+      text-align: center;
+      color: #caa866;
+      border-bottom: 1px solid #eaeaea; }
 
 /* header */
 header {
