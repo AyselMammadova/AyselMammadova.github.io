@@ -345,6 +345,58 @@ a {
     }
 }
 
+.custom-form {
+    .input-group {
+        margin: 25px 0;
+        position: relative;
+        input, textarea {
+            width: 300px;
+            padding: 15px;
+            background-color: ryba(255, 255, 255, 0.5);
+            color: #191919;
+            outline: none;
+            border: none;
+        }
+        label {
+            position: absolute;
+            left: 15px;
+            @include translateY;
+            color: #191919;
+            pointer-events: none;
+            span {
+                display: inline-block;
+                transition: transform 0.2s, color 0.3s;
+            }
+        }
+        input:focus+label span,
+        input:not(:placeholder-shown)+label span,
+        textarea:focus+label span,
+        textarea:not(:placeholder-shown)+label span {
+            transform: translateY(-38px);
+            color: $white-color;
+        }
+    }
+}
+
+.modal-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include wh-100;
+    background-color: rgba(0, 0, 0, 0.87);
+    z-index: 10000;
+    .modal-wrap {
+        position: absolute;
+        @include translateXY;
+        .modal-head {
+            padding: 15px;
+        }
+    }
+}
+
+
+
 
 
 
@@ -1026,6 +1078,82 @@ header {
             transform: translate(-50%, 23px) scaleY(0.73);
             left: 50%;
         }
+        .flat-order-wrapper {
+            position: absolute;
+            top: 160px;
+            @include translateX;
+            z-index: 100;
+            @include display-f-nowrap-center;
+            @include d-flex-column;
+            img {
+                width: 50%;
+            }
+            .order-btn {
+                background-color: #363636;
+                border: 3px solid #666666;
+                padding: 10px 25px;
+                @include radius-25px;
+                width: 230px;
+                display: block;
+                margin-top: 30px;
+                color: #fff;
+                font-size: 22px;
+                background-image: url('../img/order.png');
+                background-repeat: no-repeat;
+                background-size: 25px;
+                text-align: center;
+                background-position: 50px 50%;
+                cursor: pointer;
+                -webkit-animation: play 2s ease infinite;
+                -moz-animation: play 2s ease infinite;
+                animation: play 2s ease infinite;
+                span {
+                    margin-left: 32px;
+                    position: relative;
+                    top: 2px;
+                }    
+                @-webkit-keyframes play {
+                    0% {
+                        transform: scale(1);
+                    }
+                    15% {
+                        -webkit-box-shadow: 0 0 0 5px rgba(102, 102, 102, 0.6);
+                        -moz-box-shadow: 0 0 0 5px rgba(102, 102, 102, 0.6);
+                        box-shadow: 0 0 0 5px rgba(102, 102, 102, 0.6);
+                    }
+                    25% {
+                        -webkit-box-shadow: 0 0 0 10px rgba(102, 102, 102, 0.6), 0 0 0 20px rgba(102, 102, 102, 0.3);
+                        -moz-box-shadow: 0 0 0 10px rgba(102, 102, 102, 0.6), 0 0 0 20px rgba(102, 102, 102, 0.3);
+                        box-shadow: 0 0 0 10px rgba(102, 102, 102, 0.6), 0 0 0 20px rgba(102, 102, 102, 0.3);
+                    }
+                    25% {
+                        -webkit-box-shadow: 0 0 0 15px rgba(102, 102, 102, 0.6), 0 0 0 30px rgba(102, 102, 102, 0.3);
+                        -moz-box-shadow: 0 0 0 15px  rgba(102, 102, 102, 0.6), 0 0 0 30px rgba(102, 102, 102, 0.3);
+                        box-shadow: 0 0 0 15px  rgba(102, 102, 102, 0.6), 0 0 0 30px rgba(102, 102, 102, 0.3);
+                    }
+                }
+                @keyframes play {
+                    0% {
+                        transform: scale(1);
+                    }
+                    15% {
+                        -webkit-box-shadow: 0 0 0 5px rgba(102, 102, 102, 0.6);
+                        -moz-box-shadow: 0 0 0 5px rgba(102, 102, 102, 0.6);
+                        box-shadow: 0 0 0 5px rgba(102, 102, 102, 0.6);
+                    }
+                    25% {
+                        -webkit-box-shadow: 0 0 0 10px rgba(102, 102, 102, 0.6), 0 0 0 20px rgba(102, 102, 102, 0.3);
+                        -moz-box-shadow: 0 0 0 10px rgba(102, 102, 102, 0.6), 0 0 0 20px rgba(102, 102, 102, 0.3);
+                        box-shadow: 0 0 0 10px rgba(102, 102, 102, 0.6), 0 0 0 20px rgba(102, 102, 102, 0.3);
+                    }
+                    25% {
+                        -webkit-box-shadow: 0 0 0 15px rgba(102, 102, 102, 0.6), 0 0 0 30px rgba(102, 102, 102, 0.3);
+                        -moz-box-shadow: 0 0 0 15px  rgba(102, 102, 102, 0.6), 0 0 0 30px rgba(102, 102, 102, 0.3);
+                        box-shadow: 0 0 0 15px  rgba(102, 102, 102, 0.6), 0 0 0 30px rgba(102, 102, 102, 0.3);
+                    }
+                }  
+            }
+        }
     }
 
     .back-link {
@@ -1176,6 +1304,78 @@ header {
                             font-size: 40px;
                         }
                     }
+                }
+            }
+            &.flat-info-tooltip-wrapper {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .form-3d-wrapper {
+        position: absolute;
+        @include translateY;
+        left: 13em;
+        z-index: 100;
+        @include display-f-nowrap-center;
+        @include d-flex-column;
+        .form-3d {
+            @include display-f-nowrap-center;
+            @include d-flex-column;
+            border: 5px solid #666666;
+            background-color: #363636;
+            width: 115px;
+            height: 115px;
+            font-size: 12px;
+            @include radius-50;
+            color: #f3d390;
+            font-weight: 500;
+            .threeD {
+                font-size: 26px;
+                font-weight: 600;
+            }
+        }
+        .price-wrapper {
+            width: 150px;
+            height: 80px;
+            border: 3px solid #666666;
+            background-color: #363636;
+            margin-top: 50px;
+            text-align: center;
+            @include display-f-nowrap-center;
+            @include d-flex-column;
+            .title-price {
+                text-transform: uppercase;
+                color: #f3d390;
+                font-weight: 600;
+                font-size: 18px;
+            }
+            .pay-type {
+                @include display-f-wrap-center;
+                font-size: 18px; 
+                a {
+                    color: $white-color;
+                    cursor: pointer;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 0;
+                        height: 1px;
+                        background-color: $white-color;
+                        @include transition-300;
+                    }
+                    &:hover {
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+                span {
+                    color: #f3d390;
+                    padding: 0 5px;
                 }
             }
         }

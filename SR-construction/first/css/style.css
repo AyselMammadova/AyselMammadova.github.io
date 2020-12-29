@@ -204,6 +204,56 @@ a {
   .custom-btn:hover::before {
     opacity: 1; }
 
+.custom-form .input-group {
+  margin: 25px 0;
+  position: relative; }
+  .custom-form .input-group input, .custom-form .input-group textarea {
+    width: 300px;
+    padding: 15px;
+    background-color: ryba(255, 255, 255, 0.5);
+    color: #191919;
+    outline: none;
+    border: none; }
+  .custom-form .input-group label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #191919;
+    pointer-events: none; }
+    .custom-form .input-group label span {
+      display: inline-block;
+      transition: transform 0.2s, color 0.3s; }
+  .custom-form .input-group input:focus + label span,
+  .custom-form .input-group input:not(:placeholder-shown) + label span,
+  .custom-form .input-group textarea:focus + label span,
+  .custom-form .input-group textarea:not(:placeholder-shown) + label span {
+    transform: translateY(-38px);
+    color: #fff; }
+
+.modal-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.87);
+  z-index: 10000; }
+  .modal-wrapper .modal-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    .modal-wrapper .modal-wrap .modal-head {
+      padding: 15px; }
+
 /* header */
 header {
   background-color: transparent;
@@ -859,6 +909,82 @@ header {
     -o-transform: translate(-50%, 23px) scaleY(0.73);
     transform: translate(-50%, 23px) scaleY(0.73);
     left: 50%; }
+  #main .flat-choose-wrapper .flat-order-wrapper {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 100;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    #main .flat-choose-wrapper .flat-order-wrapper img {
+      width: 50%; }
+    #main .flat-choose-wrapper .flat-order-wrapper .order-btn {
+      background-color: #363636;
+      border: 3px solid #666666;
+      padding: 10px 25px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      -ms-border-radius: 25px;
+      -o-border-radius: 25px;
+      border-radius: 25px;
+      width: 230px;
+      display: block;
+      margin-top: 30px;
+      color: #fff;
+      font-size: 22px;
+      background-image: url("../img/order.png");
+      background-repeat: no-repeat;
+      background-size: 25px;
+      text-align: center;
+      background-position: 50px 50%;
+      cursor: pointer;
+      -webkit-animation: play 2s ease infinite;
+      -moz-animation: play 2s ease infinite;
+      animation: play 2s ease infinite; }
+      #main .flat-choose-wrapper .flat-order-wrapper .order-btn span {
+        margin-left: 32px;
+        position: relative;
+        top: 2px; }
+@-webkit-keyframes play {
+  0% {
+    transform: scale(1); }
+  15% {
+    -webkit-box-shadow: 0 0 0 5px rgba(102, 102, 102, 0.6);
+    -moz-box-shadow: 0 0 0 5px rgba(102, 102, 102, 0.6);
+    box-shadow: 0 0 0 5px rgba(102, 102, 102, 0.6); }
+  25% {
+    -webkit-box-shadow: 0 0 0 10px rgba(102, 102, 102, 0.6), 0 0 0 20px rgba(102, 102, 102, 0.3);
+    -moz-box-shadow: 0 0 0 10px rgba(102, 102, 102, 0.6), 0 0 0 20px rgba(102, 102, 102, 0.3);
+    box-shadow: 0 0 0 10px rgba(102, 102, 102, 0.6), 0 0 0 20px rgba(102, 102, 102, 0.3); }
+  25% {
+    -webkit-box-shadow: 0 0 0 15px rgba(102, 102, 102, 0.6), 0 0 0 30px rgba(102, 102, 102, 0.3);
+    -moz-box-shadow: 0 0 0 15px rgba(102, 102, 102, 0.6), 0 0 0 30px rgba(102, 102, 102, 0.3);
+    box-shadow: 0 0 0 15px rgba(102, 102, 102, 0.6), 0 0 0 30px rgba(102, 102, 102, 0.3); } }
+@keyframes play {
+  0% {
+    transform: scale(1); }
+  15% {
+    -webkit-box-shadow: 0 0 0 5px rgba(102, 102, 102, 0.6);
+    -moz-box-shadow: 0 0 0 5px rgba(102, 102, 102, 0.6);
+    box-shadow: 0 0 0 5px rgba(102, 102, 102, 0.6); }
+  25% {
+    -webkit-box-shadow: 0 0 0 10px rgba(102, 102, 102, 0.6), 0 0 0 20px rgba(102, 102, 102, 0.3);
+    -moz-box-shadow: 0 0 0 10px rgba(102, 102, 102, 0.6), 0 0 0 20px rgba(102, 102, 102, 0.3);
+    box-shadow: 0 0 0 10px rgba(102, 102, 102, 0.6), 0 0 0 20px rgba(102, 102, 102, 0.3); }
+  25% {
+    -webkit-box-shadow: 0 0 0 15px rgba(102, 102, 102, 0.6), 0 0 0 30px rgba(102, 102, 102, 0.3);
+    -moz-box-shadow: 0 0 0 15px rgba(102, 102, 102, 0.6), 0 0 0 30px rgba(102, 102, 102, 0.3);
+    box-shadow: 0 0 0 15px rgba(102, 102, 102, 0.6), 0 0 0 30px rgba(102, 102, 102, 0.3); } }
   #main .back-link {
     width: 170px;
     position: absolute;
@@ -1020,6 +1146,100 @@ header {
             margin-bottom: 10px; }
           #main .flat-info-wrapper .flat-tooltip-wrapper .tooltip-box div.area-flat .number {
             font-size: 40px; }
+      #main .flat-info-wrapper .flat-tooltip-wrapper.flat-info-tooltip-wrapper {
+        background-color: transparent; }
+  #main .form-3d-wrapper {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 13em;
+    z-index: 100;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    #main .form-3d-wrapper .form-3d {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      border: 5px solid #666666;
+      background-color: #363636;
+      width: 115px;
+      height: 115px;
+      font-size: 12px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      color: #f3d390;
+      font-weight: 500; }
+      #main .form-3d-wrapper .form-3d .threeD {
+        font-size: 26px;
+        font-weight: 600; }
+    #main .form-3d-wrapper .price-wrapper {
+      width: 150px;
+      height: 80px;
+      border: 3px solid #666666;
+      background-color: #363636;
+      margin-top: 50px;
+      text-align: center;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      #main .form-3d-wrapper .price-wrapper .title-price {
+        text-transform: uppercase;
+        color: #f3d390;
+        font-weight: 600;
+        font-size: 18px; }
+      #main .form-3d-wrapper .price-wrapper .pay-type {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 18px; }
+        #main .form-3d-wrapper .price-wrapper .pay-type a {
+          color: #fff;
+          cursor: pointer;
+          position: relative; }
+          #main .form-3d-wrapper .price-wrapper .pay-type a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background-color: #fff;
+            -webkit-transition: 300ms all ease;
+            -moz-transition: 300ms all ease;
+            -o-transition: 300ms all ease;
+            transition: 300ms all ease; }
+          #main .form-3d-wrapper .price-wrapper .pay-type a:hover::after {
+            width: 100%; }
+        #main .form-3d-wrapper .price-wrapper .pay-type span {
+          color: #f3d390;
+          padding: 0 5px; }
   #main .floor-tooltip-wrapper {
     position: absolute;
     top: 0;
