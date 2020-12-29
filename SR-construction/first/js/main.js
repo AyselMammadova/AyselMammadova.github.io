@@ -102,18 +102,29 @@ $(document).ready(function() {
     });
 
     // modals
-    $("header .openModal").click(function(a) {
-        a.stopPropagation(), button = $(this), button.closest(".form-modal-wrap").hide();
-        var e = $(this).data("modal"),
-            o = $("#" + e);
-        o.toggle(), $(".form-modal-wrap").removeClass("opened"), o.toggleClass("opened");
-        var l = o.attr("id");
-        console.log(l), $("header .account-title").data("modal", l)
-    }), $("body").click(function() {
-        $(".form-modal-wrap").hide(), $(event.target).closest("#navbarNavDropdown").length || $(event.target).is("#navbarNavDropdown") || ($("#navbarNavDropdown").removeClass("show"), $("#navbarNavDropdown .dropdown").removeClass("show open"))
-    }), $(".form-modal-wrap").click(function(a) {
-        a.stopPropagation()
-    }), $("#navbarNavDropdown").click(function() {
-        $(".for-mobile").hide()
-    });
+    // $("header .openModal").click(function(a) {
+    //     a.stopPropagation(), button = $(this), button.closest(".form-modal-wrap").hide();
+    //     var e = $(this).data("modal"),
+    //         o = $("#" + e);
+    //     o.toggle(), $(".form-modal-wrap").removeClass("opened"), o.toggleClass("opened");
+    //     var l = o.attr("id");
+    //     console.log(l), $("header .account-title").data("modal", l)
+    // }), $("body").click(function() {
+    //     $(".form-modal-wrap").hide(), $(event.target).closest("#navbarNavDropdown").length || $(event.target).is("#navbarNavDropdown") || ($("#navbarNavDropdown").removeClass("show"), $("#navbarNavDropdown .dropdown").removeClass("show open"))
+    // }), $(".form-modal-wrap").click(function(a) {
+    //     a.stopPropagation()
+    // }), $("#navbarNavDropdown").click(function() {
+    //     $(".for-mobile").hide()
+    // });
+
+    // input, textarea focus effect 
+    const labels = document.querySelectorAll("label");
+
+    labels.forEach((label) => {
+        label.innerHTML = label.innerText
+            .split("")
+            .map((letter, index) => {
+                return `<span style="transition-delay:${index*100}ms">${letter}</span>`
+            }).join("");
+    })
 });

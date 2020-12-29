@@ -347,22 +347,31 @@ a {
 
 .custom-form {
     .input-group {
-        margin: 25px 0;
+        margin: 30px 0;
         position: relative;
         input, textarea {
-            width: 300px;
             padding: 15px;
-            background-color: ryba(255, 255, 255, 0.5);
-            color: #191919;
+            background-color: $white-color;
+            color: $dark-color;
             outline: none;
-            border: none;
+            border: 1px solid #eaeaea;
+            width: 100%;
+            font-size: 15px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -o-border-radius: 3px;
+            border-radius: 3px;
+            &:focus {
+                border-color: $main-color;
+            }
         }
         label {
             position: absolute;
             left: 15px;
             @include translateY;
-            color: #191919;
+            color: $dark-color;
             pointer-events: none;
+            font-size: 15px;
             span {
                 display: inline-block;
                 transition: transform 0.2s, color 0.3s;
@@ -373,8 +382,17 @@ a {
         textarea:focus+label span,
         textarea:not(:placeholder-shown)+label span {
             transform: translateY(-38px);
-            color: $white-color;
+            color: $main-color;
         }
+        &:last-child {
+            label {
+                top: 27px;
+            }
+        }
+    }
+    .submit-btn {
+        @include radius-25px;
+        border: 3px solid #666666;
     }
 }
 
@@ -390,17 +408,20 @@ a {
         position: absolute;
         @include translateXY;
         background-color: $white-color;
-        width: 50%;
+        width: 50vw;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         -o-border-radius: 5px;
         border-radius: 5px;
         .modal-head {
-            padding: 15px;
+            padding: 15px 25px;
             font-size: 20px;
             text-align: center;
             color: $main-color;
             border-bottom: 1px solid #eaeaea;
+        }
+        .content {
+            padding: 25px;
         }
     }
 }
@@ -1340,6 +1361,9 @@ header {
             @include radius-50;
             color: #f3d390;
             font-weight: 500;
+            background-image: url('../img/border-1.png');
+            background-size: cover;
+            background-image: none;
             .threeD {
                 font-size: 26px;
                 font-weight: 600;

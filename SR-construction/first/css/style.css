@@ -205,15 +205,22 @@ a {
     opacity: 1; }
 
 .custom-form .input-group {
-  margin: 25px 0;
+  margin: 30px 0;
   position: relative; }
   .custom-form .input-group input, .custom-form .input-group textarea {
-    width: 300px;
     padding: 15px;
-    background-color: ryba(255, 255, 255, 0.5);
+    background-color: #fff;
     color: #191919;
     outline: none;
-    border: none; }
+    border: 1px solid #eaeaea;
+    width: 100%;
+    font-size: 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px; }
+    .custom-form .input-group input:focus, .custom-form .input-group textarea:focus {
+      border-color: #caa866; }
   .custom-form .input-group label {
     position: absolute;
     left: 15px;
@@ -223,7 +230,8 @@ a {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
     color: #191919;
-    pointer-events: none; }
+    pointer-events: none;
+    font-size: 15px; }
     .custom-form .input-group label span {
       display: inline-block;
       transition: transform 0.2s, color 0.3s; }
@@ -232,7 +240,16 @@ a {
   .custom-form .input-group textarea:focus + label span,
   .custom-form .input-group textarea:not(:placeholder-shown) + label span {
     transform: translateY(-38px);
-    color: #fff; }
+    color: #caa866; }
+  .custom-form .input-group:last-child label {
+    top: 27px; }
+.custom-form .submit-btn {
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+  border: 3px solid #666666; }
 
 .modal-wrapper {
   display: none;
@@ -252,17 +269,19 @@ a {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-color: #fff;
-    width: 50%;
+    width: 50vw;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px; }
     .modal-wrapper .modal-wrap .modal-head {
-      padding: 15px;
+      padding: 15px 25px;
       font-size: 20px;
       text-align: center;
       color: #caa866;
       border-bottom: 1px solid #eaeaea; }
+    .modal-wrapper .modal-wrap .content {
+      padding: 25px; }
 
 /* header */
 header {
@@ -1195,7 +1214,10 @@ header {
       -o-border-radius: 50%;
       border-radius: 50%;
       color: #f3d390;
-      font-weight: 500; }
+      font-weight: 500;
+      background-image: url("../img/border-1.png");
+      background-size: cover;
+      background-image: none; }
       #main .form-3d-wrapper .form-3d .threeD {
         font-size: 26px;
         font-weight: 600; }
