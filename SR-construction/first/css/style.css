@@ -241,7 +241,9 @@ a {
   .custom-form .input-group textarea:not(:placeholder-shown) + label span {
     transform: translateY(-38px);
     color: #caa866; }
-  .custom-form .input-group:last-child label {
+  .custom-form .input-group.first-group {
+    margin-top: 0; }
+  .custom-form .input-group.textarea-group label {
     top: 27px; }
 .custom-form .submit-btn {
   -webkit-border-radius: 25px;
@@ -249,7 +251,24 @@ a {
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
   border-radius: 25px;
-  border: 3px solid #666666; }
+  border: 3px solid #666666;
+  padding: 10px 25px;
+  font-size: 16px;
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+  color: #191919;
+  -webkit-transition: 300ms all ease;
+  -moz-transition: 300ms all ease;
+  -o-transition: 300ms all ease;
+  transition: 300ms all ease; }
+  .custom-form .submit-btn:hover {
+    -webkit-box-shadow: 0 5px 0 rgba(102, 102, 102, 0.2);
+    -moz-box-shadow: 0 5px 0 rgba(102, 102, 102, 0.2);
+    -o-box-shadow: 0 5px 0 rgba(102, 102, 102, 0.2);
+    box-shadow: 0 5px 0 rgba(102, 102, 102, 0.2); }
 
 .modal-wrapper {
   display: none;
@@ -261,6 +280,7 @@ a {
   background-color: rgba(0, 0, 0, 0.87);
   z-index: 10000; }
   .modal-wrapper .modal-wrap {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -281,7 +301,7 @@ a {
       color: #caa866;
       border-bottom: 1px solid #eaeaea; }
     .modal-wrapper .modal-wrap .content {
-      padding: 25px; }
+      padding: 45px 25px; }
 
 /* header */
 header {
@@ -1176,7 +1196,10 @@ header {
           #main .flat-info-wrapper .flat-tooltip-wrapper .tooltip-box div.area-flat .number {
             font-size: 40px; }
       #main .flat-info-wrapper .flat-tooltip-wrapper.flat-info-tooltip-wrapper {
-        background-color: transparent; }
+        background: url("../img/border-2.png") no-repeat;
+        background-size: 92%;
+        width: 190px;
+        height: 170px; }
   #main .form-3d-wrapper {
     position: absolute;
     top: 50%;
@@ -1203,8 +1226,7 @@ header {
       justify-content: center;
       -ms-flex-direction: column;
       flex-direction: column;
-      border: 5px solid #666666;
-      background-color: #363636;
+      background-color: transparent;
       width: 115px;
       height: 115px;
       font-size: 12px;
@@ -1216,8 +1238,7 @@ header {
       color: #f3d390;
       font-weight: 500;
       background-image: url("../img/border-1.png");
-      background-size: cover;
-      background-image: none; }
+      background-size: cover; }
       #main .form-3d-wrapper .form-3d .threeD {
         font-size: 26px;
         font-weight: 600; }
