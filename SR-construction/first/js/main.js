@@ -121,15 +121,27 @@ $(document).ready(function() {
 
 
     // input, textarea focus effect 
-    $(window).load(function(){
-		$(".input-group input").val("");
-		
-		$(".input-group input").focusout(function(){
-			if($(this).val() != ""){
-				$(this).addClass("has-content");
-			}else{
-				$(this).removeClass("has-content");
-			}
-		})
-	});
+    $(".input-group .effect").val("");
+    
+    $(".input-group .effect").focusout(function() {
+        if($(this).val() != ""){
+            $(this).addClass("has-content");
+        }else{
+            $(this).removeClass("has-content");
+        }
+    });
+
+    $(".input-group .effect").change(function() {
+        $(".input-group .effect").focusout(function() {
+            if($(this).val() != ""){
+                $(this).addClass("has-content");
+            }else{
+                $(this).removeClass("has-content");
+            }
+        });
+    });
 });
+
+
+
+

@@ -349,7 +349,7 @@ a {
     .input-group {
         margin: 30px 0;
         position: relative;
-        input, textarea {
+        .effect {
             padding: 15px;
             background-color: transparent;
             color: $dark-color;

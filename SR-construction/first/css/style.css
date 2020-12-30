@@ -207,7 +207,7 @@ a {
 .custom-form .input-group {
   margin: 30px 0;
   position: relative; }
-  .custom-form .input-group input, .custom-form .input-group textarea {
+  .custom-form .input-group .effect {
     padding: 15px;
     background-color: transparent;
     color: #191919;
