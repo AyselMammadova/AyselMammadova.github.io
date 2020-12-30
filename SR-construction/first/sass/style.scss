@@ -1281,7 +1281,7 @@ header {
     .flat-3d-images {
         position: absolute;
         top: 130px;
-        height: 870px;
+        height: 80vh;
         overflow-y: auto;
         @include translateX;
         z-index: 100;

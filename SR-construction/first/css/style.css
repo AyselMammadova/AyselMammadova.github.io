@@ -1088,7 +1088,7 @@ header {
   #main .flat-3d-images {
     position: absolute;
     top: 130px;
-    height: 870px;
+    height: 80vh;
     overflow-y: auto;
     left: 50%;
     -webkit-transform: translateX(-50%);
