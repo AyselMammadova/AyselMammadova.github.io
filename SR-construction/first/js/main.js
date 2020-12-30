@@ -108,15 +108,11 @@ $(document).ready(function() {
         e.stopPropagation();
         var modalL= $(this).attr('href');
         $('.modal-wrapper').show();
-        var modalD = $('.modal-wrapper .modal-wrap').filter(function() {
-            return $(this);
+        $('.modal-wrapper .modal-wrap').filter(function() {
+            if(modalL === $(this).data('modal')) {
+                $(this).show();
+            } 
         });
-        console.log(modalD.data('modal'));
-
-        if(modalL === modalD.data('modal')) {
-            modalD.show();
-        } 
-        // $('.modal-wrapper .modal-wrap').show();
     });
 
     $('.modal-wrapper .modal-wrap').click(function(e) {
@@ -125,13 +121,15 @@ $(document).ready(function() {
 
 
     // input, textarea focus effect 
-    const labels = document.querySelectorAll("label");
-
-    labels.forEach((label) => {
-        label.innerHTML = label.innerText
-            .split("")
-            .map((letter, index) => {
-                return `<span style="transition-delay:${index*100}ms">${letter}</span>`
-            }).join("");
-    })
+    $(window).load(function(){
+		$(".input-group input").val("");
+		
+		$(".input-group input").focusout(function(){
+			if($(this).val() != ""){
+				$(this).addClass("has-content");
+			}else{
+				$(this).removeClass("has-content");
+			}
+		})
+	});
 });
