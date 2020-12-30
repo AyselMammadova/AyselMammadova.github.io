@@ -1278,6 +1278,22 @@ header {
         }
     }
 
+    .flat-3d-images {
+        position: absolute;
+        top: 130px;
+        height: 870px;
+        overflow-y: auto;
+        @include translateX;
+        z-index: 100;
+        padding: 30px;
+        img {
+            width: 70vh;
+            &:first-child {
+               margin-bottom: 30px;
+            }
+        }
+    }
+
     .back-link {
         width: 170px;
         position: absolute;
@@ -1423,7 +1439,7 @@ header {
                     }
                     &.area-flat {
                         .number {
-                            font-size: 40px;
+                            font-size: 32px;
                         }
                     }
                 }

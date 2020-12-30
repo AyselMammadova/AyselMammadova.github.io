@@ -1085,6 +1085,22 @@ header {
     -webkit-box-shadow: 0 0 0 15px rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
     -moz-box-shadow: 0 0 0 15px rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
     box-shadow: 0 0 0 15px rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3); } }
+  #main .flat-3d-images {
+    position: absolute;
+    top: 130px;
+    height: 870px;
+    overflow-y: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 100;
+    padding: 30px; }
+    #main .flat-3d-images img {
+      width: 70vh; }
+      #main .flat-3d-images img:first-child {
+        margin-bottom: 30px; }
   #main .back-link {
     width: 170px;
     position: absolute;
@@ -1245,7 +1261,7 @@ header {
           #main .flat-info-wrapper .flat-tooltip-wrapper .tooltip-box div:first-child {
             margin-bottom: 10px; }
           #main .flat-info-wrapper .flat-tooltip-wrapper .tooltip-box div.area-flat .number {
-            font-size: 40px; }
+            font-size: 32px; }
       #main .flat-info-wrapper .flat-tooltip-wrapper.flat-info-tooltip-wrapper {
         background: url("../img/border-2.png") no-repeat;
         background-size: 92%;
