@@ -1112,13 +1112,13 @@ header {
                             -o-transform: scale(1.168);
                             transform: scale(1.168);
                             .hover-me {
-                                fill: #ffffff75;
+                                fill: #8080802b;
                                 fill-opacity: 1;
                                 stroke-width: 0.5;
                             }
                             &:hover {
                                 .hover-me {
-                                    fill: #ffffff75;
+                                    fill: #8080802b;
                                 }
                             }
                         }
@@ -1155,7 +1155,7 @@ header {
     .flat-choose-wrapper {
         z-index: 30;
         &::after {
-            background-color: rgba(0, 0, 0, .5);
+            background-color: rgba(255, 255, 255, 0.8);
         }
         .flat-choose-background {
             filter: blur(24px);
@@ -1169,17 +1169,17 @@ header {
             position: absolute;
             @include translateXY;
             margin-top: 24px;
-            height: 73vh;
+            height: 75vh;
             z-index: 100;
         }
         .draft-flats, .flat-svg {
             width: 410px !important;
         }
         .flat-svg {
-            -webkit-transform: translate(-50%, 23px) scaleY(0.73);
-            -moz-transform: translate(-50%, 23px) scaleY(0.73);
-            -o-transform: translate(-50%, 23px) scaleY(0.73);
-            transform: translate(-50%, 23px) scaleY(0.73);
+            -webkit-transform: translate(-50%, 46px) scaleY(0.685);
+            -moz-transform: translate(-50%, 46px) scaleY(0.685);
+            -o-transform: translate(-50%, 46px) scaleY(0.685);
+            transform: translate(-50%, 46px) scaleY(0.685);
             left: 50%;
         }
         .flat-order-wrapper {
@@ -1190,90 +1190,7 @@ header {
             @include display-f-nowrap-center;
             @include d-flex-column;
             img {
-               height: 64vh;
-            }
-            .order-btn {
-                background-color: #b1935a;
-                border: 3px solid #deb94d;
-                padding: 10px 25px;
-                -webkit-border-radius: 50px;
-                -moz-border-radius: 50px;
-                -ms-border-radius: 50px;
-                -o-border-radius: 50px;
-                border-radius: 50px;
-                width: 230px;
-                display: block;
-                margin-top: 30px;
-                color: #fff;
-                font-size: 18px;
-                text-transform: uppercase;
-                text-align: center;
-                cursor: pointer;
-                -webkit-animation: play 2s ease infinite;
-                -moz-animation: play 2s ease infinite;
-                animation: play 2s ease infinite;
-                position: relative;
-                &::before, &::after {
-                    content: '';
-                    background-image: url('../img/gold.png');
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 25px;
-                    position: absolute;
-                    width: 25px;
-                    height: 25px;
-                    top: 11px;
-                }
-                &::before {
-                    left: 15%;
-                }
-                &::after {
-                    right: 15%;
-                }
-                span {
-                    position: relative;
-                    top: 2px;
-                }    
-                @-webkit-keyframes play {
-                    0% {
-                        transform: scale(1);
-                    }
-                    15% {
-                        -webkit-box-shadow: 0 0 0 5px rgba(222, 185, 77, 0.6);
-                        -moz-box-shadow: 0 0 0 5px rgba(222, 185, 77, 0.6);
-                        box-shadow: 0 0 0 5px rgba(222, 185, 77, 0.6);
-                    }
-                    25% {
-                        -webkit-box-shadow: 0 0 0 10px rgba(222, 185, 77, 0.6), 0 0 0 20px rgba(222, 185, 77, 0.3);
-                        -moz-box-shadow: 0 0 0 10px rgba(222, 185, 77, 0.6), 0 0 0 20px rgba(222, 185, 77, 0.3);
-                        box-shadow: 0 0 0 10px rgba(222, 185, 77, 0.6), 0 0 0 20px rgba(222, 185, 77, 0.3);
-                    }
-                    25% {
-                        -webkit-box-shadow: 0 0 0 15px rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
-                        -moz-box-shadow: 0 0 0 15px  rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
-                        box-shadow: 0 0 0 15px  rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
-                    }
-                }
-                @keyframes play {
-                    0% {
-                        transform: scale(1);
-                    }
-                    15% {
-                        -webkit-box-shadow: 0 0 0 5px rgba(222, 185, 77, 0.6);
-                        -moz-box-shadow: 0 0 0 5px rgba(222, 185, 77, 0.6);
-                        box-shadow: 0 0 0 5px rgba(222, 185, 77, 0.6);
-                    }
-                    25% {
-                        -webkit-box-shadow: 0 0 0 10px rgba(222, 185, 77, 0.6), 0 0 0 20px rgba(222, 185, 77, 0.3);
-                        -moz-box-shadow: 0 0 0 10px rgba(222, 185, 77, 0.6), 0 0 0 20px rgba(222, 185, 77, 0.3);
-                        box-shadow: 0 0 0 10px rgba(222, 185, 77, 0.6), 0 0 0 20px rgba(222, 185, 77, 0.3);
-                    }
-                    25% {
-                        -webkit-box-shadow: 0 0 0 15px rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
-                        -moz-box-shadow: 0 0 0 15px  rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
-                        box-shadow: 0 0 0 15px  rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
-                    }
-                }  
+               height: 75vh;
             }
         }
     }
@@ -1449,6 +1366,9 @@ header {
                 background-size: 92%;
                 width: 190px;
                 height: 170px;
+                .tooltip-box div span {
+                    color: #363636;
+                }
             }
         }
     }
@@ -1499,7 +1419,7 @@ header {
             height: 80px;
             border: 3px solid #666666;
             background-color: #363636;
-            margin-top: 50px;
+            margin: 50px 0;
             text-align: center;
             @include display-f-nowrap-center;
             @include d-flex-column;
@@ -1537,6 +1457,88 @@ header {
                     padding: 0 5px;
                 }
             }
+        }
+        .order-btn {
+            background-color: #b1935a;
+            border: 3px solid #deb94d;
+            padding: 10px 25px;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
+            border-radius: 50px;
+            width: 230px;
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-align: center;
+            cursor: pointer;
+            -webkit-animation: play 2s ease infinite;
+            -moz-animation: play 2s ease infinite;
+            animation: play 2s ease infinite;
+            position: relative;
+            &::before, &::after {
+                content: '';
+                background-image: url('../img/gold.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 25px;
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                top: 11px;
+            }
+            &::before {
+                left: 15%;
+            }
+            &::after {
+                right: 15%;
+            }
+            span {
+                position: relative;
+                top: 2px;
+            }    
+            @-webkit-keyframes play {
+                0% {
+                    transform: scale(1);
+                }
+                15% {
+                    -webkit-box-shadow: 0 0 0 5px rgba(222, 185, 77, 0.6);
+                    -moz-box-shadow: 0 0 0 5px rgba(222, 185, 77, 0.6);
+                    box-shadow: 0 0 0 5px rgba(222, 185, 77, 0.6);
+                }
+                25% {
+                    -webkit-box-shadow: 0 0 0 10px rgba(222, 185, 77, 0.6), 0 0 0 20px rgba(222, 185, 77, 0.3);
+                    -moz-box-shadow: 0 0 0 10px rgba(222, 185, 77, 0.6), 0 0 0 20px rgba(222, 185, 77, 0.3);
+                    box-shadow: 0 0 0 10px rgba(222, 185, 77, 0.6), 0 0 0 20px rgba(222, 185, 77, 0.3);
+                }
+                25% {
+                    -webkit-box-shadow: 0 0 0 15px rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
+                    -moz-box-shadow: 0 0 0 15px  rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
+                    box-shadow: 0 0 0 15px  rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
+                }
+            }
+            @keyframes play {
+                0% {
+                    transform: scale(1);
+                }
+                15% {
+                    -webkit-box-shadow: 0 0 0 5px rgba(222, 185, 77, 0.6);
+                    -moz-box-shadow: 0 0 0 5px rgba(222, 185, 77, 0.6);
+                    box-shadow: 0 0 0 5px rgba(222, 185, 77, 0.6);
+                }
+                25% {
+                    -webkit-box-shadow: 0 0 0 10px rgba(222, 185, 77, 0.6), 0 0 0 20px rgba(222, 185, 77, 0.3);
+                    -moz-box-shadow: 0 0 0 10px rgba(222, 185, 77, 0.6), 0 0 0 20px rgba(222, 185, 77, 0.3);
+                    box-shadow: 0 0 0 10px rgba(222, 185, 77, 0.6), 0 0 0 20px rgba(222, 185, 77, 0.3);
+                }
+                25% {
+                    -webkit-box-shadow: 0 0 0 15px rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
+                    -moz-box-shadow: 0 0 0 15px  rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
+                    box-shadow: 0 0 0 15px  rgba(222, 185, 77, 0.6), 0 0 0 30px rgba(222, 185, 77, 0.3);
+                }
+            }  
         }
     }
 
@@ -1694,6 +1696,22 @@ footer {
                 }
             }
         }
+    }
+}
+
+
+.flat-body {
+    header {
+        .nav-link, .menu-title {
+            color: $dark-color !important;
+        }
+    }
+    .dropdown-menu-wrap .dropdown-toggle::after {
+        background: url('../img/down-arrow-black.png') no-repeat;
+        background-size: 9px;
+    }
+    .dropdown-menu-wrap:hover .dropdown-toggle::after {
+        background: none;
     }
 }
 
