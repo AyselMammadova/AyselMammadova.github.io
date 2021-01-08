@@ -963,11 +963,16 @@ header {
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
-    #main .floor-choose-wrapper .floor-wrap .floor-svg svg a {
+    #main .floor-choose-wrapper .floor-wrap .floor-svg svg.ahmadli-svg a {
       -webkit-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
       -moz-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
       -o-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
       transform: translate(-2px, 1px) scale(0.9) scaleY(0.77); }
+    #main .floor-choose-wrapper .floor-wrap .floor-svg svg.teraspark-svg a {
+      -webkit-transform: translate(-2px, 64px) scale(0.9) scaleY(0.77);
+      -moz-transform: translate(-2px, 64px) scale(0.9) scaleY(0.77);
+      -o-transform: translate(-2px, 64px) scale(0.9) scaleY(0.77);
+      transform: translate(-2px, 64px) scale(0.9) scaleY(0.77); }
   #main .flat-choose-wrapper {
     z-index: 30; }
     #main .flat-choose-wrapper::after {

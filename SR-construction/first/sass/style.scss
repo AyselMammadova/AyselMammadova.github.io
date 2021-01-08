@@ -1097,6 +1097,9 @@ header {
                             fill: #fff;
                             fill-opacity: 0;
                             pointer-events: all;
+                            // fill: #caa86673;
+                            //     fill-opacity: 1;
+                            //     stroke-width: 0.5;
                         }
                         &:hover {
                             .hover-me {
@@ -1141,11 +1144,21 @@ header {
             .floor-svg {
                 @include translateXY;
                 svg {
-                    a {
-                        -webkit-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
-                        -moz-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
-                        -o-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
-                        transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+                    &.ahmadli-svg {
+                        a {
+                            -webkit-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+                            -moz-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+                            -o-transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+                            transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+                        }
+                    }
+                    &.teraspark-svg {
+                        a {
+                            -webkit-transform: translate(-2px, 64px) scale(0.9) scaleY(0.77);
+                            -moz-transform: translate(-2px, 64px) scale(0.9) scaleY(0.77);
+                            -o-transform: translate(-2px, 64px) scale(0.9) scaleY(0.77);
+                            transform: translate(-2px, 64px) scale(0.9) scaleY(0.77);
+                        }
                     }
                 }
             }
