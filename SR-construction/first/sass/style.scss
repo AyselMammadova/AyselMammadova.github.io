@@ -1159,7 +1159,7 @@ header {
     }
 
     .flat-choose-wrapper {
-        z-index: 30;
+        z-index: 20;
         &::after {
             background-color: rgba(255, 255, 255, 0.8);
         }
@@ -1200,7 +1200,11 @@ header {
         .flat-order-wrapper {
             position: absolute;
             top: 160px;
-            @include translateX;
+            left: 54%;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
             z-index: 100;
             @include display-f-nowrap-center;
             @include d-flex-column;
@@ -1398,7 +1402,7 @@ header {
         .form-3d {
             @include display-f-nowrap-center;
             @include d-flex-column;
-            background-color: transparent;
+            background-color: #363636;
             width: 115px;
             height: 115px;
             font-size: 12px;
@@ -1414,6 +1418,7 @@ header {
                 @include wh-100;
                 background-image: url('../img/border-1.png');
                 background-size: cover;
+                background-color: transparent;
                 @include transition-300;
             }
             &:hover {
@@ -2027,7 +2032,7 @@ footer {
                 }
             }
         }
-        &.project-main {
+        &.project-main, &.flat-main {
             height: 990px;
             overflow-y: auto;
         }
@@ -2070,8 +2075,12 @@ footer {
         .flat-choose-wrapper .flat-svg {
             width: 360px !important;
         }
-        .flat-choose-wrapper .flat-svg {
-            left: 43.5em;
+        .flat-choose-wrapper {
+            height: 100%;
+            overflow: hidden;
+            .flat-svg {
+                left: 43.5em;
+            }
         }
     }
 }
@@ -2193,7 +2202,7 @@ footer {
         }
         .flat-choose-wrapper {
             .draft-flats {
-                margin-top: 115px;
+                margin-top: 90px;
                 height: 56vh;
                 -webkit-transform: translate(-50%, -50%);
                 -moz-transform: translate(-50%, -50%);
@@ -2205,7 +2214,7 @@ footer {
                 -moz-transform: translate(-50%, 1.8%) scaleY(0.524);
                 -o-transform: translate(-50%, 1.8%) scaleY(0.524);
                 transform: translate(-50%, 1.8%) scaleY(0.524);
-                margin-top: 115px;
+                margin-top: 90px;
             }
             .draft-flats, .flat-svg {
                 width: 82% !important;
