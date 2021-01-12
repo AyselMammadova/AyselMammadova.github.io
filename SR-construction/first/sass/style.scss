@@ -1097,9 +1097,6 @@ header {
                             fill: #fff;
                             fill-opacity: 0;
                             pointer-events: all;
-                            // fill: #caa86673;
-                            //     fill-opacity: 1;
-                            //     stroke-width: 0.5;
                         }
                         &:hover {
                             .hover-me {
@@ -1110,10 +1107,6 @@ header {
                         }
                         &.unselect-section {
                             cursor: not-allowed;
-                            -webkit-transform: scale(1.168);
-                            -moz-transform: scale(1.168);
-                            -o-transform: scale(1.168);
-                            transform: scale(1.168);
                             .hover-me {
                                 fill: #8080802b;
                                 fill-opacity: 1;
@@ -1189,11 +1182,20 @@ header {
             width: 410px !important;
         }
         .flat-svg {
-            -webkit-transform: translate(-50%, 46px) scaleY(0.685);
-            -moz-transform: translate(-50%, 46px) scaleY(0.685);
-            -o-transform: translate(-50%, 46px) scaleY(0.685);
-            transform: translate(-50%, 46px) scaleY(0.685);
             left: 50%;
+            -webkit-transform: translate(-50%, 2%) scaleY(0.704);
+            -moz-transform: translate(-50%, 2%) scaleY(0.704);
+            -o-transform: translate(-50%, 2%) scaleY(0.704);
+            transform: translate(-50%, 2%) scaleY(0.704);
+            margin-top: 27px;
+            a {
+                &.unselect-section {
+                    -webkit-transform: scale(1.17);
+                    -moz-transform: scale(1.17);
+                    -o-transform: scale(1.17);
+                    transform: scale(1.17);
+                }
+            }
         }
         .flat-order-wrapper {
             position: absolute;
@@ -1741,8 +1743,12 @@ footer {
                     display: block;
                 }
             }
-            .floor-wrap .floor-svg svg a {
-                transform: translate(-2px, -87px) scale(0.9) scaleY(0.87);
+            .floor-wrap .floor-svg svg {
+                &.ahmadli-svg {
+                    a {
+                        transform: translate(-2px, -87px) scale(0.9) scaleY(0.87);
+                    }
+                }
             }
         }
     }
@@ -1775,8 +1781,12 @@ footer {
                 display: block;
             }
         }
-        .floor-wrap .floor-svg svg a {
-            transform: translate(-101px, 1px) scale(1.085) scaleY(0.639);
+        .floor-wrap .floor-svg svg {
+            &.ahmadli-svg {
+                a {
+                    transform: translate(-101px, 1px) scale(1.085) scaleY(0.639);
+                }
+            }
         }
     }
 }
@@ -1951,8 +1961,10 @@ footer {
             .floor-wrap .floor-svg {
                 svg {
                     width: 1440px;
-                    a {
-                        transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+                    &.ahmadli-svg {
+                        a {
+                            transform: translate(-2px, 1px) scale(0.9) scaleY(0.77);
+                        }
                     }
                 }
             }
@@ -1968,20 +1980,19 @@ footer {
         }
         .flat-choose-wrapper {
             .draft-flats {
-                height: 53vh;
+                left: 10em;
+                height: 60vh;
                 -webkit-transform: translate(0, -50%);
                 -moz-transform: translate(0, -50%);
                 -o-transform: translate(0, -50%);
                 transform: translate(0, -50%);
             }
             .flat-svg {
-                -webkit-transform: translate(0, 23px) scaleY(0.53);
-                -moz-transform: translate(0, 23px) scaleY(0.53);
-                -o-transform: translate(0, 23px) scaleY(0.53);
-                transform: translate(0, 23px) scaleY(0.53);
-            }
-            .draft-flats, .flat-svg {
-                left: 10em;
+                left: 48em;
+                -webkit-transform: translate(-50%, 1.5%) scaleY(0.563);
+                -moz-transform: translate(-50%, 1.5%) scaleY(0.563);
+                -o-transform: translate(-50%, 1.5%) scaleY(0.563);
+                transform: translate(-50%, 1.5%) scaleY(0.563);
             }
         }
     }
@@ -2059,6 +2070,9 @@ footer {
         .flat-choose-wrapper .flat-svg {
             width: 360px !important;
         }
+        .flat-choose-wrapper .flat-svg {
+            left: 43.5em;
+        }
     }
 }
 
@@ -2130,8 +2144,11 @@ footer {
             transform: translateY(-50%) scale(0.8); 
         }
         .flat-choose-wrapper {
-            .draft-flats, .flat-svg {
+            .draft-flats {
                 left: 6em;
+            }
+            .flat-svg {
+                left: 39.6em;
             }
         }
     }
@@ -2176,21 +2193,22 @@ footer {
         }
         .flat-choose-wrapper {
             .draft-flats {
-                margin-top: 80px;
-                height: 46vh;
+                margin-top: 115px;
+                height: 56vh;
                 -webkit-transform: translate(-50%, -50%);
                 -moz-transform: translate(-50%, -50%);
                 -o-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
             }
             .flat-svg {
-                -webkit-transform: translate(-50%, 80px) scaleY(0.46);
-                -moz-transform: translate(-50%, 80px) scaleY(0.46);
-                -o-transform: translate(-50%, 80px) scaleY(0.46);
-                transform: translate(-50%, 80px) scaleY(0.46);
+                -webkit-transform: translate(-50%, 1.8%) scaleY(0.524);
+                -moz-transform: translate(-50%, 1.8%) scaleY(0.524);
+                -o-transform: translate(-50%, 1.8%) scaleY(0.524);
+                transform: translate(-50%, 1.8%) scaleY(0.524);
+                margin-top: 115px;
             }
             .draft-flats, .flat-svg {
-                width: 72% !important;
+                width: 82% !important;
                 left: 50%;
             }
         }
@@ -2215,6 +2233,10 @@ footer {
         }
         .navbar-toggler .menu-title {
             font-size: 14px;
+        }
+
+        #menu .navbar-nav {
+            padding: 60% 0;
         }
     }
     
