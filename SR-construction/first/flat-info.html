@@ -78,12 +78,12 @@
     <!--header end-->
 
     <!--main section start-->
-    <section id="main">
+    <section id="main" class="flat-main">
         <a class="back-link custom-btn" href="flat.html">
             <div class="icon"></div>
             <div class="hover-text"><span>Geri</span></div>
         </a>
-        <div class="flat-info-wrapper">
+        <div class="flat-info-wrapper change-flat-info-wrapper">
             <div class="box-flat floor-info">
                 <span class="number">3</span>
                 <span class="title">Mərtəbə</span>
@@ -116,7 +116,9 @@
 
         <div class="form-3d-wrapper">
             <a class="form-3d" href="flat-3d.html">
-                <span class="threeD">3D</span> Görünüş
+                <div class="three-wrap">
+                    <span class="threeD">3D</span> Görünüş
+                </div>
             </a>
             <div class="price-wrapper">
                 <span class="title-price">Qiymət</span>
@@ -126,61 +128,17 @@
                     <a class="pay-credit open-modal" data-href="#pay-credit">Kreditlə</a>
                 </div>
             </div>
-            <a class="order-btn open-modal" data-href="#order-modal">
-                <span>Sifariş et</span>
-            </a>
+            <div class="order-btn-wrap">
+                <a class="order-btn open-modal" data-href="#order-modal">
+                    <span>Sifariş et</span>
+                </a>
+            </div>
         </div>
 
         <div class="flat-choose-wrapper custom-choose-wrapper">
             <img class="flat-choose-background custom-choose-background" src="img/item1.png">
             <div class="flat-order-wrapper">
                 <img src="img/flat-info.png" alt="flat-img">
-            </div>
-        </div>
-
-        <div class="modal-wrapper">
-            <div class="modal-wrap" data-modal="#order-modal">
-                <div class="modal-head">Mənzil Sifarişi</div>
-                <div class="content">
-                    <form action="" class="custom-form">
-                        <div class="input-group first-group"> 
-                            <input class="effect" type="text" placeholder=" ">
-                            <label>Ad, Soyad</label> 
-                            <span class="focus-border">
-                                <i></i>
-                            </span>
-                        </div> 
-                        <div class="input-group"> 
-                            <input class="effect" type="text" placeholder=" ">
-                            <label>Telefon</label> 
-                            <span class="focus-border">
-                                <i></i>
-                            </span>
-                        </div> 
-                        <div class="input-group"> 
-                            <input class="effect" type="email" placeholder=" ">
-                            <label>Email</label> 
-                            <span class="focus-border">
-                                <i></i>
-                            </span>
-                        </div> 
-                        <div class="input-group textarea-group"> 
-                            <textarea class="effect" type="text" placeholder=" " rows="6"></textarea>
-                            <label>Mesaj</label> 
-                            <span class="focus-border">
-                                <i></i>
-                            </span>
-                        </div> 
-                        <input class="submit-btn" value="Sifariş et">
-                    </form>
-                </div>
-            </div>
-            <div class="modal-wrap" data-modal="#pay-cash">
-                <div class="modal-head">Nağd Qiymət</div>
-                <div class="content">
-                    <p>1 kv.m qiyməti: 1.140,00 AZN</p>
-                    <p>Mənzilin ümumi qiyməti: 254.220,00 AZN</p>
-                </div>
             </div>
         </div>
         
@@ -217,6 +175,64 @@
         <!--footer end-->
     </section>
     <!--main section end-->
+
+    <!--modals start-->
+    <div class="modal-wrapper">
+        <div class="modal-wrap" data-modal="#order-modal">
+            <div class="modal-head">Mənzil Sifarişi</div>
+            <div class="close-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="12" height="12" x="0" y="0" viewBox="0 0 413.348 413.348" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                    <g><path xmlns="http://www.w3.org/2000/svg" d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" fill="#191919" class="close-svg"/></g>
+                </svg>
+            </div>
+            <div class="content">
+                <form action="" class="custom-form">
+                    <div class="input-group first-group"> 
+                        <input class="effect" type="text" placeholder=" ">
+                        <label>Ad, Soyad</label> 
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div> 
+                    <div class="input-group"> 
+                        <input class="effect" type="text" placeholder=" ">
+                        <label>Telefon</label> 
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div> 
+                    <div class="input-group"> 
+                        <input class="effect" type="email" placeholder=" ">
+                        <label>Email</label> 
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div> 
+                    <div class="input-group textarea-group"> 
+                        <textarea class="effect" type="text" placeholder=" " rows="6"></textarea>
+                        <label>Mesaj</label> 
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div> 
+                    <input class="submit-btn" value="Sifariş et">
+                </form>
+            </div>
+        </div>
+        <div class="modal-wrap" data-modal="#pay-cash">
+            <div class="modal-head">Nağd Qiymət</div>
+            <div class="close-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="12" height="12" x="0" y="0" viewBox="0 0 413.348 413.348" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                    <g><path xmlns="http://www.w3.org/2000/svg" d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" fill="#191919" class="close-svg"/></g>
+                </svg>
+            </div>
+            <div class="content">
+                <p>1 kv.m qiyməti: 1.140,00 AZN</p>
+                <p>Mənzilin ümumi qiyməti: 254.220,00 AZN</p>
+            </div>
+        </div>
+    </div>
+    <!--modals end-->
 
 
 

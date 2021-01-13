@@ -125,6 +125,11 @@ $(document).ready(function() {
         e.stopPropagation();
     });
 
+    $('.close-modal').click(function() {
+        $('.modal-wrapper').hide();
+        $('.modal-wrapper .modal-wrap').hide();
+    });
+
 
     // input, textarea focus effect 
     $(".input-group .effect").val("");
