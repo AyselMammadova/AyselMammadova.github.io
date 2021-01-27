@@ -1,0 +1,81 @@
+/* okmedia 1 */
+@font-face {
+    font-family: 'okmedia1-bold';
+    src: url('../fonts/Gilroy-Extrabold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Extrabold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'okmedia1-medium';
+    src: url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'okmedia1';
+    src: url('../fonts/Gilroy.woff2') format('woff2'),
+        url('../fonts/Gilroy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* okmedia 2 */
+@font-face {
+    font-family: 'okmedia2';
+    src: url('../fonts/AvertaStd-Extrabold.woff2') format("woff2"), url('../fonts/AvertaStd-Extrabold.woff') format("woff");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'okmedia2';
+    src: url('../fonts/AvertaStd-Light.woff2') format("woff2"), url('../fonts/AvertaStd-Light.woff') format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'okmedia2';
+    src: url('../fonts/Averta-Black.woff2') format("woff2"), url('../fonts/Averta-Black.woff') format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'okmedia2';
+    src: url('../fonts/AvertaStd-Thin.woff2') format("woff2"), url('../fonts/AvertaStd-Thin.woff') format("woff");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'okmedia2';
+    src: url('../fonts/AvertaStd-Semibold.woff2') format("woff2"), url('../fonts/AvertaStd-Semibold.woff') format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'okmedia2';
+    src: url('../fonts/AvertaStd-Extrathin.woff2') format("woff2"), url('../fonts/AvertaStd-Extrathin.woff') format("woff");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'okmedia2';
+    src: url('../fonts/AvertaStd-Regular.woff2') format("woff2"), url('../fonts/AvertaStd-Regular.woff') format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'okmedia2';
+    src: url('../fonts/AvertaStd-Bold.woff2') format("woff2"), url('../fonts/AvertaStd-Bold.woff') format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
